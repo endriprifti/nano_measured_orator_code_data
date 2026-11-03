@@ -1,0 +1,380 @@
+{
+ "meta": {
+  "K": 5,
+  "vocab": 2000,
+  "cfg": {
+   "d": 192,
+   "L": 4,
+   "H": 4,
+   "T": 128,
+   "ff": 768,
+   "drop": 0.1
+  },
+  "folds": {
+   "0": {
+    "gpt_val_nats": 3.8138232231140137
+   },
+   "1": {
+    "gpt_val_nats": 3.8337066173553467
+   },
+   "2": {
+    "gpt_val_nats": 3.6830406188964844
+   },
+   "3": {
+    "gpt_val_nats": 3.836094617843628
+   },
+   "4": {
+    "gpt_val_nats": 3.8715038299560547
+   }
+  }
+ },
+ "n_sentences": 7006,
+ "rate": {
+  "kn": {
+   "bits_per_word": 8.778716022557443,
+   "sd": 7.32349334939073,
+   "median": 7.018960234755836,
+   "perplexity_per_word": 439.19445284099635,
+   "n_words": 227054,
+   "q": [
+    0.584878124340752,
+    3.565857042638431,
+    12.354694452225393,
+    21.632919153299802,
+    34.629423775912244
+   ],
+   "bits_per_char": 1.4269722888510603
+  },
+  "gpt": {
+   "bits_per_word": 8.8481852891689,
+   "sd": 7.608449137695044,
+   "median": 7.0421061515808105,
+   "perplexity_per_word": 460.8601737538209,
+   "n_words": 226950,
+   "q": [
+    0.7316289365291596,
+    3.8351102471351624,
+    11.77192111313343,
+    22.679379168152806,
+    38.3545870614052
+   ],
+   "bits_per_char": 1.433681712184973
+  }
+ },
+ "kn_gpt_corr": {
+  "pearson": 0.9053239541704853,
+  "spearman": 0.8974410927877089
+ },
+ "best_model": "kn",
+ "order": {
+  "kn": {
+   "H_unigram": 9.913593921901663,
+   "H_model": 8.778716022557443,
+   "D_lower_bound": 1.13487789934422,
+   "R_model": 0.378704074941802,
+   "M_B_model": 0.043138891150903955
+  },
+  "gpt": {
+   "H_unigram": 9.913593921901663,
+   "H_model": 8.8481852891689,
+   "D_lower_bound": 1.0654086327327636,
+   "R_model": 0.37378752767548484,
+   "M_B_model": 0.042244541164055384
+  }
+ },
+ "by_term_units": {
+  "median": {
+   "T1": 8.726565428402601,
+   "T2": 8.50849970887209,
+   "T3": 8.82292383856772
+  },
+  "mean": {
+   "T1": 8.671868917560996,
+   "T2": 8.519595638898544,
+   "T3": 8.893747248555954
+  },
+  "count": {
+   "T1": 8,
+   "T2": 11,
+   "T3": 58
+  }
+ },
+ "by_genre_units": {
+  "median": {
+   "adversarial": 9.097473947712118,
+   "debate": 8.869529823096759,
+   "expository": 8.33860853566732
+  },
+  "mean": {
+   "adversarial": 9.036814154284633,
+   "debate": 8.781055643813728,
+   "expository": 8.370502806849291
+  },
+  "count": {
+   "adversarial": 43,
+   "debate": 14,
+   "expository": 20
+  }
+ },
+ "ols_unit_surprisal": {
+  "coef": {
+   "Intercept": 8.529816964215039,
+   "C(term, Treatment('T1'))[T.T2]": -0.15881908906189057,
+   "C(term, Treatment('T1'))[T.T3]": -0.1339530636558805,
+   "C(genre2, Treatment('expository'))[T.adversarial]": 0.6868457403112612,
+   "C(genre2, Treatment('expository'))[T.debate]": 0.4149983648574929,
+   "np.log(n)": -0.006329556148604276
+  },
+  "p": {
+   "Intercept": 2.4503317911856985e-14,
+   "C(term, Treatment('T1'))[T.T2]": 0.6801081016756111,
+   "C(term, Treatment('T1'))[T.T3]": 0.6893638813068758,
+   "C(genre2, Treatment('expository'))[T.adversarial]": 0.009485963012393163,
+   "C(genre2, Treatment('expository'))[T.debate]": 0.17319052013949018,
+   "np.log(n)": 0.9540533403771277
+  },
+  "r2": 0.1175073863523628,
+  "n": 77
+ },
+ "by_term_tokens": {
+  "T1": 8.756552544533376,
+  "T2": 8.573778598292275,
+  "T3": 8.867862442318609
+ },
+ "sentence_contour": {
+  "0": {
+   "mean": 8.1079318263704,
+   "se": 0.04055624493573742
+  },
+  "1": {
+   "mean": 8.679842677179867,
+   "se": 0.04796801524350555
+  },
+  "2": {
+   "mean": 8.771249457016626,
+   "se": 0.048017057755374154
+  },
+  "3": {
+   "mean": 8.761578659696362,
+   "se": 0.04869251687135791
+  },
+  "4": {
+   "mean": 8.886214508680872,
+   "se": 0.050853670467706405
+  },
+  "5": {
+   "mean": 8.819966482007954,
+   "se": 0.047858503971989666
+  },
+  "6": {
+   "mean": 8.95132233864984,
+   "se": 0.05042319967274373
+  },
+  "7": {
+   "mean": 8.959248426371909,
+   "se": 0.05003780629664122
+  },
+  "8": {
+   "mean": 8.808974061642667,
+   "se": 0.049130852101339884
+  },
+  "9": {
+   "mean": 9.243286659053387,
+   "se": 0.056865430836898774
+  }
+ },
+ "positions": {
+  "first": 8.969573855462299,
+  "last": 11.363657530345066,
+  "internal": 8.708479733793105,
+  "p_last_vs_internal": 4.88490706402752e-166
+ },
+ "length_vs_rate": {
+  "spearman": -0.010128497163641977,
+  "p": 0.39968697886742305,
+  "by_bin": {
+   "3-10": 7.667516050488495,
+   "10-20": 9.292094416228437,
+   "20-30": 8.91280324276707,
+   "30-45": 8.745290501794372,
+   "45-70": 8.707822055776855,
+   "70+": 8.64667714937032
+  }
+ },
+ "speech_arc": {
+  "0": {
+   "mean": 7.554909961068217,
+   "se": 0.1197709501777212,
+   "n": 672
+  },
+  "1": {
+   "mean": 8.989271694767941,
+   "se": 0.08323379443868029,
+   "n": 633
+  },
+  "2": {
+   "mean": 8.93855002205379,
+   "se": 0.08470180749976314,
+   "n": 645
+  },
+  "3": {
+   "mean": 8.79460689408568,
+   "se": 0.08131674572866274,
+   "n": 642
+  },
+  "4": {
+   "mean": 8.883667751423816,
+   "se": 0.08103110746024413,
+   "n": 648
+  },
+  "5": {
+   "mean": 9.026279708810323,
+   "se": 0.08995028602327279,
+   "n": 656
+  },
+  "6": {
+   "mean": 9.04546574317834,
+   "se": 0.09244362600505032,
+   "n": 643
+  },
+  "7": {
+   "mean": 8.936867814188687,
+   "se": 0.09638495540570811,
+   "n": 640
+  },
+  "8": {
+   "mean": 8.852357937112988,
+   "se": 0.09097465849556605,
+   "n": 646
+  },
+  "9": {
+   "mean": 8.872873705837046,
+   "se": 0.12883909221456372,
+   "n": 565
+  }
+ },
+ "uid": {
+  "mean_var": 51.15566660612228,
+  "mean_mad": 8.000107785618912,
+  "null_mad_mean": 7.517773634126602,
+  "null_mad_sd": 0.011713267273047698,
+  "z_mad": 41.178446649310565,
+  "by_term_var": {
+   "T1": 48.8304950413872,
+   "T2": 49.87766063535756,
+   "T3": 52.202873362491275
+  },
+  "by_term_mad": {
+   "T1": 7.836108769457671,
+   "T2": 7.976663515846575,
+   "T3": 8.048183606387935
+  },
+  "lag1_autocorr_mean": -0.1352229887080665
+ },
+ "length_info": {
+  "n_types": 1340,
+  "spearman_len_context_info": 0.30138903745180456,
+  "spearman_len_unigram_info": 0.2529668281279423,
+  "partial_len_context_given_unigram": 0.19365237672795807,
+  "partial_len_unigram_given_context": 0.09530695031920236
+ },
+ "anaphora_surprisal": {
+  "n_anaphoric": 801,
+  "first_anaphoric": 6.298798581811886,
+  "first_other": 9.195870555489194,
+  "p_first": 2.9474163169691965e-46,
+  "rest_anaphoric": 9.183186817796152,
+  "rest_other": 8.888512546437463,
+  "p_rest": 0.0016976656382606656
+ },
+ "peaks": {
+  "threshold_bits": 23.4257027213389,
+  "share": 0.040510187003972624,
+  "by_decile": {
+   "0": 0.026638528310902285,
+   "1": 0.03721565059144677,
+   "2": 0.03830689700879247,
+   "3": 0.039839912679643444,
+   "4": 0.04279846914963129,
+   "5": 0.04099630043878517,
+   "6": 0.044859316935055744,
+   "7": 0.042921378934459735,
+   "8": 0.04266241812710214,
+   "9": 0.04874310239117106
+  }
+ },
+ "most_predictable": [
+  [
+   2.3049148657983842,
+   "S16.1",
+   "Kjo qeveri ka punuar dhe po punon në interes të të gjithë shqiptarëve kudo që ata janë."
+  ],
+  [
+   2.7483543360013316,
+   "S36.1",
+   "Reforma legjislative në tërësi që po zhvillojmë po na sjell gjithnjë e më afër standardeve europiane."
+  ],
+  [
+   2.754423823004614,
+   "S36.1",
+   "Veprimi ynë ekzekutiv në luftën institucionale kundër korrupsionit është bazuar në këto elemente kyçe:"
+  ],
+  [
+   2.7714965276085204,
+   "S39.1",
+   "Reforma legjislative në tërësi që po zhvillojmë po na sjell gjithnjë e më afër standardeve europiane."
+  ],
+  [
+   2.894678322379078,
+   "S39.1",
+   "Veprimi ynë ekzekutiv në luftën institucionale kundër korrupsionit është bazuar në këto elemente kyçe:"
+  ],
+  [
+   3.0855265592164116,
+   "S14.1",
+   "Kjo qeveri ka punuar dhe po punon në interes të të gjithë shqiptarëve, kudo që ata janë."
+  ]
+ ],
+ "most_surprising": [
+  [
+   19.22990568852674,
+   "S12.1",
+   "Turneu im euroatlantik, i filluar në Romë, Vjenë, Bruksel dhe Luksemburg, vazhdoi me atë të Hong-Kongut, Nju-Jorkut, Uashingtonit dhe përfundoi me Kretën."
+  ],
+  [
+   19.30674386312978,
+   "S55.1",
+   "- 2 operatorë dhe 1 licencë të telefonisë mobile me 1,1 milion pajtimtarë, që janë kompanitë celulare “Vodafon”, “AMC” dhe “Eagle Mobile”."
+  ],
+  [
+   19.457589211327576,
+   "S21.1",
+   "Përmbytje ka pasur edhe në spitalin obstetrikë-gjinekologjik të qytetit dhe në nënstacionin elektrik."
+  ],
+  [
+   19.75345521266555,
+   "S24.1",
+   "Mbrojtja nga Buna në fshatrat Darragjat dhe Shirq dhe nga Drini në Bahçallëk."
+  ],
+  [
+   27.76548396990133,
+   "S58.1",
+   "Në vitin 2003: Tiranë–Sukth, Fushë–Krujë–Lezhë, Durrës–Rrogozhinë, Rrogozhinë–Peqin, Rrogozhinë–Lushnjë, Gjirokastër–Kakavijë."
+  ],
+  [
+   27.788641978258752,
+   "S58.1",
+   "Në vitin 2004: Tiranë–Elbasan, Librazhd–Qafëthanë, Qafëthanë– Pogradec, Jergucat–Sarandë, Lezhë–Shkodër, Shkodër–Muriqan, Lushnjë–Fier."
+  ]
+ ],
+ "self_repetition": {
+  "sentences_ge10": 6255,
+  "verbatim_repeated_distinct": 3,
+  "share_tokens_in_shared_8grams": 0.011133915280065534,
+  "share_by_term": {
+   "T1": 0.0023061312342414365,
+   "T2": 0.01808273470398811,
+   "T3": 0.010368513339226455
+  }
+ }
+}

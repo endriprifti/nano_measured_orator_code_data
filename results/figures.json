@@ -1,0 +1,904 @@
+{
+ "words_by_term": {
+  "T1": 32522,
+  "T2": 56518,
+  "T3": 138014,
+  "all": 227054
+ },
+ "anaphora_sentence": {
+  "observed": 331,
+  "pairs": 6822,
+  "null_mean": 161.373,
+  "null_sd": 11.841362717187577,
+  "ratio": 2.051148581237258,
+  "z": 14.324956008128078,
+  "p_perm": 0.000999000999000999
+ },
+ "epistrophe_sentence": {
+  "observed": 100,
+  "pairs": 6822,
+  "null_mean": 32.161,
+  "null_sd": 5.50827368601089,
+  "ratio": 3.109356052361556,
+  "z": 12.315836842364531,
+  "p_perm": 0.000999000999000999
+ },
+ "anaphora_sentence_words": [
+  [
+   "në",
+   92
+  ],
+  [
+   "për",
+   22
+  ],
+  [
+   "ministër",
+   18
+  ],
+  [
+   "ne",
+   17
+  ],
+  [
+   "qeveria",
+   12
+  ],
+  [
+   "të",
+   11
+  ],
+  [
+   "kjo",
+   11
+  ],
+  [
+   "nuk",
+   8
+  ],
+  [
+   "me",
+   7
+  ],
+  [
+   "e",
+   7
+  ],
+  [
+   "unë",
+   6
+  ],
+  [
+   "do",
+   5
+  ],
+  [
+   "u",
+   5
+  ],
+  [
+   "nga",
+   4
+  ],
+  [
+   "sigurisht",
+   4
+  ]
+ ],
+ "anaphora_clause": {
+  "observed": 823,
+  "pairs": 14744,
+  "nullA_within_mean": 585.62,
+  "nullA_within_sd": 16.524696668925575,
+  "zA": 14.36516534953342,
+  "nullB_across_mean": 274.788,
+  "nullB_across_sd": 15.69939667630575,
+  "ratioB": 2.9950361733409028,
+  "zB": 34.91930367154725
+ },
+ "epistrophe_clause": {
+  "observed": 140,
+  "pairs": 14744,
+  "nullA_within_mean": 124.915,
+  "nullA_within_sd": 7.50185143814512,
+  "zA": 2.010836941304433,
+  "nullB_across_mean": 17.792,
+  "nullB_across_sd": 3.8580741309622337,
+  "ratioB": 7.868705035971223,
+  "zB": 31.6759076813074
+ },
+ "anaphora_clause_words": [
+  [
+   "të",
+   170
+  ],
+  [
+   "në",
+   117
+  ],
+  [
+   "për",
+   91
+  ],
+  [
+   "me",
+   61
+  ],
+  [
+   "që",
+   56
+  ],
+  [
+   "i",
+   29
+  ],
+  [
+   "edhe",
+   21
+  ],
+  [
+   "as",
+   20
+  ],
+  [
+   "duke",
+   19
+  ],
+  [
+   "si",
+   14
+  ],
+  [
+   "nga",
+   13
+  ],
+  [
+   "se",
+   13
+  ],
+  [
+   "e",
+   12
+  ],
+  [
+   "por",
+   10
+  ],
+  [
+   "është",
+   8
+  ],
+  [
+   "u",
+   6
+  ],
+  [
+   "janë",
+   6
+  ],
+  [
+   "kur",
+   6
+  ],
+  [
+   "banka",
+   5
+  ],
+  [
+   "mbi",
+   5
+  ]
+ ],
+ "runs_clause": {
+  "counts": {
+   "2": 470,
+   "3": 79,
+   "4": 31,
+   "5": 13,
+   "6": 3,
+   "7": 2,
+   "8": 2,
+   "10": 1
+  },
+  "P_ge3_given_ge2": 0.21797004991680533,
+  "P_ge4_given_ge3": 0.3969465648854962,
+  "P_ge5_given_ge4": 0.40384615384615385
+ },
+ "runs_sentence": {
+  "counts": {
+   "2": 202,
+   "3": 32,
+   "4": 4,
+   "5": 3,
+   "6": 3,
+   "9": 1,
+   "19": 1
+  },
+  "P_ge3_given_ge2": 0.17886178861788618,
+  "P_ge4_given_ge3": 0.2727272727272727,
+  "P_ge5_given_ge4": 0.6666666666666666
+ },
+ "runs_clause_null": {
+  "counts": {
+   "2": 51603,
+   "3": 1648,
+   "4": 55,
+   "5": 4
+  },
+  "P_ge3_given_ge2": 0.032020258863252674,
+  "P_ge4_given_ge3": 0.03456356180433509,
+  "P_ge5_given_ge4": 0.06779661016949153
+ },
+ "runs_clause_hazard_test": {
+  "table": [
+   [
+    131,
+    470
+   ],
+   [
+    52,
+    79
+   ]
+  ],
+  "fisher_p": 5.0607961451391414e-05
+ },
+ "enumerations": {
+  "n": 350,
+  "dist": {
+   "3": 247,
+   "4": 67,
+   "5": 20,
+   "6": 16
+  },
+  "share_three": 0.7057142857142857,
+  "per_1000_words": 1.5414835237432505
+ },
+ "markers_per_1000": {
+  "antithesis_jo_vetem_por": {
+   "T1": 0.39972941393518235,
+   "T2": 1.1854630383240738,
+   "T3": 0.7100728911559697,
+   "all": 0.7839544777894245
+  },
+  "antithesis_jo_por": {
+   "T1": 0.09224524936965746,
+   "T2": 0.12385434728758979,
+   "T3": 0.18114104366223716,
+   "all": 0.15414835237432506
+  },
+  "antithesis_as_as": {
+   "T1": 0.061496832913104975,
+   "T2": 0.1592413036554726,
+   "T3": 0.24635181938064254,
+   "all": 0.19819073876698934
+  },
+  "antithesis_nga_njera_ane": {
+   "T1": 0.0,
+   "T2": 0.0707739127357656,
+   "T3": 0.036228208732447434,
+   "all": 0.03963814775339787
+  },
+  "adversative_por": {
+   "T1": 3.167086895024906,
+   "T2": 4.54722389327294,
+   "T3": 2.9707131160606894,
+   "all": 3.391263752235151
+  },
+  "contrastive_ndersa_kurse": {
+   "T1": 0.4304778303917348,
+   "T2": 0.265402172759121,
+   "T3": 0.5071949222542641,
+   "all": 0.4360196252873766
+  },
+  "concessive_megjithate": {
+   "T1": 0.6457167455876023,
+   "T2": 0.2830956509430624,
+   "T3": 0.3332995203385164,
+   "all": 0.36555180705911366
+  },
+  "pron_1sg": {
+   "T1": 0.5842199126744972,
+   "T2": 1.1146891255883082,
+   "T3": 2.934484907328242,
+   "all": 2.1448642173227515
+  },
+  "verb_1sg_cognitive": {
+   "T1": 1.8756534038497017,
+   "T2": 2.9901978130860964,
+   "T3": 5.231353340965409,
+   "all": 4.192835184581641
+  },
+  "pron_1pl": {
+   "T1": 5.534714962179447,
+   "T2": 7.802823879118157,
+   "T3": 6.108075992290638,
+   "all": 6.447805367886054
+  },
+  "verb_1pl": {
+   "T1": 6.18043170776705,
+   "T2": 5.414204324286068,
+   "T3": 4.825597403161998,
+   "all": 5.1661719238595225
+  },
+  "pron_2pl": {
+   "T1": 0.8917040772400221,
+   "T2": 2.034749991153261,
+   "T3": 3.963366035329749,
+   "all": 3.043328899733103
+  },
+  "verb_2pl": {
+   "T1": 0.9839493266096796,
+   "T2": 2.1055239038890265,
+   "T3": 4.4995435245699715,
+   "all": 3.400072229513684
+  },
+  "deontic_duhet": {
+   "T1": 1.5989176557407294,
+   "T2": 1.468558689267136,
+   "T3": 1.0796006202269335,
+   "all": 1.2508037735516662
+  },
+  "possibility_mund": {
+   "T1": 1.8449049873931493,
+   "T2": 1.6277999929226088,
+   "T3": 1.804164794875882,
+   "all": 1.7660996943458385
+  },
+  "future_do_te": {
+   "T1": 13.252567492774123,
+   "T2": 11.023036908595492,
+   "T3": 5.49944208558552,
+   "all": 7.984884652990037
+  },
+  "intensifier_shume": {
+   "T1": 2.6751122317200666,
+   "T2": 2.7247956403269753,
+   "T3": 3.4199429043430376,
+   "all": 3.1402221497969647
+  },
+  "absolute_never_all": {
+   "T1": 1.014697743066232,
+   "T2": 0.9731413001167769,
+   "T3": 1.072354978480444,
+   "all": 1.0394003188668774
+  },
+  "address_zoti_name": {
+   "T1": 0.09224524936965746,
+   "T2": 0.8138999964613044,
+   "T3": 1.891112495833756,
+   "all": 1.3653139781725934
+  },
+  "address_honorific": {
+   "T1": 0.5842199126744972,
+   "T2": 1.061608691036484,
+   "T3": 1.3621806483400234,
+   "all": 1.1759317166841368
+  },
+  "address_kolege": {
+   "T1": 0.2152389151958674,
+   "T2": 0.176934781839414,
+   "T3": 0.47821235526830613,
+   "all": 0.36555180705911366
+  },
+  "mention_berisha": {
+   "T1": 0.0,
+   "T2": 0.0530804345518242,
+   "T3": 1.4853565580303447,
+   "all": 0.9160816369674174
+  },
+  "europe_integration": {
+   "T1": 1.4759239899145193,
+   "T2": 4.741852153296295,
+   "T3": 4.7893691944295504,
+   "all": 4.302941150563302
+  },
+  "reform": {
+   "T1": 1.506672406371072,
+   "T2": 1.3977847765313705,
+   "T3": 2.267885866651209,
+   "all": 1.9422692399164956
+  },
+  "democracy": {
+   "T1": 0.9224524936965747,
+   "T2": 2.707102162143034,
+   "T3": 0.8622313678322489,
+   "all": 1.3300800690584618
+  },
+  "law_state": {
+   "T1": 2.4906217329807516,
+   "T2": 1.9816695566014366,
+   "T3": 4.456069674091034,
+   "all": 3.5586248205272755
+  }
+ },
+ "marker_tests": {
+  "antithesis_jo_vetem_por": {
+   "counts": [
+    13,
+    67,
+    98
+   ],
+   "chi2": 18.722080113091558,
+   "p": 8.60105962969348e-05
+  },
+  "antithesis_jo_por": {
+   "counts": [
+    3,
+    7,
+    25
+   ],
+   "chi2": 1.7975712791232208,
+   "p": 0.4070636817505201
+  },
+  "antithesis_as_as": {
+   "counts": [
+    2,
+    9,
+    34
+   ],
+   "chi2": 5.114996464092306,
+   "p": 0.07749838108660206
+  },
+  "antithesis_nga_njera_ane": {
+   "counts": [
+    0,
+    4,
+    5
+   ],
+   "chi2": 2.7119739928382414,
+   "p": 0.25769282699577145
+  },
+  "adversative_por": {
+   "counts": [
+    103,
+    257,
+    410
+   ],
+   "chi2": 30.051153482174463,
+   "p": 2.981775444557452e-07
+  },
+  "contrastive_ndersa_kurse": {
+   "counts": [
+    14,
+    15,
+    70
+   ],
+   "chi2": 5.381516867734091,
+   "p": 0.06782947568678277
+  },
+  "concessive_megjithate": {
+   "counts": [
+    21,
+    16,
+    46
+   ],
+   "chi2": 8.43023199083363,
+   "p": 0.014770608344843315
+  },
+  "pron_1sg": {
+   "counts": [
+    19,
+    63,
+    405
+   ],
+   "chi2": 105.2408163589192,
+   "p": 1.403612063539816e-23
+  },
+  "verb_1sg_cognitive": {
+   "counts": [
+    61,
+    169,
+    722
+   ],
+   "chi2": 97.05186238173253,
+   "p": 8.422787706599683e-22
+  },
+  "pron_1pl": {
+   "counts": [
+    180,
+    441,
+    843
+   ],
+   "chi2": 22.91753494615119,
+   "p": 1.0556513733410313e-05
+  },
+  "verb_1pl": {
+   "counts": [
+    201,
+    306,
+    666
+   ],
+   "chi2": 10.300939709147473,
+   "p": 0.005796680490053964
+  },
+  "pron_2pl": {
+   "counts": [
+    29,
+    115,
+    547
+   ],
+   "chi2": 107.07628196475142,
+   "p": 5.6063576559262e-24
+  },
+  "verb_2pl": {
+   "counts": [
+    32,
+    119,
+    621
+   ],
+   "chi2": 133.21615075997792,
+   "p": 1.1816270171241605e-29
+  },
+  "deontic_duhet": {
+   "counts": [
+    52,
+    83,
+    149
+   ],
+   "chi2": 8.538244309731047,
+   "p": 0.013994062382493006
+  },
+  "possibility_mund": {
+   "counts": [
+    60,
+    92,
+    249
+   ],
+   "chi2": 0.8411635927686585,
+   "p": 0.6566646635303054
+  },
+  "future_do_te": {
+   "counts": [
+    431,
+    623,
+    759
+   ],
+   "chi2": 287.41989117532745,
+   "p": 3.868687379025106e-63
+  },
+  "intensifier_shume": {
+   "counts": [
+    87,
+    154,
+    472
+   ],
+   "chi2": 8.813024904083303,
+   "p": 0.012197644104953753
+  },
+  "absolute_never_all": {
+   "counts": [
+    33,
+    55,
+    148
+   ],
+   "chi2": 0.4024372099898471,
+   "p": 0.8177336513527461
+  },
+  "address_zoti_name": {
+   "counts": [
+    3,
+    46,
+    261
+   ],
+   "chi2": 79.24688988445406,
+   "p": 6.190938753536691e-18
+  },
+  "address_honorific": {
+   "counts": [
+    19,
+    60,
+    188
+   ],
+   "chi2": 14.399479934642681,
+   "p": 0.0007467799703274131
+  },
+  "address_kolege": {
+   "counts": [
+    7,
+    10,
+    66
+   ],
+   "chi2": 12.307093477583019,
+   "p": 0.0021259282705459468
+  },
+  "mention_berisha": {
+   "counts": [
+    0,
+    3,
+    205
+   ],
+   "chi2": 124.67992227575535,
+   "p": 8.435267815144512e-28
+  },
+  "europe_integration": {
+   "counts": [
+    48,
+    268,
+    661
+   ],
+   "chi2": 70.82868808600497,
+   "p": 4.1662545589733506e-16
+  },
+  "reform": {
+   "counts": [
+    49,
+    79,
+    313
+   ],
+   "chi2": 19.375572935326318,
+   "p": 6.203657250831383e-05
+  },
+  "democracy": {
+   "counts": [
+    30,
+    153,
+    119
+   ],
+   "chi2": 107.49106365709748,
+   "p": 4.556297779518891e-24
+  },
+  "law_state": {
+   "counts": [
+    81,
+    112,
+    615
+   ],
+   "chi2": 81.44515534245917,
+   "p": 2.0625725258629805e-18
+  }
+ },
+ "we_I_ratio": {
+  "T1": 4.7625,
+  "T2": 3.2198275862068964,
+  "T3": 1.338952972493345
+ },
+ "sentence_kinds": {
+  "T1": {
+   "address": 15,
+   "declarative": 1026,
+   "exclamation": 10,
+   "question": 1
+  },
+  "T2": {
+   "address": 52,
+   "declarative": 1619,
+   "exclamation": 18,
+   "question": 1
+  },
+  "T3": {
+   "address": 132,
+   "declarative": 4110,
+   "exclamation": 114,
+   "question": 27
+  }
+ },
+ "question_per_1000_sent": {
+  "T1": 0.9505703422053232,
+  "T2": 0.591715976331361,
+  "T3": 6.160164271047228
+ },
+ "question_marks_total": 32,
+ "exclamations": {
+  "total": 142,
+  "formulaic_thanks": 115
+ },
+ "question_examples": [
+  "Si është menduar kjo punë?",
+  "Çfarë kam parasysh me këtë?",
+  "Kështu, për shembull, pyetja themelore që shtrohet sot para nesh është: çfarë vlere juridike ka raporti apo votimi i këtij raporti sot në Kuvend?",
+  "Më pas unë besoj se pas vlerësimit që do të bëj ky komision, jo hetimi juaj i mbaruar, qytetarët e Tiranës dhe të gjithë shqiptarët do të kenë mundësi të kuptojnë më mirë se kush e shkaktoi masakrën urbane?",
+  "Kush i orientoi dhe i lejoi sipërmarrësit, që u ngritën me shpirtin e tyre më këmbë dhe mbajnë më këmbë një vend të tërë tani, që në kundërshtim me ligjet e kohës të investojnë paratë e pasigurta deri në piramida?",
+  "Kush e shkaktoi kaosin e konflikteve të pronësisë në këta vjet, duke rrezikuar seriozisht jo vetëm rezultatet e sipërmarrjes shqiptare, por dhe aftësitë e saj konkurruese tani që Shqipëria po hapet dhe po nënshkruan marrëveshje të tregtisë të lirë, në të cilat duhet konkurruar?",
+  "Prandaj, zoti Berisha, po ju ridrejtohem personalisht si drejtues legjendar i opozitës: a e keni menduar vërtet sa kohë po vazhdoni t'i humbni, jo vetëm gjashtë javë, Shqipërisë dhe shqiptarëve, tempullit të demokracisë gjithashtu, Kuvendit, me gërr-mërret tuaja?",
+  "A e dini listën e gjatë të ligjeve që presin të merren në shqyrtim nga Kuvendi, që edhe ju të nënshkruani Marrëveshjen e Stabilizim-Asocimit dhe të integroheni në BE?",
+  "A e dini se miratimi i këtyre ligjeve përbën një detyrim politik të të gjithëve përballë së ardhmes dhe atdheut për progresin dhe integrimin euroatlantik të vendit?",
+  "A e doni ju këtë zhvillim dhe integrim, zoti Berisha?",
+  "Shumë nga bashkëpunëtorët tuaj po ngazëllehen, e shikoni apo jo?",
+  "Ballafaqimi me akuzën në një gjykatë është pjesë organike e funksionimit të një shoqërie demokratike dhe të shtetit të së drejtës, apo jo avokat?",
+  "Po ju për 400 mijë euro që keni përfituar duke shitur televizionin “Koha”, a e keni paguar tatimin për këtë të ardhur?",
+  "A ju kujtohen tokat djerrë dhe tregu i letrave pa vlerë që piramidat e Berishës lanë pas, duke transformuar gati të gjithë shqiptarët në të përndjekur?",
+  "A ka sot logjikë dhe moral të pyetet më pse nuk veproi Berisha dhe shteti i tij kur vetë thelbi i regjimit që ai ndërtoi ishte piramidal?",
+  "Ku i keni çuar gati 1 miliard dollarë zoti Berisha, sepse asnjë qindarkë nuk mund të tërhiqej prej këtyre llogarive bankare pa firmën e presidentëve të çdo firme piramidale, miqve tuaj, që doni t'i riktheni dhe sot në pushtet?",
+  "Më lejoni t'ju pyes se në cilën anë të dritës jeni?",
+  "Cilët janë ata që demonstrojnë këtë shpirt?",
+  "Të nderuar opozitarë, e çfarë Dushku paskam bërë unë kur dushkarët janë shpërndarë në të katër anët e kësaj salle?",
+  "Kush e kujton, për shembull, se kush ishte kryetar i Gjykatës së Lartë ose i KQZ-së në kohën e Berishës?",
+  "Prandaj po e përsëris, në vëmendje të zotit Berisha: ku i ka çuar ai 1,1 miliardë dollarë?",
+  "A është e vërtetë se janë hapur gjyqe mes politikanëve, qeveritarëve dhe gazetarëve?",
+  "Prandaj jam këtu për t'u dhënë informacion, sepse për atë që sapo thashë pyetja shtrohet: në ç'raport janë veprimtaritë ligjore të medieve si sipërmarrje krahasuar me të tjera biznese?",
+  "- A ka lidhje Sali Berisha me një veturë “Mercedes-Benz” të blinduar, që ka qenë pronë e Arben Grorit, të dënuar me burg të përjetshëm për vrasje, dhe Elvis Gjetës, të dënuar me 7 vjet burg për drogë në Itali?",
+  "- A është e ligjshme dhe e moralshme që Pjetër Arbnori ka hipotekuar në emër të të birit 13-vjeçar 3 apartamente në plazhin e Kavajës në zonën kadastrale nr. 2291, me vlerë respektive prej 950 mijë, 1 milion dhe 1.5 milion lekë?",
+  "- Pse këto pasuri nuk janë në emër të vetë zotit Arbnori, siç janë deklaruar 3 autoveturat e tij, kur ky i fundit ka përfituar të ardhura nga burgu dhe nga shitja e librave?",
+  "- Pse zotit Arbnori dhe shumë zyrtarëve apo deputetëve të PD-së u lejohet t'u falen autoveturat, kurse zotit Nano jo?",
+  "- A është korrekte në deklarimin e saj zonja Topalli?",
+  "Cili është statusi i saj i pronësisë mbi Dhomën e Tregtisë së Shkodrës, ndërtuar nga shteti dhe privatizuar prej saj në kohën kur PD-ja ishte në pushtet?"
+ ],
+ "recurrence_speech_shuffle": {
+  "k": 20,
+  "observed_rate": 0.02788273848964023,
+  "null_rate_mean": 0.009779104958722086,
+  "null_rate_sd": 0.00034046310173206087,
+  "ratio": 2.8512566955088583,
+  "z": 53.17355519237858
+ },
+ "recurrence_paragraph_shuffle": {
+  "k": 20,
+  "observed_rate": 0.024408588671406314,
+  "null_rate_mean": 0.020974134894909954,
+  "null_rate_sd": 0.00036442268222087337,
+  "ratio": 1.1637471005934,
+  "z": 9.424368855324897
+ },
+ "recurrence_by_term": {
+  "T1": 0.024345283498601576,
+  "T2": 0.02672710788757933,
+  "T3": 0.02916270566727605
+ },
+ "alliteration": {
+  "observed": 5684,
+  "pairs": 98375,
+  "null_mean": 5931.62,
+  "null_sd": 71.56425271507183,
+  "ratio": 0.958254237459581,
+  "z": -3.4601073944820184
+ },
+ "burstiness": {
+  "n_words": 500,
+  "median_B": 0.15103741222243366,
+  "most_bursty": [
+   [
+    "kosovës",
+    90,
+    0.5849950542534033
+   ],
+   [
+    "lekë",
+    179,
+    0.5678937788529914
+   ],
+   [
+    "piramidale",
+    57,
+    0.5485630825436733
+   ],
+   [
+    "punonjësve",
+    63,
+    0.5040675094271407
+   ],
+   [
+    "sipërmarrjes",
+    59,
+    0.4683260458265543
+   ],
+   [
+    "dollarë",
+    152,
+    0.466247030890197
+   ],
+   [
+    "sigurimin",
+    45,
+    0.46326069241278656
+   ],
+   [
+    "amerikanë",
+    79,
+    0.4474909213817048
+   ],
+   [
+    "ministër",
+    58,
+    0.4459409937937681
+   ],
+   [
+    "medies",
+    50,
+    0.44091249688030687
+   ],
+   [
+    "miliardë",
+    92,
+    0.44001731017765705
+   ],
+   [
+    "berisha",
+    149,
+    0.43302200101976507
+   ],
+   [
+    "luftës",
+    87,
+    0.42808186465539694
+   ],
+   [
+    "berishës",
+    52,
+    0.4033009470373522
+   ],
+   [
+    "program",
+    55,
+    0.4011343115604956
+   ]
+  ],
+  "least_bursty": [
+   [
+    "radhë",
+    51,
+    -0.01177266915106538
+   ],
+   [
+    "shpejt",
+    54,
+    -0.012984602090157555
+   ],
+   [
+    "cila",
+    84,
+    -0.01839511016117643
+   ],
+   [
+    "madhe",
+    76,
+    -0.02097590558086578
+   ],
+   [
+    "vërtetë",
+    49,
+    -0.02117882244900663
+   ],
+   [
+    "drejt",
+    73,
+    -0.021548399296343747
+   ],
+   [
+    "politikën",
+    45,
+    -0.022548554767555268
+   ],
+   [
+    "iu",
+    48,
+    -0.03045509992828345
+   ],
+   [
+    "pasi",
+    71,
+    -0.035110175440473616
+   ],
+   [
+    "rrugën",
+    52,
+    -0.03797099297163497
+   ],
+   [
+    "mbeten",
+    41,
+    -0.04017799073840849
+   ],
+   [
+    "mundësi",
+    56,
+    -0.05825570019822883
+   ],
+   [
+    "cilën",
+    72,
+    -0.07069363191805939
+   ],
+   [
+    "nivel",
+    49,
+    -0.07853644143975638
+   ],
+   [
+    "njëjtën",
+    42,
+    -0.0914054025700374
+   ]
+  ]
+ },
+ "burstiness_function_words_median": 0.08365380233577624
+}
