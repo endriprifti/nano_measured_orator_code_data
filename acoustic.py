@@ -1,4 +1,4 @@
-"""Appendix C — acoustic pilot on a recording of Nano's intervention at the meeting of the KPD of the
+"""Appendix C — acoustic pilot on a recording of Nano's intervention at the meeting of the General Steering Council (KPD) of the
 Socialist Party, 3 December 2001 (segment from 2:40 to the end, as indicated by the author).
 
 Pauses and inter-pause units (IPUs) from the intensity contour; syllable nuclei after de Jong & Wempe (2009);

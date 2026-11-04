@@ -830,269 +830,311 @@
  "glm": {
   "pron_1sg": {
    "irr": {
-    "Intercept": 0.00038558037458495946,
-    "C(term, Treatment('T1'))[T.T2]": 2.3568874425300446,
-    "C(term, Treatment('T1'))[T.T3]": 4.2337957947564995,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 1.8928619539093279,
-    "C(genre2, Treatment('expository'))[T.debate]": 2.4684997285873322
+    "Intercept": 0.0004044598210370326,
+    "C(term, Treatment('T1'))[T.T2]": 2.265904125646838,
+    "C(term, Treatment('T1'))[T.T3]": 4.119351055171324,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 1.8580721602803376,
+    "C(genre2, Treatment('expository'))[T.debate]": 2.422294368353484
    },
    "p": {
-    "Intercept": 4.4603063552837045e-93,
-    "C(term, Treatment('T1'))[T.T2]": 0.046907712682017474,
-    "C(term, Treatment('T1'))[T.T3]": 0.000243839784828432,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.006929394612165325,
-    "C(genre2, Treatment('expository'))[T.debate]": 0.001307501698596028
+    "Intercept": 6.251633618726129e-73,
+    "C(term, Treatment('T1'))[T.T2]": 0.0921604950153088,
+    "C(term, Treatment('T1'))[T.T3]": 0.0020394927038075886,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.020203175973121632,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.00519682957223634
    },
    "ci": {
     "Intercept": [
-     0.00018161610439827318,
-     0.0008186070599722178
+     0.00017325830555830536,
+     0.0009441841550173627
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     1.0117907480590667,
-     5.490185028289591
+     0.8746051173604349,
+     5.870445306927525
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     1.958398452317432,
-     9.15290083613301
+     1.6754905963557025,
+     10.127811610909582
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     1.1911627218063972,
-     3.007923527965964
+     1.101552324415202,
+     3.1341517568325106
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     1.4227993685184293,
-     4.2827478313972875
+     1.3024189955805696,
+     4.505086325419793
     ]
-   }
+   },
+   "alpha": 0.3710510249048299,
+   "alpha_ci": [
+    0.1874403470677934,
+    0.5546617027418663
+   ],
+   "converged": true
   },
   "pron_2pl": {
    "irr": {
-    "Intercept": 0.0008254438244912113,
-    "C(term, Treatment('T1'))[T.T2]": 2.2552204156649105,
-    "C(term, Treatment('T1'))[T.T3]": 2.7501137159376876,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 1.635704680916306,
-    "C(genre2, Treatment('expository'))[T.debate]": 4.404939729131506
+    "Intercept": 0.000938004172029209,
+    "C(term, Treatment('T1'))[T.T2]": 2.075471487789416,
+    "C(term, Treatment('T1'))[T.T3]": 2.5157840615235005,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 1.6034931255269764,
+    "C(genre2, Treatment('expository'))[T.debate]": 4.1999187631826675
    },
    "p": {
-    "Intercept": 6.8943135638004e-115,
-    "C(term, Treatment('T1'))[T.T2]": 0.02212796734179017,
-    "C(term, Treatment('T1'))[T.T3]": 0.001707972298303185,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.024113529255101573,
-    "C(genre2, Treatment('expository'))[T.debate]": 1.9282244214439542e-09
+    "Intercept": 2.2293945526146258e-70,
+    "C(term, Treatment('T1'))[T.T2]": 0.10162448415037231,
+    "C(term, Treatment('T1'))[T.T3]": 0.02578102140168632,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.07969819517306802,
+    "C(genre2, Treatment('expository'))[T.debate]": 2.2718998012868937e-06
    },
    "ci": {
     "Intercept": [
-     0.00044815463779679187,
-     0.0015203625042024616
+     0.0004341117353789258,
+     0.0020267865506473815
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     1.1237229338591421,
-     4.526043715923076
+     0.8658499313632243,
+     4.974975155157435
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     1.4616129319050497,
-     5.1745063864007435
+     1.1179918714188772,
+     5.661194509565744
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     1.0665626260143657,
-     2.508553870080459
+     0.9456184482514675,
+     2.7190567277601563
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     2.7146958343065823,
-     7.147575714403155
+     2.3166382680340165,
+     7.614187273312719
     ]
-   }
+   },
+   "alpha": 0.46115310561352413,
+   "alpha_ci": [
+    0.2685889932879386,
+    0.6537172179391096
+   ],
+   "converged": true
   },
   "pron_1pl": {
    "irr": {
-    "Intercept": 0.005039957513724502,
-    "C(term, Treatment('T1'))[T.T2]": 1.5538696107596415,
-    "C(term, Treatment('T1'))[T.T3]": 0.8101520626696144,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 1.2214867047561917,
-    "C(genre2, Treatment('expository'))[T.debate]": 2.4568202588786905
+    "Intercept": 0.004928676909900525,
+    "C(term, Treatment('T1'))[T.T2]": 1.5924774976059175,
+    "C(term, Treatment('T1'))[T.T3]": 0.8436636516363463,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 1.2280253031325037,
+    "C(genre2, Treatment('expository'))[T.debate]": 2.4167488223887443
    },
    "p": {
-    "Intercept": 9.890981133860446e-109,
-    "C(term, Treatment('T1'))[T.T2]": 0.12432877986364627,
-    "C(term, Treatment('T1'))[T.T3]": 0.41901842013798274,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.3130754586423782,
-    "C(genre2, Treatment('expository'))[T.debate]": 6.671786118071977e-05
+    "Intercept": 1.6033504059394936e-147,
+    "C(term, Treatment('T1'))[T.T2]": 0.05466365105651926,
+    "C(term, Treatment('T1'))[T.T3]": 0.4456437966140737,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.21331499475069193,
+    "C(genre2, Treatment('expository'))[T.debate]": 3.855411825585145e-06
    },
    "ci": {
     "Intercept": [
-     0.00315606493522252,
-     0.008048367907980683
+     0.0032953425971245127,
+     0.0073715722618289976
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     0.8857313167388954,
-     2.7260081264057794
+     0.9907390068835276,
+     2.5596898504666816
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     0.4861955627308941,
-     1.3499637079392965
+     0.5450556783838333,
+     1.3058635756311492
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     0.828082835940115,
-     1.8017880641158948
+     0.8886174410199025,
+     1.6970701626144449
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     1.5794423814167369,
-     3.8215802332862454
+     1.6619472525949368,
+     3.5143563439801415
     ]
-   }
+   },
+   "alpha": 0.18605620356014752,
+   "alpha_ci": [
+    0.093478644944919,
+    0.27863376217537605
+   ],
+   "converged": true
   },
   "future_do_te": {
    "irr": {
-    "Intercept": 0.011429541929214027,
-    "C(term, Treatment('T1'))[T.T2]": 0.8455573758034378,
-    "C(term, Treatment('T1'))[T.T3]": 0.5806557288128742,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.6709241125955492,
-    "C(genre2, Treatment('expository'))[T.debate]": 0.903907277244057
+    "Intercept": 0.01161864450975041,
+    "C(term, Treatment('T1'))[T.T2]": 0.8363631311497943,
+    "C(term, Treatment('T1'))[T.T3]": 0.5768010622997317,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.6653731150208122,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.8925523608699605
    },
    "p": {
-    "Intercept": 1.5076843997568897e-86,
-    "C(term, Treatment('T1'))[T.T2]": 0.5488053145394869,
-    "C(term, Treatment('T1'))[T.T3]": 0.03179884718143984,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.03959741162160225,
-    "C(genre2, Treatment('expository'))[T.debate]": 0.6574513492366073
+    "Intercept": 2.0674960999614315e-115,
+    "C(term, Treatment('T1'))[T.T2]": 0.44992074325501485,
+    "C(term, Treatment('T1'))[T.T3]": 0.00750525624903056,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.009306099565041573,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.5544684994372013
    },
    "ci": {
     "Intercept": [
-     0.007328219092922336,
-     0.01782621767379055
+     0.007926538062156414,
+     0.017030499214839893
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     0.48861869038264627,
-     1.4632417667357178
+     0.5261136043890103,
+     1.3295670009503742
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     0.353505883690654,
-     0.9537636881264843
+     0.38533263370120163,
+     0.8634084849612921
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     0.4587725245642301,
-     0.9811816112782574
+     0.4894596228305228,
+     0.9045105286361749
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     0.5783532243224664,
-     1.4127151565756835
+     0.6122646047271483,
+     1.3011526564557196
     ]
-   }
+   },
+   "alpha": 0.20537992567745836,
+   "alpha_ci": [
+    0.11318381643314915,
+    0.29757603492176754
+   ],
+   "converged": true
   },
   "address_zoti_name": {
    "irr": {
-    "Intercept": 5.759916434963288e-05,
-    "C(term, Treatment('T1'))[T.T2]": 9.127755661992536,
-    "C(term, Treatment('T1'))[T.T3]": 14.244641933120178,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 2.2863331250960637,
-    "C(genre2, Treatment('expository'))[T.debate]": 4.425167391367524
+    "Intercept": 3.163626663030293e-05,
+    "C(term, Treatment('T1'))[T.T2]": 12.481099300316906,
+    "C(term, Treatment('T1'))[T.T3]": 15.3276018579068,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 3.6463900427696188,
+    "C(genre2, Treatment('expository'))[T.debate]": 6.586270028770299
    },
    "p": {
-    "Intercept": 2.3052594407669002e-46,
-    "C(term, Treatment('T1'))[T.T2]": 0.0017715929565813508,
-    "C(term, Treatment('T1'))[T.T3]": 8.271971028347199e-05,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.0028691565070176873,
-    "C(genre2, Treatment('expository'))[T.debate]": 2.120602910566024e-06
+    "Intercept": 5.052862587532088e-34,
+    "C(term, Treatment('T1'))[T.T2]": 0.004211154468598329,
+    "C(term, Treatment('T1'))[T.T3]": 0.0007073590833942122,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.0029960538244510086,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.00017282209303945946
    },
    "ci": {
     "Intercept": [
-     1.5107391582308254e-05,
-     0.00021960533131750029
+     5.955546183738702e-06,
+     0.00016805400133347887
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     2.2816076404399173,
-     36.51632381848644
+     2.21557323450231,
+     70.31039972793494
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     3.795217804574225,
-     53.464605788433715
+     3.15801528949607,
+     74.39336329242317
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     1.3275281325353234,
-     3.9376334337475463
+     1.5518368869324655,
+     8.568014110227848
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     2.3929310601501412,
-     8.183314081933398
+     2.4627880181404214,
+     17.61375829846374
     ]
-   }
+   },
+   "alpha": 0.8389756780657986,
+   "alpha_ci": [
+    0.41239709598954116,
+    1.2655542601420562
+   ],
+   "converged": true
   },
   "antithesis_jo_vetem_por": {
    "irr": {
-    "Intercept": 0.000461381216106817,
-    "C(term, Treatment('T1'))[T.T2]": 2.827416878771119,
-    "C(term, Treatment('T1'))[T.T3]": 1.7053574946090213,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.8587587224280628,
-    "C(genre2, Treatment('expository'))[T.debate]": 1.3737384607000596
+    "Intercept": 0.0004388074610247687,
+    "C(term, Treatment('T1'))[T.T2]": 2.8677069422083123,
+    "C(term, Treatment('T1'))[T.T3]": 1.6390062621245105,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.921472920491638,
+    "C(genre2, Treatment('expository'))[T.debate]": 1.4771883957533338
    },
    "p": {
-    "Intercept": 3.5989345269755513e-87,
-    "C(term, Treatment('T1'))[T.T2]": 0.016857540872164636,
-    "C(term, Treatment('T1'))[T.T3]": 0.19874447582405708,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.5808469449277751,
-    "C(genre2, Treatment('expository'))[T.debate]": 0.34014688305749086
+    "Intercept": 2.619578421601318e-112,
+    "C(term, Treatment('T1'))[T.T2]": 0.004804640398350413,
+    "C(term, Treatment('T1'))[T.T3]": 0.17870781251144363,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.7410449268141429,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.19119863043552388
    },
    "ci": {
     "Intercept": [
-     0.00021561653980844538,
-     0.0009872741059907663
+     0.00022389745813380555,
+     0.0008600007764980119
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     1.2055583976278634,
-     6.631189515240325
+     1.3788612931255155,
+     5.964155457398249
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     0.7555677072543975,
-     3.8490848093378887
+     0.7976814822180431,
+     3.367686961735259
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     0.5001878334486356,
-     1.4743792112288736
+     0.5673282918403917,
+     1.496686055343547
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     0.7153972389598189,
-     2.637915350568698
+     0.8229237641550432,
+     2.6516254015204157
     ]
-   }
+   },
+   "alpha": 0.12709429788277807,
+   "alpha_ci": [
+    -0.04867736913182938,
+    0.3028659648973855
+   ],
+   "converged": true
   },
   "adversative_por": {
    "irr": {
-    "Intercept": 0.002348005607906559,
-    "C(term, Treatment('T1'))[T.T2]": 1.8747775197714325,
-    "C(term, Treatment('T1'))[T.T3]": 1.0046222162880354,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 1.2882549042641207,
-    "C(genre2, Treatment('expository'))[T.debate]": 1.6118813551096294
+    "Intercept": 0.0023092066539867,
+    "C(term, Treatment('T1'))[T.T2]": 1.840788044767801,
+    "C(term, Treatment('T1'))[T.T3]": 0.9116189284021916,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 1.4508284394663045,
+    "C(genre2, Treatment('expository'))[T.debate]": 1.8289050741715431
    },
    "p": {
-    "Intercept": 8.375159078676216e-113,
-    "C(term, Treatment('T1'))[T.T2]": 0.04669464382311947,
-    "C(term, Treatment('T1'))[T.T3]": 0.9874323469499714,
-    "C(genre2, Treatment('expository'))[T.adversarial]": 0.23476549207336794,
-    "C(genre2, Treatment('expository'))[T.debate]": 0.05771963366883734
+    "Intercept": 8.312712528037568e-256,
+    "C(term, Treatment('T1'))[T.T2]": 0.002083497931192307,
+    "C(term, Treatment('T1'))[T.T3]": 0.6191059111746928,
+    "C(genre2, Treatment('expository'))[T.adversarial]": 0.008641202743486743,
+    "C(genre2, Treatment('expository'))[T.debate]": 0.00043733705933323395
    },
    "ci": {
     "Intercept": [
-     0.001387973989584502,
-     0.00397207035299778
+     0.0016300695832700569,
+     0.00327129309419978
     ],
     "C(term, Treatment('T1'))[T.T2]": [
-     1.0092357771315157,
-     3.482625991153605
+     1.2481364731344493,
+     2.7148478541377052
     ],
     "C(term, Treatment('T1'))[T.T3]": [
-     0.5659816280972533,
-     1.7832130008397744
+     0.6329526271976619,
+     1.3129719901796628
     ],
     "C(genre2, Treatment('expository'))[T.adversarial]": [
-     0.8482952090610494,
-     1.9563952273142238
+     1.0989749434334668,
+     1.9153331687326731
     ],
     "C(genre2, Treatment('expository'))[T.debate]": [
-     0.9844893747751536,
-     2.639095524564139
+     1.30633394145054,
+     2.5605196835169743
     ]
-   }
+   },
+   "alpha": 0.07066245062417131,
+   "alpha_ci": [
+    0.017520122881135212,
+    0.12380477836720741
+   ],
+   "converged": true
   }
  },
  "ols_log_msl": {

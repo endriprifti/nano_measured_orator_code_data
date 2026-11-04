@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Reproduces every number and figure of the paper from the official PDF edition.
-# Usage: bash run_all.sh path/to/fatos_nano.pdf [path/to/Mbledhja_e_KPD.aac]
+# Usage: bash run_all.sh path/to/fatos_nano.pdf [path/to/Mbledhja_e_KPD.aac [folder with FN1.mp4 FN2.mp4 FN3.mp4 FN5.mp4]]
 set -euo pipefail
 PDF="${1:?give the path to the PDF of 'Fjalime të z. Fatos Nano në Kuvendin e Shqipërisë' (Tiranë 2010)}"
 python3 parse.py "$PDF" corpus.json        # typography-based segmentation (sessions, speech units, paragraphs)
@@ -20,4 +20,17 @@ if [ -n "${2:-}" ]; then
   ffmpeg -hide_banner -loglevel error -y -ss 160 -i "$2" -ac 1 -ar 16000 nano_seg.wav
   python3 acoustic.py nano_seg.wav
   python3 make_figs.py fig9
+fi
+
+# Appendix C.2 (optional): broadcast clips FN1-FN5 supplied by the author (FN4 has an empty audio track and is skipped).
+# Needs the pretrained components fetched by get_models.sh (Silero VAD, GE2E speaker encoder, Whisper large-v3-turbo).
+if [ -n "${3:-}" ]; then
+  mkdir -p ../audio ../video
+  cp nano_seg.wav ../audio/nano_seg.wav
+  for c in FN1 FN2 FN3 FN5; do
+    ffmpeg -hide_banner -loglevel error -y -i "$3/$c.mp4" -vn -ac 1 -ar 16000 "../video/$c.wav"
+  done
+  [ -f silero_vad.onnx ] || bash get_models.sh
+  python3 video.py > results/video.log      # ~15 min on 2 CPU cores, mostly automatic transcription
+  python3 make_figs.py fig10
 fi

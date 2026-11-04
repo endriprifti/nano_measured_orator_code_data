@@ -3,7 +3,7 @@
 Input : corpus.json (from parse.py)
 Output: units.json  -- one record per speech unit with sentences -> clauses -> tokens
 """
-import json, re, unicodedata
+import json, re, unicodedata, os, collections
 
 ABBR = {"nr", "dr", "z", "zj", "prof", "fq", "shek", "p.sh", "sh.a", "sh", "pra"}  # 'pra' never abbreviated; filtered below
 ABBR.discard("pra")
@@ -98,6 +98,7 @@ def genre(summary, intertitle, first):
 
 def main():
   corpus = json.load(open("corpus.json", encoding="utf-8"))
+  residual = []
   units = []
   for c in corpus:
       for j, sp in enumerate(c["speeches"]):
@@ -111,6 +112,7 @@ def main():
                       continue
                   # residual deputies' questions set in roman type ('Pyetje: ...?')
                   if re.match(r"^(\w+\s+){0,4}?[Pp]yetj\w*\b[^:]{0,70}:", s) and s.rstrip().endswith("?"):
+                      residual.append(len([t for t in toks if is_word(t)]))
                       continue
                   kind = "address" if (s.rstrip().endswith(",") and len(toks) <= 8) else (
                          "question" if s.rstrip().rstrip("”\")").endswith("?") else (
@@ -122,6 +124,15 @@ def main():
                         "summary": sp["intertitle"] or c["summary"], "sentences": sents})
 
   json.dump(units, open("units.json", "w", encoding="utf-8"), ensure_ascii=False)
+  # words removed at extraction (parse.py log): read-aloud questions, question frames, stage directions, editorial lines
+  from collections import Counter as _Counter
+  rc, rw = _Counter(), _Counter()
+  for line in open("corpus_removed.log", encoding="utf-8"):
+      kind, _, txt = line.rstrip("\n").partition("\t"); rc[kind] += 1
+      ws = [t for t in tokens(norm(txt))]; rw[kind + "_tokens"] += len(ws); rw[kind + "_words"] += sum(1 for t in ws if is_word(t))
+  os.makedirs("results", exist_ok=True)
+  json.dump({"items": dict(rc), "counts": dict(rw), "residual_roman_questions": len(residual),
+             "residual_roman_question_words": sum(residual)}, open("results/removed_counts.json", "w"), indent=1)
   import collections
   nt = sum(len(s["tokens"]) for u in units for s in u["sentences"])
   nw = sum(sum(is_word(t) for t in s["tokens"]) for u in units for s in u["sentences"])

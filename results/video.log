@@ -1,0 +1,382 @@
+{
+ "KPD": {
+  "label": "Party council (KPD), 3 Dec 2001",
+  "short": "KPD 2001",
+  "spans": null,
+  "speech_time_s": 1626.4320000000002,
+  "n_ipus": 885,
+  "n_pauses": 884,
+  "pause_median": 0.7359999999999935,
+  "pause_median_ci": [
+   0.7039999999999509,
+   0.7680000000000291
+  ],
+  "pause_mean": 0.8549502262443436,
+  "ipu_dur_median": 1.5679999999999836,
+  "ipu_dur_ci": [
+   1.4719999999999742,
+   1.6319999999999482
+  ],
+  "detected_nuclei": 7337,
+  "artic_detected": 4.511101601542517,
+  "syllables_est": 9882.938163048026,
+  "syllable_source": "detector, calibrated on a transcribed sample",
+  "artic_est": 6.076453342683878,
+  "artic_est_ci": [
+   5.709533571121917,
+   6.483522273680748
+  ],
+  "ipu_syl_est_median": 9.428999201490551,
+  "ipu_syl_est_ci": [
+   8.981514959537703,
+   9.931167930178779
+  ],
+  "f0_median_hz": 124.35764777720128,
+  "f0_median_ci": [
+   124.18328571109515,
+   124.55435323688783
+  ],
+  "f0_range_st": 12.053324463913308,
+  "f0_sd_st": 4.071075502257807,
+  "decl_median": -1.1216087843290699,
+  "decl_ci": [
+   -1.2458993427664293,
+   -0.9606748132531637
+  ],
+  "decl_share_negative": 0.7415730337078652,
+  "decl_n": 623,
+  "pause_share_ge_1s": 0.26018099547511314,
+  "ci_note": "includes the uncertainty of the calibration ratio",
+  "f0_ipu_median_hz": 123.3553984032385,
+  "f0_ipu_median_ci_hz": [
+   121.89944709286374,
+   124.77993396393772
+  ]
+ },
+ "FN1": {
+  "label": "TV interview, 19 May 2000",
+  "short": "Interview 2000",
+  "spans": [
+   [
+    42.8,
+    85.8
+   ],
+   [
+    105.6,
+    131.0
+   ]
+  ],
+  "speech_time_s": 49.152,
+  "n_ipus": 23,
+  "n_pauses": 21,
+  "pause_median": 0.8960000000000008,
+  "pause_median_ci": [
+   0.5120000000000005,
+   1.0559999999999974
+  ],
+  "pause_mean": 0.8137142857142857,
+  "ipu_dur_median": 1.6640000000000015,
+  "ipu_dur_ci": [
+   1.152000000000001,
+   2.495999999999995
+  ],
+  "detected_nuclei": 149,
+  "artic_detected": 3.0314127604166665,
+  "syllables_est": 185.60553633217992,
+  "syllable_source": "automatic transcript, bias-corrected",
+  "artic_est": 3.7761543036332177,
+  "artic_est_ci": [
+   3.337233015119561,
+   4.299334146684233
+  ],
+  "ipu_syl_est_median": 6.228373702422145,
+  "ipu_syl_est_ci": [
+   3.737024221453287,
+   8.719723183391004
+  ],
+  "f0_median_hz": 89.5482951066302,
+  "f0_median_ci": [
+   88.99823915186563,
+   90.2234815680885
+  ],
+  "f0_range_st": 10.199398374534212,
+  "f0_sd_st": 3.2074867064100925,
+  "decl_median": -0.8496433614949552,
+  "decl_ci": [
+   -1.2841940556305247,
+   0.14739552339481204
+  ],
+  "decl_share_negative": 0.631578947368421,
+  "decl_n": 19,
+  "pause_share_ge_1s": 0.3333333333333333,
+  "f0_ipu_median_hz": 87.8112371044378,
+  "f0_ipu_median_ci_hz": [
+   81.63705762477353,
+   92.85024101385766
+  ]
+ },
+ "FN2": {
+  "label": "Parliament, government programme, 29 Jul 2002 (S18)",
+  "short": "Parliament 2002 (S18)",
+  "spans": [
+   [
+    26.8,
+    47.55
+   ],
+   [
+    48.05,
+    72.2
+   ]
+  ],
+  "speech_time_s": 36.57600000000001,
+  "n_ipus": 13,
+  "n_pauses": 11,
+  "pause_median": 0.73599999999999,
+  "pause_median_ci": [
+   0.5439999999999969,
+   0.7680000000000007
+  ],
+  "pause_mean": 0.7214545454545455,
+  "ipu_dur_median": 2.5919999999999987,
+  "ipu_dur_ci": [
+   2.2080000000000055,
+   3.0720000000000027
+  ],
+  "detected_nuclei": 160,
+  "artic_detected": 4.37445319335083,
+  "syllables_est": 210.0,
+  "syllable_source": "exact transcript",
+  "artic_est": 5.741469816272964,
+  "artic_est_ci": [
+   5.319422508477096,
+   6.086257716370134
+  ],
+  "ipu_syl_est_median": 18.0,
+  "ipu_syl_est_ci": [
+   13.0,
+   18.0
+  ],
+  "f0_median_hz": 124.10383311859829,
+  "f0_median_ci": [
+   123.22554934821906,
+   124.98755212499258
+  ],
+  "f0_range_st": 10.85505299090248,
+  "f0_sd_st": 3.0964094998573732,
+  "decl_median": -1.3062192320342403,
+  "decl_ci": [
+   -1.6020314645978317,
+   -0.2053037947895303
+  ],
+  "decl_share_negative": 0.7692307692307693,
+  "decl_n": 13,
+  "pause_share_ge_1s": 0.18181818181818182,
+  "ipu_syllable_source": "exact (aligned printed text)",
+  "f0_ipu_median_hz": 121.19428680657067,
+  "f0_ipu_median_ci_hz": [
+   118.42604696353172,
+   133.63046638477306
+  ]
+ },
+ "FN3": {
+  "label": "Parliament, debate, 3 Jun 2002",
+  "short": "Parliament 2002 (debate)",
+  "spans": [
+   [
+    24.0,
+    82.9
+   ]
+  ],
+  "speech_time_s": 39.360000000000014,
+  "n_ipus": 22,
+  "n_pauses": 21,
+  "pause_median": 0.8320000000000007,
+  "pause_median_ci": [
+   0.607999999999997,
+   1.152000000000001
+  ],
+  "pause_mean": 0.9188571428571419,
+  "ipu_dur_median": 1.3760000000000012,
+  "ipu_dur_ci": [
+   0.8639999999999972,
+   2.272000000000002
+  ],
+  "detected_nuclei": 159,
+  "artic_detected": 4.039634146341462,
+  "syllables_est": 212.41522491349482,
+  "syllable_source": "automatic transcript, bias-corrected",
+  "artic_est": 5.3967282752412284,
+  "artic_est_ci": [
+   5.025970093576011,
+   5.79741418043052
+  ],
+  "ipu_syl_est_median": 8.683641270048529,
+  "ipu_syl_est_ci": [
+   4.007834432330091,
+   12.023503296990272
+  ],
+  "f0_median_hz": 128.19322583585043,
+  "f0_median_ci": [
+   126.7969468466077,
+   129.623838364514
+  ],
+  "f0_range_st": 13.902078631919698,
+  "f0_sd_st": 4.102022702661617,
+  "decl_median": -1.28403168425953,
+  "decl_ci": [
+   -2.4489879432095405,
+   -0.016873607544407598
+  ],
+  "decl_share_negative": 0.7142857142857143,
+  "decl_n": 14,
+  "pause_share_ge_1s": 0.3333333333333333,
+  "f0_ipu_median_hz": 131.802726974175,
+  "f0_ipu_median_ci_hz": [
+   129.24601006525776,
+   144.22994556140347
+  ]
+ },
+ "FN5": {
+  "label": "Address, 1991",
+  "short": "Address 1991",
+  "spans": [
+   [
+    0.0,
+    29.0
+   ]
+  ],
+  "speech_time_s": 15.328000000000001,
+  "n_ipus": 11,
+  "n_pauses": 10,
+  "pause_median": 1.3600000000000003,
+  "pause_median_ci": [
+   0.28800000000000026,
+   2.031999999999999
+  ],
+  "pause_mean": 1.3215999999999999,
+  "ipu_dur_median": 0.7360000000000007,
+  "ipu_dur_ci": [
+   0.6720000000000006,
+   2.208000000000002
+  ],
+  "detected_nuclei": 57,
+  "artic_detected": 3.7186847599164925,
+  "syllabl
+{
+ "KPD_heldout_cos": {
+  "median": 0.7691571712493896,
+  "p5": 0.6916654109954834
+ },
+ "FN1": {
+  "cluster_cos": [
+   0.7099148035049438,
+   0.5150628685951233
+  ],
+  "single_speaker": false,
+  "n_windows": 195,
+  "cos_to_KPD_nano_cluster": 0.7099148035049438,
+  "cos_to_KPD_other_cluster": 0.5150628685951233,
+  "share_windows_nano": 0.441025641025641,
+  "agreement_with_spans": 1.0,
+  "nano_in_spans": 1.0,
+  "other_outside_spans": 1.0
+ },
+ "FN2": {
+  "cluster_cos": [
+   0.7191885709762573,
+   0.5536831021308899
+  ],
+  "single_speaker": false,
+  "n_windows": 187,
+  "cos_to_KPD_nano_cluster": 0.7191885709762573,
+  "cos_to_KPD_other_cluster": 0.5536831021308899,
+  "share_windows_nano": 0.43315508021390375,
+  "agreement_with_spans": 0.9358288770053476,
+  "nano_in_spans": 0.9726027397260274,
+  "other_outside_spans": 0.9122807017543859
+ },
+ "FN3": {
+  "cluster_cos": [
+   0.5934858322143555,
+   0.7020313143730164
+  ],
+  "single_speaker": false,
+  "n_windows": 117,
+  "cos_to_KPD_nano_cluster": 0.7020313143730164,
+  "cos_to_KPD_other_cluster": 0.5934858322143555,
+  "share_windows_nano": 0.5897435897435898,
+  "agreement_with_spans": 0.9829059829059829,
+  "nano_in_spans": 1.0,
+  "other_outside_spans": 0.96
+ },
+ "FN5": {
+  "cluster_cos": [
+   0.6964295506477356,
+   0.7048308849334717
+  ],
+  "single_speaker": true,
+  "n_windows": 24,
+  "cos_to_KPD_nano_cluster": 0.7006301879882812,
+  "cos_to_KPD_other_cluster": null,
+  "share_windows_nano": 1.0,
+  "agreement_with_spans": 1.0,
+  "nano_in_spans": 1.0,
+  "other_outside_spans": null
+ }
+}
+{
+ "FN5": {
+  "text_syllables_phonetic": 88,
+  "text_syllables_orthographic": 92,
+  "detected_nuclei": 57,
+  "words": 49,
+  "detection_ratio": 0.6477272727272727,
+  "asr_syllables": 86,
+  "asr_over_exact": 0.9772727272727273
+ },
+ "FN2": {
+  "text_syllables_phonetic": 210,
+  "text_syllables_orthographic": 218,
+  "detected_nuclei": 160,
+  "words": 95,
+  "detection_ratio": 0.7619047619047619,
+  "asr_syllables": 203,
+  "asr_over_exact": 0.9666666666666667
+ },
+ "KPD_asr_sample": {
+  "n_valid": 10,
+  "n_windows": 12,
+  "asr_syllables": 951,
+  "detected": 728,
+  "detection_ratio": 0.7655099894847529,
+  "ratio_ci": [
+   0.7268020368128887,
+   0.8036498421594013
+  ]
+ },
+ "FN1": {
+  "asr_syllables": 180,
+  "detected_nuclei": 149,
+  "detection_ratio_vs_asr": 0.8277777777777777
+ },
+ "FN3": {
+  "asr_syllables": 206,
+  "detected_nuclei": 159,
+  "detection_ratio_vs_asr": 0.7718446601941747
+ },
+ "asr_bias_pooled": 0.9697986577181208
+}
+26.82-33.18 31syl [comma] pause 1.216000000000001: Maxhoranca është e bindur se procesi politik i bashkëpunimit me opozitën është i pakthyeshëm  ||  Majoranza është e bindur se procesi politik i bashkunimit më opozitën është i pakthishëm.
+34.40-36.61 15syl [inside phrase] pause 0.5439999999999969: se zhvillimi ekonomik dhe social i vendit  ||  se zhvillimi ekonomik dhe sociali v
+37.15-38.91 9syl [comma] pause 1.1200000000000045: është dinamik dhe i qëndrueshëm  ||  është dinamik dhe i
+40.03-42.59 20syl [inside phrase] pause 0.7680000000000007: se forcimi i institucioneve të sigurisë kombëtare  ||  se forësimi instituzionëve të sigurisë
+43.36-44.64 2syl [inside phrase] pause 0.2880000000000038: lejon  ||  leyon tašma
+44.93-47.52 18syl [end of excerpt] pause None: tashmë çrrënjosjen e trafiqeve dhe të krimit të organizuar  ||  që rënjonsje në trafikeve dhe
+48.06-51.14 13syl [comma] pause 0.7359999999999971: Qeveria e re do të godasë pa mëshirë  ||  Qeveria e re do t'godas pa mëshirë.
+51.87-54.85 18syl [comma] pause 0.7040000000000006: me një vullnet institucional dhe politik të patundur  ||  me një vullnet institizional dhe politik të patundur
+55.55-58.21 18syl [comma] pause 0.7360000000000042: korrupsionin dhe abuzimin me funksionet publike  ||  korupcionin dhe abuzimin me funksionet publike
+58.94-60.83 10syl [phrase boundary, unpunctuated] pause 0.5760000000000005: si dhe çdo lidhje favorizuese  ||  si dhe zdo lidhje favorizuese
+61.41-64.64 18syl [phrase boundary, unpunctuated] pause 0.5120000000000005: të përfaqësuesve të politikës e të administratës  ||  të përfajshusve të politikës a të administ
+65.15-67.68 17syl [comma] pause 0.73599999999999: me botën e trafiqeve dhe të krimit të organizuar  ||  me botën e traficjeve dhe krimit organizuar
+68.42-71.87 21syl [end of excerpt] pause None: që deformojnë parametrat e zhvillimit dhe të integrimit kombëtar  ||  që deformojnë parametrat e shvillimit dhe t'integrim
+{'n_pauses': 11, 'pause_sites': {'comma': 6, 'inside phrase': 3, 'phrase boundary, unpunctuated': 2}, 'pause_dur_by_site': {'inside phrase': 0.5333333333333338, 'phrase boundary, unpunctuated': 0.5440000000000005, 'comma': 0.8746666666666663}, 'printed_punctuation_marks': 6, 'punctuation_marks_realised_as_pause': 6, 'printed_clause_syllables': [31, 24, 40, 13, 18, 18, 45, 21], 'ipu_syllables_exact': [31, 15, 9, 20, 2, 18, 13, 18, 18, 10, 18, 17, 21], 'departures': [{'printed': 'me një vullnet të patundur institucional dhe politik', 'spoken': 'me një vullnet institucional dhe politik të patundur'}], 'ipu_artic_cv': 0.2682572161617326, 'resets': [{'into': 2, 'opens_with_se': True, 'reset_st': 0.1606179720572971}, {'into': 3, 'opens_with_se': False, 'reset_st': -4.018738895902015}, {'into': 4, 'opens_with_se': True, 'reset_st': 6.92851413051866}, {'into': 5, 'opens_with_se': False, 'reset_st': -2.349519418209394}, {'into': 6, 'opens_with_se': False, 'reset_st': -1.7797961674302818}, {'into': 8, 'opens_with_se': False, 'reset_st': -0.8240391860965035}, {'into': 9, 'opens_with_se': False, 'reset_st': 4.701771762507693}, {'into': 10, 'opens_with_se': False, 'reset_st': 5.538951203838998}, {'into': 11, 'opens_with_se': False, 'reset_st': -4.551160642053196}, {'into': 12, 'opens_with_se': False, 'reset_st': -0.19444549910531395}, {'into': 13, 'opens_with_se': False, 'reset_st': 1.467254860959594}], 'reset_se_mean': 3.5445660512879784, 'reset_other_mean': -0.2233024423878243, 'ipu_syl_median': 18.0, 'clause_syl_median': 22.5, 'artic_exact': 5.741469816272964}

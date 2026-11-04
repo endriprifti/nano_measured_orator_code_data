@@ -4,6 +4,7 @@ import sys, collections, json, math
 import numpy as np
 from common import *
 
+HERE = os.path.dirname(os.path.abspath(__file__))
 def J(name): return json.load(open(os.path.join(RES, name), encoding="utf-8"))
 
 def fig1():
@@ -75,6 +76,7 @@ def fig3():
              ("Clause anaphora\n(clauses permuted in sentence)", Fg["anaphora_clause"]["observed"] / Fg["anaphora_clause"]["nullA_within_mean"], Fg["anaphora_clause"]["zA"]),
              ("Clause anaphora\n(openings redistributed)", Fg["anaphora_clause"]["ratioB"], Fg["anaphora_clause"]["zB"]),
              ("Clause epistrophe\n(clauses permuted in sentence)", Fg["epistrophe_clause"]["observed"] / Fg["epistrophe_clause"]["nullA_within_mean"], Fg["epistrophe_clause"]["zA"]),
+             ("Clause epistrophe\n(endings redistributed)", Fg["epistrophe_clause"]["ratioB"], Fg["epistrophe_clause"]["zB"]),
              ("Lexical recurrence, k = 20\n(words permuted in speech)", Fg["recurrence_speech_shuffle"]["ratio"], Fg["recurrence_speech_shuffle"]["z"]),
              ("Lexical recurrence, k = 20\n(words permuted in paragraph)", Fg["recurrence_paragraph_shuffle"]["ratio"], Fg["recurrence_paragraph_shuffle"]["z"]),
              ("Alliteration of adjacent\npolysyllables", Fg["alliteration"]["ratio"], Fg["alliteration"]["z"])]
@@ -122,7 +124,7 @@ def fig4():
                     label=f"{TERM_LABEL[term]} vs 1991" if k == order[0] else None)
     ax.axvline(1, color=DARK, lw=0.7)
     ax.set_xscale("log"); ax.set_yticks(y); ax.set_yticklabels([lab[k] for k in order], fontsize=7.2)
-    ax.set_xticks([0.25, 0.5, 1, 2, 4, 10, 30]); ax.set_xticklabels(["0.25", "0.5", "1", "2", "4", "10", "30"])
+    ax.set_xticks([0.25, 0.5, 1, 2, 4, 10, 30, 100]); ax.set_xticklabels(["0.25", "0.5", "1", "2", "4", "10", "30", "100"])
     ax.set_xlabel("incidence-rate ratio at constant genre (95% CI, log scale)")
     ax.set_title("Change in rhetorical markers relative to 1991", loc="left")
     ax.legend(fontsize=7, loc="lower right")
@@ -181,7 +183,7 @@ def fig8():
     fig.tight_layout(w_pad=1.5, rect=(0, 0.06, 1, 1))
     savefig(fig, "fig8_stylometry")
 
-def fig5():
+def fig6():
     SA = J("surprisal_analysis.json"); SU = J("surprisal.json")["units"]; best = SA["best_model"]
     fig, ax = plt.subplots(2, 2, figsize=(7.4, 5.4))
     a = ax[0, 0]
@@ -223,9 +225,9 @@ def fig5():
     d.set_title(f"(d) Length and information, ρ = {LI['spearman_len_context_info']:.2f}", loc="left")
     d.legend(fontsize=6.8, loc="upper left")
     fig.tight_layout(h_pad=1.6, w_pad=1.6)
-    savefig(fig, "fig5_surprisal")
+    savefig(fig, "fig6_surprisal")
 
-def fig6():
+def fig5():
     I = J("info.json")
     try:
         SA = J("surprisal_analysis.json"); best = SA["best_model"]; Om = SA["order"][best]
@@ -255,7 +257,7 @@ def fig6():
     ax.set_xlabel("complexity H (bits per symbol)"); ax.set_ylabel("order R = 1 − H / H_max")
     ax.set_title("The order–complexity plane (grey lines: constant M_B = R/H)", loc="left", fontsize=8.8)
     fig.tight_layout()
-    savefig(fig, "fig6_order_complexity")
+    savefig(fig, "fig5_order_complexity")
 
 def fig9():
     A = J("acoustic.json"); rows = J("acoustic_ipus.json")
@@ -299,6 +301,53 @@ def fig9():
     d.set_title("(d) Long-range correlation of phrase length", loc="left"); d.legend(fontsize=6.8, loc="upper left")
     fig.tight_layout(h_pad=1.6, w_pad=1.6)
     savefig(fig, "fig9_acoustic")
+
+def fig10():
+    """Appendix C.2: the S18 excerpt as performed (a) and five recordings compared (b-e)."""
+    V = J("video.json"); al = V["fn2_alignment"]["ipus"]; recs = V["recordings"]
+    import parselmouth
+    from matplotlib.lines import Line2D
+    snd = parselmouth.Sound(os.path.join(os.environ.get("NANO_VIDEO", os.path.join(HERE, "..", "video")), "FN2.wav"))
+    pt = snd.to_pitch_ac(time_step=0.01, pitch_floor=60, pitch_ceiling=400)
+    F = pt.selected_array["frequency"]; tF = pt.xs()
+    fig = plt.figure(figsize=(7.4, 5.6))
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.15, 1], hspace=0.62, wspace=0.65)
+    a = fig.add_subplot(gs[0, :])
+    for i, r in enumerate(al, 1):
+        a.axvspan(r["a"], r["b"], color=ACCENT, alpha=0.08, lw=0)
+        sel = (tF >= r["a"]) & (tF <= r["b"]) & (F > 0)
+        st = 12 * np.log2(F[sel] / 100); ok = st > np.median(st) - 9      # hide octave (halving) errors
+        a.plot(tF[sel][ok], st[ok], ".", ms=1.6, color=ACCENT, rasterized=True)
+        a.text((r["a"] + r["b"]) / 2, 13.0, str(i), ha="center", va="bottom", fontsize=7, color=DARK)
+        if r["pause_after"] is not None:
+            x = r["b"] + r["pause_after"] / 2
+            mk = {"sentence end": ("v", DARK), "comma": ("v", DARK)}.get(r["site_after"], ("o", GREY))
+            a.plot([x], [-4.6], marker=mk[0], color=mk[1], ms=4.2, mfc=mk[1] if mk[0] == "v" else "white", clip_on=False)
+    a.axvline(47.8, color=DARK, lw=0.6, ls=":"); a.text(47.6, 10.6, "broadcast\nsplice", fontsize=6.4, color=DARK, va="bottom", ha="right")
+    a.set_ylim(-5.5, 14.5); a.set_xlim(al[0]["a"] - 0.6, al[-1]["b"] + 0.6)
+    a.set_xlabel("time in clip FN2 (s)"); a.set_ylabel("F0 (semitones re 100 Hz)")
+    a.set_title("(a) Session S18, 29 July 2002: the printed text as performed (IPUs numbered as in Table C2)", loc="left")
+    h = [Line2D([], [], marker="v", ls="", color=DARK, ms=4.2, label="pause at a printed comma or full stop"),
+         Line2D([], [], marker="o", ls="", color=GREY, mfc="white", ms=4.2, label="pause with no printed punctuation")]
+    a.legend(handles=h, fontsize=6.6, loc="upper center", ncol=2, bbox_to_anchor=(0.5, -0.2))
+    order = ["FN5", "FN1", "KPD", "FN3", "FN2"]
+    lab = [recs[k]["short"] for k in order]
+    panels = [("artic_est", "artic_est_ci", "syllables per second", "(b) Articulation rate"),
+              ("ipu_syl_est_median", "ipu_syl_est_ci", "syllables (median)", "(c) Length of IPU"),
+              ("pause_median", "pause_median_ci", "seconds (median)", "(d) Silent pause"),
+              ("f0_ipu_median_hz", "f0_ipu_median_ci_hz", "Hz (median over IPUs)", "(e) Pitch level")]
+    for j, (key, ci, xl, tt) in enumerate(panels):
+        b = fig.add_subplot(gs[1, j])
+        for y, k in enumerate(order):
+            v = recs[k][key]; lo, hi = recs[k][ci]
+            col = ACCENT if k == "FN2" else DARK
+            b.plot([lo, hi], [y, y], "-", color=col, lw=1.0)
+            b.plot([v], [y], "o", color=col, ms=4.2)
+        b.set_yticks(range(len(order))); b.set_yticklabels(lab if j == 0 else [""] * len(order), fontsize=7)
+        b.set_ylim(-0.6, len(order) - 0.4); b.set_xlabel(xl, fontsize=7.4); b.set_title(tt, loc="left", fontsize=8.2)
+        b.tick_params(axis="x", labelsize=7); b.margins(x=0.12)
+        b.grid(axis="x", color=GREY, alpha=0.25, lw=0.5)
+    savefig(fig, "fig10_broadcast")
 
 if __name__ == "__main__":
     for name in sys.argv[1:]:
