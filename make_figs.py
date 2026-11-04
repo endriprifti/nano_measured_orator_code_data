@@ -303,15 +303,15 @@ def fig9():
     savefig(fig, "fig9_acoustic")
 
 def fig10():
-    """Appendix C.2: the S18 excerpt as performed (a) and five recordings compared (b-e)."""
+    """Appendix C.2: the S18 excerpt as performed (a) and six recordings compared (b-e)."""
     V = J("video.json"); al = V["fn2_alignment"]["ipus"]; recs = V["recordings"]
     import parselmouth
     from matplotlib.lines import Line2D
     snd = parselmouth.Sound(os.path.join(os.environ.get("NANO_VIDEO", os.path.join(HERE, "..", "video")), "FN2.wav"))
     pt = snd.to_pitch_ac(time_step=0.01, pitch_floor=60, pitch_ceiling=400)
     F = pt.selected_array["frequency"]; tF = pt.xs()
-    fig = plt.figure(figsize=(7.4, 5.6))
-    gs = fig.add_gridspec(2, 4, height_ratios=[1.15, 1], hspace=0.62, wspace=0.65)
+    fig = plt.figure(figsize=(7.4, 5.9))
+    gs = fig.add_gridspec(2, 4, height_ratios=[1.15, 1.1], hspace=0.62, wspace=0.65)
     a = fig.add_subplot(gs[0, :])
     for i, r in enumerate(al, 1):
         a.axvspan(r["a"], r["b"], color=ACCENT, alpha=0.08, lw=0)
@@ -330,7 +330,7 @@ def fig10():
     h = [Line2D([], [], marker="v", ls="", color=DARK, ms=4.2, label="pause at a printed comma or full stop"),
          Line2D([], [], marker="o", ls="", color=GREY, mfc="white", ms=4.2, label="pause with no printed punctuation")]
     a.legend(handles=h, fontsize=6.6, loc="upper center", ncol=2, bbox_to_anchor=(0.5, -0.2))
-    order = ["FN5", "FN1", "KPD", "FN3", "FN2"]
+    order = ["FN1990", "FN1991", "FN1", "KPD", "FN3", "FN2"]
     lab = [recs[k]["short"] for k in order]
     panels = [("artic_est", "artic_est_ci", "syllables per second", "(b) Articulation rate"),
               ("ipu_syl_est_median", "ipu_syl_est_ci", "syllables (median)", "(c) Length of IPU"),

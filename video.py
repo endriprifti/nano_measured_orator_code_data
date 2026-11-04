@@ -1,23 +1,28 @@
-"""Appendix C, second part — five broadcast clips supplied by the author, compared with the KPD recording.
+"""Appendix C, second part — three broadcast clips and two archival audio recordings supplied by the author, compared
+with the KPD recording.
 
-FN1  TV interview, 19 May 2000 (RTV Klan archive)                       Nano is party chairman, not PM
-FN2  Parliament, 29 Jul 2002: programme of the government (session S18)  the only clip whose text is in the edition
-FN3  Parliament, 3 Jun 2002: debate on the European Parliament resolution Nano is party chairman, not PM
-FN4  Parliament, 5 Nov 1999                                              audio track empty (0 packets): not analysed
-FN5  Address, 1991 (A2 CNN Short "Çfarë thoshte Fatos Nano në vitin 1991 në ditëlindjen e PS", burned-in subtitles)
-     text not in the edition
+FN1     TV interview, 19 May 2000 (RTV Klan archive)                        Nano is party chairman, not PM
+FN2     Parliament, 29 Jul 2002: programme of the government (session S18)   the only clip whose text is in the edition
+FN3     Parliament, 3 Jun 2002: debate on the European Parliament resolution  Nano is party chairman, not PM
+FN4     Parliament, 5 Nov 1999                                               audio track empty (0 packets): not analysed
+FN1990  audio, 1990 (Historiani, YouTube): speech at a meeting, introduced by the chair      text not in the edition
+FN1991  audio, March 1991 (Historiani, YouTube): Nano as Chairman of the Council of Ministers at a meeting of party
+        and state cadres called by a district committee of the Party of Labour before the elections of 31 March 1991
+        text not in the edition
+(An earlier version also analysed a 29-s video clip of a 1991 address; it was withdrawn at the author's request.)
 
 Steps
 1. Speaker attribution. Silero VAD v5 (ONNX) marks speech; a pretrained GE2E speaker encoder (Resemblyzer weights, run in
-   NumPy) embeds 1.6-s windows; k-means (k = 2) per clip; the cluster closer to the centroid of the KPD recording is
-   Nano. The attribution is checked against shot content, F0 and the content of the automatic transcript.
+   NumPy) embeds 1.6-s windows. Clips: k-means (k = 2) per clip; the cluster closer to the centroid of the KPD recording
+   is Nano, checked against spans fixed from shot content, F0 and the automatic transcript. Archival recordings: the
+   chair's introduction is located from the transcript; the rest is tested for a second voice (k = 2 within the span).
 2. Segmentation of Nano's speech into inter-pausal units (IPUs) with the VAD (pauses >= 0.25 s, IPUs >= 0.10 s);
    syllable nuclei as in acoustic.py; F0 statistics in semitones re 100 Hz.
-3. Calibration of the nucleus detector against exact transcripts (FN5 subtitles; FN2 printed text) and against
-   automatic transcripts (Whisper large-v3-turbo, int8 ONNX via sherpa-onnx) of a sample of the KPD recording.
+3. Calibration of the nucleus detector against the exact transcript of FN2 (printed text) and against automatic
+   transcripts (Whisper large-v3-turbo, int8 ONNX via sherpa-onnx) of samples of the three long recordings.
 4. FN2: alignment of each IPU with the printed text of S18, classification of pause sites.
 
-Usage: python video.py   (expects the WAVs produced by run_all.sh in ../video and ../audio)
+Usage: python video.py   (expects the WAVs produced by run_all.sh in ../video, ../audio and ../audio90)
 """
 import os, sys, json, re, difflib
 import numpy as np, soundfile as sf, parselmouth
@@ -30,6 +35,7 @@ from scipy import signal, stats
 HERE = os.path.dirname(os.path.abspath(__file__))
 VID = os.environ.get("NANO_VIDEO", os.path.join(HERE, "..", "video"))
 AUD = os.environ.get("NANO_AUDIO", os.path.join(HERE, "..", "audio"))
+A90 = os.environ.get("NANO_AUDIO90", os.path.join(HERE, "..", "audio90"))
 SR = 16000
 rng = np.random.default_rng(11)
 
@@ -42,14 +48,17 @@ REC = {
                 label="Parliament, government programme, 29 Jul 2002 (S18)", short="Parliament 2002 (S18)"),
     "FN3": dict(wav=os.path.join(VID, "FN3.wav"), spans=[(24.0, 82.9)],
                 label="Parliament, debate, 3 Jun 2002", short="Parliament 2002 (debate)"),
-    "FN5": dict(wav=os.path.join(VID, "FN5.wav"), spans=[(0.0, 29.0)],
-                label="Address, 1991", short="Address 1991"),
+    # archival audio: one span from the end of the chair's introduction (located in the automatic transcript: FN1990 "Shoku
+    # Fatos Nano ka fjalën ..." ends at 8.3 s, Nano opens at 12.9 s; FN1991 the chair speaks until 93.2 s, Nano opens at
+    # 96.5 s) to the end of the tape, which in both cases breaks off in mid-speech
+    "FN1990": dict(wav=os.path.join(A90, "FN1990.wav"), spans=[(12.7, 749.2)], archive=True,
+                   label="Party meeting (aktiv), 1990", short="Party aktiv 1990"),
+    "FN1991": dict(wav=os.path.join(A90, "FN1991.wav"), spans=[(96.4, 3358.6)], archive=True,
+                   label="Pre-election meeting of cadres, March 1991", short="Cadres meeting 1991"),
 }
-
-# exact transcripts
-FN5_TEXT = ("fillim që ju flas në emër të Partisë së Punës dhe në emër të programit të saj, sepse kam detyrën morale "
-            "dhe përgjegjësinë politike, që jo thjesht të drejtoj qeverinë e re të punës që ngarkoi Këshilli "
-            "Presidencial, bashkë me një ekip shokësh tepër të angazhuar, të kthjellët politikisht.")
+CLIPS = ("FN1", "FN2", "FN3")
+ARCH = ("FN1990", "FN1991")
+LONG = ("KPD",) + ARCH                      # syllables from the detector, calibrated on a transcribed sample
 
 
 def load(path):
@@ -82,8 +91,11 @@ def window_embeddings(w, m, step, spans=None):
     for t in ts:
         sel = (tm >= t) & (tm < t + WIN)
         if sel.any() and m[sel].mean() > 0.6: keep.append(t)
-    M = np.stack([enc.mel(enc.normalize(w[int(t * SR):int((t + WIN) * SR)]))[:160] for t in keep])
-    return np.array(keep), enc.forward(M)
+    out = []
+    for i in range(0, len(keep), 256):          # batches keep the LSTM's gate tensors small on long recordings
+        M = np.stack([enc.mel(enc.normalize(w[int(t * SR):int((t + WIN) * SR)]))[:160] for t in keep[i:i + 256]])
+        out.append(enc.forward(M))
+    return np.array(keep), np.concatenate(out)
 
 
 R = {"recordings": {}, "diarisation": {}}
@@ -95,7 +107,27 @@ ref = EK.mean(0); ref /= np.linalg.norm(ref)
 tk2, EK2 = window_embeddings(K[int(600 * SR):int(900 * SR)], mK[int(600 / stK):int(900 / stK)], stK)
 R["diarisation"]["KPD_heldout_cos"] = {"median": float(np.median(EK2 @ ref)), "p5": float(np.percentile(EK2 @ ref, 5))}
 
-for c in ("FN1", "FN2", "FN3", "FN5"):
+for c in ARCH:
+    # one speaker after the chair's introduction? two clusters inside the span, compared with the KPD reference;
+    # the windows before the span (the chair) are compared with the centroid of the span
+    w = load(REC[c]["wav"]); m, st = vad_mask(w)
+    t, E = window_embeddings(w, m, st)
+    sim = E @ ref; centre = t + WIN / 2
+    a0, b0 = REC[c]["spans"][0]
+    ins = (t >= a0) & (t + WIN <= b0); pre = t + WIN <= a0
+    km = KMeans(2, n_init=10, random_state=0).fit(E[ins])
+    cm = [sim[ins][km.labels_ == k].mean() for k in (0, 1)]
+    cen = E[ins].mean(0); cen /= np.linalg.norm(cen)
+    R["diarisation"][c] = {"n_windows": int(ins.sum()), "cluster_cos": [float(x) for x in cm],
+        "single_speaker": bool(abs(cm[0] - cm[1]) < 0.05), "cluster_sizes": [int((km.labels_ == k).sum()) for k in (0, 1)],
+        "cos_to_KPD_span": float(np.median(sim[ins])), "cos_to_KPD_span_p5": float(np.percentile(sim[ins], 5)),
+        "cos_to_KPD_chair": float(np.median(sim[pre])),
+        "cos_to_span_centroid_span": float(np.median(E[ins] @ cen)), "cos_to_span_centroid_chair": float(np.median(E[pre] @ cen)),
+        "n_windows_chair": int(pre.sum()),
+        "windows": [[float(a), int(b), float(s)] for a, b, s in zip(t, ins, sim)]}
+    REC[c]["vad"] = (m, st)
+
+for c in CLIPS:
     w = load(REC[c]["wav"]); m, st = vad_mask(w)
     t, E = window_embeddings(w, m, st)
     sim = E @ ref
@@ -230,37 +262,45 @@ p9 = P[9]["text"]; p11 = P[11]["text"]
 cut = p9.index("krimit të organizuar") + len("krimit të organizuar")
 FN2_TEXT = p9[:cut] + ". " + p11                      # the broadcast keeps the first three se-clauses of ¶9, then ¶11
 CAL = {}
-for name, text in (("FN5", FN5_TEXT), ("FN2", FN2_TEXT)):
+for name, text in (("FN2", FN2_TEXT),):
     det = len(A[name]["nuclei"])
     CAL[name] = {"text_syllables_phonetic": nsyl(text, True), "text_syllables_orthographic": nsyl(text, False),
                  "detected_nuclei": det, "words": len([t for t in tokens(text) if not t[0].isdigit()])}
     CAL[name]["detection_ratio"] = det / CAL[name]["text_syllables_phonetic"]
-# KPD: 12 windows of 25 s spread over the recording, automatic transcripts
-kp = A["KPD"]; T = parselmouth.Sound(REC["KPD"]["wav"]).duration
-starts = np.linspace(30, T - 60, 12)
-kcal = []
-for s0 in starts:
-    # snap window edges to pauses so that no word is cut
-    ip = [x for x in kp["ipus"] if x[0] >= s0][:200]
-    a = ip[0][0] - 0.1; b = a
-    for x in ip:
-        if x[1] - a > 25: break
-        b = x[1] + 0.1
-    txt = transcribe_robust("KPD", a, b)
-    det = int(((kp["nuclei"] >= a) & (kp["nuclei"] <= b)).sum())
-    phon = sum(min(y, b) - max(x, a) for x, y in kp["ipus"] if y > a and x < b)
-    # a decode is unusable if the decoder looped (a word repeated 4+ times in a row) or stopped early
-    # (fewer recognised syllables than half the detected nuclei)
-    valid = not degenerate(txt) and nsyl(txt) >= 0.5 * det
-    kcal.append({"a": a, "b": b, "text": txt, "asr_syllables": nsyl(txt), "detected": det, "phonation": phon, "valid": valid})
-kv = [k for k in kcal if k["valid"]]
-CAL["KPD_asr_sample"] = {"windows": kcal, "n_valid": len(kv), "n_windows": len(kcal),
-                         "asr_syllables": int(sum(k["asr_syllables"] for k in kv)),
-                         "detected": int(sum(k["detected"] for k in kv)),
-                         "detection_ratio": sum(k["detected"] for k in kv) / sum(k["asr_syllables"] for k in kv),
-                         "ratio_ci": ratio_boot([k["detected"] for k in kv], [k["asr_syllables"] for k in kv])}
-# same check on the exact transcripts, to measure the bias of the automatic syllable count itself
-for name, spans in (("FN5", [(0.2, 14.8), (14.8, 29.0)]), ("FN2", [(26.8, 47.55), (47.75, 72.2)])):
+
+
+def asr_sample(name, n=12, L=25.0):
+    """n windows of about L s spread evenly over the analysed speech, edges snapped to pauses, automatic transcripts."""
+    a_ = A[name]
+    lo, hi = REC[name]["spans"][0] if REC[name]["spans"] else (0.0, parselmouth.Sound(REC[name]["wav"]).duration)
+    starts = np.linspace(lo + 30, hi - 60, n)
+    out = []
+    for s0 in starts:
+        # snap window edges to pauses so that no word is cut
+        ip = [x for x in a_["ipus"] if x[0] >= s0][:200]
+        a = ip[0][0] - 0.1; b = a
+        for x in ip:
+            if x[1] - a > L: break
+            b = x[1] + 0.1
+        txt = transcribe_robust(name, a, b)
+        det = int(((a_["nuclei"] >= a) & (a_["nuclei"] <= b)).sum())
+        phon = sum(min(y, b) - max(x, a) for x, y in a_["ipus"] if y > a and x < b)
+        # a decode is unusable if the decoder looped (a word repeated 4+ times in a row) or stopped early
+        # (fewer recognised syllables than half the detected nuclei)
+        valid = not degenerate(txt) and nsyl(txt) >= 0.5 * det
+        out.append({"a": a, "b": b, "text": txt, "asr_syllables": nsyl(txt), "detected": det, "phonation": phon, "valid": valid})
+    kv = [k for k in out if k["valid"]]
+    return {"windows": out, "n_valid": len(kv), "n_windows": len(out),
+            "asr_syllables": int(sum(k["asr_syllables"] for k in kv)), "detected": int(sum(k["detected"] for k in kv)),
+            "detection_ratio": sum(k["detected"] for k in kv) / sum(k["asr_syllables"] for k in kv),
+            "ratio_ci": ratio_boot([k["detected"] for k in kv], [k["asr_syllables"] for k in kv])}
+
+
+# KPD and the two archival recordings: 12 windows of 25 s each
+for name in LONG:
+    CAL[f"{name}_asr_sample"] = asr_sample(name)
+# same check on the exact transcript, to measure the bias of the automatic syllable count itself
+for name, spans in (("FN2", [(26.8, 47.55), (47.75, 72.2)]),):
     CAL[name]["asr_text"] = " ".join(transcribe_robust(name, a, b) for a, b in spans)
     CAL[name]["asr_syllables"] = nsyl(CAL[name]["asr_text"])
     CAL[name]["asr_over_exact"] = CAL[name]["asr_syllables"] / CAL[name]["text_syllables_phonetic"]
@@ -270,19 +310,18 @@ for name, spans in (("FN1", [(42.8, 66.5), (66.5, 85.8), (105.6, 119.0), (119.0,
     CAL[name] = {"asr_text": " ".join(transcribe_robust(name, a, b) for a, b in spans)}
     CAL[name]["asr_syllables"] = nsyl(CAL[name]["asr_text"]); CAL[name]["detected_nuclei"] = len(A[name]["nuclei"])
     CAL[name]["detection_ratio_vs_asr"] = CAL[name]["detected_nuclei"] / CAL[name]["asr_syllables"]
-CAL["asr_bias_pooled"] = ((CAL["FN2"]["asr_syllables"] + CAL["FN5"]["asr_syllables"]) /
-                          (CAL["FN2"]["text_syllables_phonetic"] + CAL["FN5"]["text_syllables_phonetic"]))
+CAL["asr_bias"] = CAL["FN2"]["asr_over_exact"]          # the one exact transcript left after FN5 was withdrawn
 R["calibration"] = CAL
-BIAS = CAL["asr_bias_pooled"]
+BIAS = CAL["asr_bias"]
 
 # ------------------------------------------------------------------ register comparison
 for k, a in A.items():
     rows = a["rows"]; D = np.array([r["dur"] for r in rows]); S = np.array([r["syl"] for r in rows])
     phon = D.sum()
-    # transcript-based syllable totals: exact for FN2/FN5, automatic for FN1/FN3, detector x KPD calibration for KPD
-    if k in ("FN2", "FN5"): tsyl, src = CAL[k]["text_syllables_phonetic"], "exact transcript"
+    # transcript-based syllable totals: exact for FN2, automatic for FN1/FN3, detector x own calibration for the long ones
+    if k == "FN2": tsyl, src = CAL[k]["text_syllables_phonetic"], "exact transcript"
     elif k in ("FN1", "FN3"): tsyl, src = CAL[k]["asr_syllables"] / BIAS, "automatic transcript, bias-corrected"
-    else: tsyl, src = len(a["nuclei"]) / CAL["KPD_asr_sample"]["detection_ratio"] / BIAS, "detector, calibrated on a transcribed sample"
+    else: tsyl, src = len(a["nuclei"]) / CAL[f"{k}_asr_sample"]["detection_ratio"] / BIAS, "detector, calibrated on a transcribed sample"
     scale = tsyl / max(len(a["nuclei"]), 1)
     decl = np.array([r["decl"] for r in rows if r["dur"] >= 1.0 and np.isfinite(r["decl"])])
     R["recordings"][k] = {
@@ -386,16 +425,66 @@ R["fn2_alignment"] = {
 ex = [r["syl"] for r in al]
 R["recordings"]["FN2"]["ipu_syl_est_median"] = float(np.median(ex)); R["recordings"]["FN2"]["ipu_syl_est_ci"] = boot(ex)
 R["recordings"]["FN2"]["ipu_syllable_source"] = "exact (aligned printed text)"
-# KPD: widen the intervals by the uncertainty of the calibration ratio
-k = R["recordings"]["KPD"]; cr = CAL["KPD_asr_sample"]; r0, (rl, rh) = cr["detection_ratio"], cr["ratio_ci"]
-for key in ("artic_est_ci", "ipu_syl_est_ci"):
-    k[key] = [k[key][0] * r0 / rh, k[key][1] * r0 / rl]
-k["ci_note"] = "includes the uncertainty of the calibration ratio"
+# long recordings: widen the intervals by the uncertainty of the calibration ratio
+for name in LONG:
+    k = R["recordings"][name]; cr = CAL[f"{name}_asr_sample"]; r0, (rl, rh) = cr["detection_ratio"], cr["ratio_ci"]
+    for key in ("artic_est_ci", "ipu_syl_est_ci"):
+        k[key] = [k[key][0] * r0 / rh, k[key][1] * r0 / rl]
+    k["ci_note"] = "includes the uncertainty of the calibration ratio"
 # pitch level with intervals over IPUs (median of per-IPU median F0), less optimistic than intervals over frames
 for name, a in A.items():
     med = np.array([r["f0_st_med"] for r in a["rows"] if np.isfinite(r["f0_st_med"])])
     R["recordings"][name]["f0_ipu_median_hz"] = float(100 * 2 ** (np.median(med) / 12))
     R["recordings"][name]["f0_ipu_median_ci_hz"] = [float(100 * 2 ** (x / 12)) for x in boot(med)]
+
+# ------------------------------------------------------------------ 5. the long recordings: order in time (as in C.1)
+# DFA of log IPU length in spoken order against shuffles (detector counts: a constant calibration factor does not change
+# the exponent of a log series), and the profile of phrase length and pitch over tenths of the speech.
+from rhythm_dfa import dfa
+rng_long = np.random.default_rng(31)
+R["long_recordings"] = {}
+for name in LONG:
+    a = A[name]; rows = [r for r in a["rows"] if r["syl"] > 0]
+    scale = R["recordings"][name]["syllables_est"] / max(len(a["nuclei"]), 1)
+    out = {"n_ipus_with_nuclei": len(rows), "n_ipus": len(a["rows"])}
+    for key, vals in (("syl", [r["syl"] for r in rows]), ("dur", [r["dur"] for r in a["rows"]])):
+        x = np.log(np.array(vals, float))
+        scales = np.unique(np.round(np.logspace(np.log10(4), np.log10(len(x) / 8), 16)).astype(int))
+        Fo = dfa(x, scales); a_obs = np.polyfit(np.log(scales), np.log(Fo), 1)[0]
+        a_null = [np.polyfit(np.log(scales), np.log(dfa(rng_long.permutation(x), scales)), 1)[0] for _ in range(100)]
+        out[f"dfa_{key}"] = {"alpha": float(a_obs), "null_mean": float(np.mean(a_null)), "null_sd": float(np.std(a_null)),
+                             "z": float((a_obs - np.mean(a_null)) / np.std(a_null)), "n": int(len(x))}
+    snd = parselmouth.Sound(REC[name]["wav"]); _, _, tF, F = tracks(snd)
+    T0, T1 = a["rows"][0]["a"], a["rows"][-1]["b"]; prof = []
+    for k in range(10):
+        a_, b_ = T0 + k * (T1 - T0) / 10, T0 + (k + 1) * (T1 - T0) / 10
+        rs = [r for r in a["rows"] if a_ <= r["a"] < b_ or (k == 9 and r["a"] >= a_)]
+        f = np.concatenate([F[(tF >= r["a"]) & (tF <= r["b"]) & (F > 0)] for r in rs])
+        prof.append({"decile": k, "n_ipu": len(rs), "ipu_syl_mean_est": float(np.mean([r["syl"] for r in rs]) * scale),
+                     "f0_med": float(np.median(f)), "f0_p90": float(np.percentile(f, 90)),
+                     "pause_share": float(1 - sum(r["dur"] for r in rs) / (b_ - a_)),
+                     "artic_detected": float(sum(r["syl"] for r in rs) / sum(r["dur"] for r in rs))})
+    out["decile_profile"] = prof
+    m_ = [p["ipu_syl_mean_est"] for p in prof]; f_ = [p["f0_med"] for p in prof]
+    out["first_tenth_longest"] = bool(m_[0] == max(m_)); out["last_tenth_highest_f0"] = bool(f_[-1] == max(f_))
+    out["first_tenth_rank"] = int(1 + sum(v > m_[0] for v in m_)); out["last_tenth_f0_rank"] = int(1 + sum(v > f_[-1] for v in f_))
+    # a drift in tape speed would move F0 and syllable rate in the same proportion: compare the two across tenths
+    out["f0_ratio_last_first"] = prof[-1]["f0_med"] / prof[0]["f0_med"]
+    out["artic_ratio_last_first"] = prof[-1]["artic_detected"] / prof[0]["artic_detected"]
+    out["f0_spearman_tenth"] = float(stats.spearmanr(range(10), f_).statistic)
+    out["speech_share"] = float(sum(r["dur"] for r in a["rows"]) / (T1 - T0))
+    if name in ARCH:
+        # mains hum in the non-speech frames: at the recording speed it lies at 50 Hz and its odd harmonics
+        w = load(REC[name]["wav"]); m, st = REC[name]["vad"]
+        keep = np.repeat(~m, int(round(st * SR)))[:len(w)]
+        fr, P = signal.welch(w[:len(keep)][keep], SR, nperseg=2 ** 17); hum = {}
+        for h in (50, 150):
+            sel = (fr > h - 5) & (fr < h + 5); Ps = np.log(P[sel]); j = int(np.argmax(Ps))
+            d = 0.5 * (Ps[j - 1] - Ps[j + 1]) / (Ps[j - 1] - 2 * Ps[j] + Ps[j + 1])
+            hum[str(h)] = {"peak_hz": float(fr[sel][j] + d * (fr[1] - fr[0])),
+                           "prominence_db": float(10 * np.log10(P[sel].max() / np.median(P[sel])))}
+        out["mains_hum"] = hum
+    R["long_recordings"][name] = out
 
 # corrections to Appendix C.1 (intensity-based segmentation of acoustic.py), using the KPD calibration above
 AC = json.load(open(os.path.join(RES, "acoustic.json"))); AR = json.load(open(os.path.join(RES, "acoustic_ipus.json")))

@@ -13,10 +13,10 @@ Tiranë 2010. ISBN 978-99956-798-6-6.
 
 ```bash
 pip install -r requirements.txt
-bash run_all.sh path/to/fatos_nano.pdf [path/to/Mbledhja_e_KPD.aac [folder/with/FN1.mp4…FN5.mp4]]
+bash run_all.sh path/to/fatos_nano.pdf [path/to/Mbledhja_e_KPD.aac [folder/with/FN1-FN3.mp4 and FN1990.m4a, FN1991.m4a]]
 ```
 
-The third argument runs Appendix C.2 on the broadcast clips. It needs three pretrained components that are not
+The third argument runs Appendix C.2 on the broadcast clips and the two archival audio recordings of 1990 and 1991. It needs three pretrained components that are not
 redistributed here; `get_models.sh` fetches them (Silero VAD and the Resemblyzer GE2E weights from their PyPI wheels,
 Whisper large-v3-turbo as an int8 ONNX export from the sherpa-onnx releases). PyTorch is not needed: the speaker
 encoder runs in NumPy (`voice_encoder_np.py`) and the VAD and recogniser in onnxruntime.
@@ -39,7 +39,7 @@ cross-validation folds; it takes about 1.5 hours on two CPU cores. Every other s
 | `semantics.py` | 9 | `results/semantics.json` |
 | `stylometry.py` | 7.4, 10 | `results/stylometry.json` |
 | `acoustic.py` | Appendix C.1 | `results/acoustic.json`, `results/acoustic_ipus.json` (needs ffmpeg and praat-parselmouth) |
-| `video.py` | Appendix C.2 | `results/video.json`, `results/asr_cache.json`, `results/video.log` — speaker attribution, VAD-based IPUs, calibration of the syllable detector, register comparison, alignment of clip FN2 with session S18 |
+| `video.py` | Appendix C.2 | `results/video.json`, `results/asr_cache.json`, `results/video.log` — speaker attribution, VAD-based IPUs, calibration of the syllable detector, register comparison of six recordings, alignment of clip FN2 with session S18 |
 | `prosody.py`, `vad_np.py`, `voice_encoder_np.py`, `asr.py` | Appendix C.2 | shared segmentation; Silero VAD in onnxruntime; GE2E speaker encoder in NumPy; Whisper turbo via sherpa-onnx |
 | `get_models.sh` | Appendix C.2 | downloads the pretrained components |
 | `make_figs.py` | all figures | `figures/fig1…fig10` (PNG at 300 dpi and vector PDF) |
