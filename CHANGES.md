@@ -1,3 +1,16 @@
+# Changes of 5 November 2026
+
+Appendix C.2
+- The 29-s video clip of a 1991 address (FN5) is withdrawn at the author's request; it is no longer analysed and no
+  longer enters the calibration. The bias of the automatic syllable count now rests on the exact transcript of FN2
+  alone (`asr_bias`, previously `asr_bias_pooled` over FN2 and FN5), which shifts the calibrated rates slightly.
+- Two archival audio recordings supplied by the author are added: FN1990 (speech at a party aktiv, 1990) and FN1991
+  (Nano as Chairman of the Council of Ministers at a pre-election meeting of cadres, March 1991). The chair's
+  introduction is located in the automatic transcript; the remainder is tested for a second voice. Syllables are
+  counted with the nucleus detector calibrated on 12 transcribed windows of each recording, as for the KPD recording.
+- `video.py` reads the archival WAVs from `../audio90` (`NANO_AUDIO90`); speaker embeddings are computed in batches.
+- Figure 10b–e shows six recordings.
+
 # Changes after the review of 4 November 2026
 
 Measurement
