@@ -164,13 +164,17 @@ MARK = {
     "pron_1pl": r"\b(ne|neve|ynë|jonë|tonë|tanë|sonë|tona|tanët|tonat|na)\b",
     "verb_1pl": r"\b(kemi|jemi|duam|themi|mund të \w+jmë)\b|\b\w{3,}(ojmë|jmë)\b",
     "pron_2pl": r"\b(ju|juve|juaj|tuaj|tuaja|tuajat)\b",
-    "verb_2pl": r"\b(keni|jeni|doni|thoni)\b|\b\w{3,}oni\b",
+    # 2nd-person-plural present/imperative in -oni; nouns in -ioni (komisioni, informacioni ...) and eight other
+    # nouns in -oni attested in the corpus are excluded
+    "verb_2pl": r"\b(keni|jeni|doni|thoni)\b|\b(?!\w*ioni\b)(?!(?:anxhoni|betoni|harmoni|maqedoni|rajoni|sinkroni|"
+                r"telefoni|uashingtoni)\b)\w{3,}oni\b",
     "deontic_duhet": r"\bduhet\b",
     "possibility_mund": r"\bmund\b",
     "future_do_te": r"\bdo t[ëa]\b|\bdo t'",
     "intensifier_shume": r"\b(shumë|tepër|jashtëzakonisht|veçanërisht|thellësisht)\b",
     "absolute_never_all": r"\b(kurrë|asnjëherë|asnjë|gjithmonë|gjithnjë|absolutisht)\b",
-    "address_zoti_name": r"\b(zoti|zonja|zotit|zonjës)\s+[A-ZËÇ]\w+",
+    # a name after zoti/zonja (title word matched in any case, so sentence-initial "Zoti" counts; titles of office excluded)
+    "address_zoti_name": r"\b(?i:zoti|zonja|zotit|zonjës)\s+(?!(?:Kryetar|President)\w*\b)[A-ZËÇ]\w+",
     "address_honorific": r"\b(i nderuar|e nderuar|të nderuar)\b",
     "address_kolege": r"\bkolegë\b",
     "mention_berisha": r"\bBerish\w*\b",
@@ -282,5 +286,36 @@ Bf = []
 for w, f in fw:
     d = np.diff(pos[w]); Bf.append((d.std() - d.mean()) / (d.std() + d.mean()))
 R["burstiness_function_words_median"] = float(np.median(Bf))
+# ---------------------------------------------------------------- additions (separate random stream, so earlier results are unchanged)
+rng2 = np.random.default_rng(55)
+from statsmodels.stats.multitest import multipletests
+_keys = list(R["marker_tests"])
+_adj = multipletests([R["marker_tests"][k]["p"] for k in _keys], method="fdr_bh")[1]
+for k, a in zip(_keys, _adj): R["marker_tests"][k]["p_bh"] = float(a)
+R["marker_tests_bh_family"] = len(_keys)        # Benjamini-Hochberg over all markers in MARK, not only those tabulated
+TITLES = {"ministër", "kryeministër", "zëvendëskryeministër", "zëvendësministër", "ministre", "sekretar", "kryetar"}
+def sentence_level_variant(fn, drop_first=(), mask_words=()):
+    seqs = []
+    for ss in sp_sents:
+        ss = [s for s in ss if first_word(s["tokens"]) not in drop_first]
+        seqs.append([None if fn(s["tokens"]) in mask_words else fn(s["tokens"]) for s in ss])
+    obs = sum(adj_equal(x) for x in seqs)
+    null = [sum(adj_equal(list(rng2.permutation(np.array(x, dtype=object)))) for x in seqs) for _ in range(1000)]
+    return {"observed": obs, "null_mean": float(np.mean(null)), "null_sd": float(np.std(null)),
+            "ratio": obs / np.mean(null), "z": (obs - np.mean(null)) / np.std(null)}
+R["anaphora_sentence_no_titles"] = sentence_level_variant(first_word, drop_first=TITLES)
+R["anaphora_sentence_no_titles_no_ne"] = sentence_level_variant(first_word, drop_first=TITLES, mask_words={"në"})
+drv = collections.Counter()
+for ss in sp_sents:
+    lw = [last_word(s["tokens"]) for s in ss]
+    for a, b in zip(lw, lw[1:]):
+        if a and a == b: drv[a] += 1
+R["epistrophe_sentence_words"] = drv.most_common(15)
+drv = collections.Counter()
+for x in cl_last:
+    for a, b in zip(x, x[1:]):
+        if a and a == b: drv[a] += 1
+R["epistrophe_clause_words"] = drv.most_common(20)
+
 save("figures.json", R)
 print(json.dumps(R, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o), indent=1, ensure_ascii=False)[:9000])

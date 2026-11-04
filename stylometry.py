@@ -119,7 +119,8 @@ MARK = {
     "pron_2pl": r"\b(ju|juve|juaj|tuaj|tuaja|tuajat)\b",
     "pron_1pl": r"\b(ne|neve|ynë|jonë|tonë|tanë|sonë|tona|tanët|tonat|na)\b",
     "future_do_te": r"\bdo t[ëa]\b|\bdo t'",
-    "address_zoti_name": r"\b(zoti|zonja|zotit|zonjës)\s+[A-ZËÇ]\w+",
+    # a name after zoti/zonja (title word matched in any case, so sentence-initial "Zoti" counts; titles of office excluded)
+    "address_zoti_name": r"\b(?i:zoti|zonja|zotit|zonjës)\s+(?!(?:Kryetar|President)\w*\b)[A-ZËÇ]\w+",
     "antithesis_jo_vetem_por": r"\bjo vetëm\b[^.?!]{0,250}?\bpor\b",
     "adversative_por": r"\bpor\b",
 }
@@ -141,12 +142,15 @@ R["glm_n_units"] = len(df)
 R["glm"] = {}
 for k in MARK:
     try:
-        mod = smf.glm(f"{k} ~ C(term, Treatment('T1')) + C(genre2, Treatment('expository'))", data=df,
-                      family=sm.families.NegativeBinomial(alpha=0.3), offset=np.log(df["n"])).fit()
-        ci = mod.conf_int()
-        R["glm"][k] = {"irr": {n: float(np.exp(v)) for n, v in mod.params.items()},
-                       "p": {n: float(v) for n, v in mod.pvalues.items()},
-                       "ci": {n: [float(np.exp(ci.loc[n, 0])), float(np.exp(ci.loc[n, 1]))] for n in ci.index}}
+        # NB2 model with the dispersion alpha estimated by maximum likelihood, exposure = words in the unit
+        mod = smf.negativebinomial(f"{k} ~ C(term, Treatment('T1')) + C(genre2, Treatment('expository'))", data=df,
+                                   exposure=df["n"]).fit(disp=0, maxiter=500)
+        ci = mod.conf_int(); keep = [n for n in mod.params.index if n != "alpha"]
+        R["glm"][k] = {"irr": {n: float(np.exp(mod.params[n])) for n in keep},
+                       "p": {n: float(mod.pvalues[n]) for n in keep},
+                       "ci": {n: [float(np.exp(ci.loc[n, 0])), float(np.exp(ci.loc[n, 1]))] for n in keep},
+                       "alpha": float(mod.params["alpha"]), "alpha_ci": [float(ci.loc["alpha", 0]), float(ci.loc["alpha", 1])],
+                       "converged": bool(mod.mle_retvals.get("converged", True))}
     except Exception as e:
         R["glm"][k] = {"error": str(e)}
 mod = smf.ols("np.log(msl) ~ C(term, Treatment('T1')) + C(genre2, Treatment('expository'))", data=df).fit()

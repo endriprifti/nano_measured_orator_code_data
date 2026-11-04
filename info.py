@@ -127,5 +127,12 @@ for u in U: gen[u["genre"]] += " " + " ".join(" ".join(s["tokens"]).lower() for 
 G = sorted(g for g in gen if len(gen[g]) > 60000)
 R["ncd_genres"] = {"genres": G, "matrix": [[ncd(gen[a][:60000].encode(), gen[b][:60000].encode()) if a != b else 0.0
                                              for b in G] for a in G]}
+# ---------------------------------------------------------------- additions: most frequent two-word sentence openings per term
+R["two_word_openings"] = {}
+for t in TERMS:
+    ss = [s for u in U if u["term"] == t for s in u["sentences"] if s["kind"] != "address"]
+    op = collections.Counter(" ".join(w.lower() for w in s["tokens"][:2]) for s in ss if len(s["tokens"]) >= 2)
+    R["two_word_openings"][t] = [[w, c, c / len(ss)] for w, c in op.most_common(10)]
+
 save("info.json", R)
 print(json.dumps(R, indent=1, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o))[:6000])

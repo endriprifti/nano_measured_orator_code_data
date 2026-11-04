@@ -60,6 +60,7 @@ def chunks(X, size=3):
     m = len(X) // size
     return np.array([X[i * size:(i + 1) * size].mean(0) for i in range(m)])
 traj = []
+rng_ring = np.random.default_rng(77)
 for ui, u in enumerate(U):
     X = E[owner == ui]
     if len(X) < 45: continue
@@ -78,17 +79,26 @@ for ui, u in enumerate(U):
     first, last = X[:k].mean(0), X[-k:].mean(0)
     ring = float(first @ last / np.linalg.norm(first) / np.linalg.norm(last))
     nring = []
-    for _ in range(200):
+    for _ in range(200):          # unmatched null of the first version (random pairs, overlap allowed); kept for comparison
         i, j = rng.choice(len(X) - k, 2, replace=False)
         f2, l2 = X[i:i + k].mean(0), X[j:j + k].mean(0)
         nring.append(float(f2 @ l2 / np.linalg.norm(f2) / np.linalg.norm(l2)))
-    # local coherence: adjacent sentences vs random pairs in the same speech
+    # matched null: non-overlapping segments of the same size at least half a speech apart (separate random stream)
+    gap = max(k, (len(X) - k) // 2); mring = []
+    while len(mring) < 200:
+        i = int(rng_ring.integers(0, len(X) - k - gap + 1)); j = int(rng_ring.integers(i + gap, len(X) - k + 1))
+        if i == 0 and j == len(X) - k: continue           # exclude the first-last pair itself
+        f2, l2 = X[i:i + k].mean(0), X[j:j + k].mean(0)
+        mring.append(float(f2 @ l2 / np.linalg.norm(f2) / np.linalg.norm(l2)))
+    # local coherence: adjacent sentences vs random pairs of distinct sentences in the same speech
     adj = np.mean(np.sum(X[:-1] * X[1:], 1))
-    rp = rng.integers(0, len(X), (2000, 2)); rnd = np.mean(np.sum(X[rp[:, 0]] * X[rp[:, 1]], 1))
+    rp = rng.integers(0, len(X), (2000, 2)); rp = rp[rp[:, 0] != rp[:, 1]]
+    rnd = np.mean(np.sum(X[rp[:, 0]] * X[rp[:, 1]], 1))
     traj.append({"id": u["id"], "term": u["term"], "genre": u["genre"], "n_sent": len(X),
                  "speed": sp, "speed_null": np.mean(nsp), "speed_ratio": sp / np.mean(nsp),
                  "spread": spread, "circuitousness": path / short, "circ_null": np.mean(ncirc),
-                 "ring": ring, "ring_null_mean": np.mean(nring), "ring_pct": float(np.mean(np.array(nring) < ring)),
+                 "ring": ring, "ring_null_mean": np.mean(nring), "ring_pct_unmatched": float(np.mean(np.array(nring) < ring)),
+                 "ring_null_matched_mean": np.mean(mring), "ring_pct": float(np.mean(np.array(mring) < ring)),
                  "coh_adjacent": adj, "coh_random": rnd})
 R["trajectories"] = traj
 arr = lambda k: np.array([t[k] for t in traj])
@@ -99,6 +109,8 @@ R["trajectory_summary"] = {
     "circ_obs_median": float(np.median(arr("circuitousness"))), "circ_null_median": float(np.median(arr("circ_null"))),
     "circ_wilcoxon_p": stats.wilcoxon(arr("circuitousness") - arr("circ_null")).pvalue,
     "ring_pct_median": float(np.median(arr("ring_pct"))),
+    "ring_pct_unmatched_median": float(np.median(arr("ring_pct_unmatched"))),
+    "ring_unmatched_share_above_null_median": float(np.mean(arr("ring_pct_unmatched") > 0.5)),
     "ring_share_above_null_median": float(np.mean(arr("ring_pct") > 0.5)),
     "ring_binom_p": stats.binomtest(int(np.sum(arr("ring_pct") > 0.5)), len(traj), 0.5).pvalue,
     "coh_adjacent_mean": float(arr("coh_adjacent").mean()), "coh_random_mean": float(arr("coh_random").mean()),

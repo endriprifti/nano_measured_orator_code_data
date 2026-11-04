@@ -18,7 +18,7 @@ MODELS = ("kn", "gpt")
 R = {"meta": meta}
 
 # ---------------------------------------------------------------- sentences with word surprisal
-sents = []          # list of dicts: unit, term, genre, words, surprisal per model, pos in speech
+sents_all = []      # list of dicts: unit, term, genre, words, surprisal per model, pos in speech
 for u in U:
     rec = SUN[u["id"]]; toks, isw = rec["tokens"], rec["isword"]
     cur = {"w": [], "kn": [], "gpt": [], "punct_after": []}; k = 0; sl = []
@@ -28,12 +28,21 @@ for u in U:
         if isw[j]:
             cur["w"].append(t); cur["kn"].append(rec["kn"][j]); cur["gpt"].append(rec["gpt"][j])
             cur["punct_after"].append(toks[j + 1] if j + 1 < len(toks) and toks[j + 1] in ",;:.!?" else "")
+    # the stream has one segment per sentence of units.json (checked: 7,125 = 7,125), so kinds and clauses carry over
+    assert len(sl) == len(u["sentences"]), u["id"]
+    na = [j for j, x in enumerate(u["sentences"]) if x["kind"] != "address"]; rank = {j: r for r, j in enumerate(na)}
     for i, s in enumerate(sl):
         if s["w"]:
-            s.update({"unit": u["id"], "term": u["term"], "genre": u["genre"], "idx": i, "n_in_unit": len(sl)})
-            sents.append(s)
-R["n_sentences"] = len(sents)
-allw = {m: np.array([x for s in sents for x in s[m] if x == x]) for m in MODELS}
+            src = u["sentences"][i]
+            s.update({"unit": u["id"], "term": u["term"], "genre": u["genre"], "kind": src["kind"],
+                      "idx": rank.get(i, -1), "n_in_unit": len(na), "src_idx": i,
+                      "clause_sizes": [sum(1 for t in c if not t[0].isdigit()) for c in src["clauses"] if c]})
+            sents_all.append(s)
+# model-level rates use every scored word; all sentence-level analyses use the same sentence set as Sections 6-7
+# (vocative address lines excluded)
+sents = [s for s in sents_all if s["kind"] != "address"]
+R["n_sentences_all"] = len(sents_all); R["n_sentences"] = len(sents)
+allw = {m: np.array([x for s in sents_all for x in s[m] if x == x]) for m in MODELS}
 R["rate"] = {m: {"bits_per_word": float(allw[m].mean()), "sd": float(allw[m].std()), "median": float(np.median(allw[m])),
                  "perplexity_per_word": float(2 ** allw[m].mean()), "n_words": int(len(allw[m])),
                  "q": np.percentile(allw[m], [5, 25, 75, 95, 99])} for m in MODELS}
@@ -45,7 +54,7 @@ for m in MODELS:
         v = np.array(rec[m], float); tot_bits += np.nansum(v)
         chars += sum(len(t) + 1 for t in rec["tokens"])
     R["rate"][m]["bits_per_char"] = tot_bits / chars
-both = np.array([(a, b) for s in sents for a, b in zip(s["kn"], s["gpt"]) if a == a and b == b])
+both = np.array([(a, b) for s in sents_all for a, b in zip(s["kn"], s["gpt"]) if a == a and b == b])
 R["kn_gpt_corr"] = {"pearson": float(np.corrcoef(both[:, 0], both[:, 1])[0, 1]),
                     "spearman": float(stats.spearmanr(both[:, 0], both[:, 1])[0])}
 best = min(MODELS, key=lambda m: R["rate"][m]["bits_per_word"]); R["best_model"] = best
@@ -148,21 +157,29 @@ R["length_info"] = {"n_types": len(types),
 # ---------------------------------------------------------------- surprisal at anaphoric clause openings
 # re-align clause boundaries from punctuation recorded after each word
 ana_first, other_first, ana_rest, other_rest = [], [], [], []
+n_fallback = 0
 for s in sents:
-    v = s[best]; clauses = [[]]
-    for i, (w, p) in enumerate(zip(s["w"], s["punct_after"])):
-        clauses[-1].append((w, v[i]))
-        if p in (",", ";", ":"): clauses.append([])
-    clauses = [c for c in clauses if c]
+    v = s[best]
+    if sum(s["clause_sizes"]) == len(s["w"]):          # clause segmentation of prep.py (punctuation, brackets, dashes)
+        clauses, k = [], 0                                # a clause without words (a numeral) breaks adjacency, as in figures.py
+        for n in s["clause_sizes"]:
+            clauses.append(list(zip(s["w"][k:k + n], v[k:k + n]))); k += n
+    else:                                              # tokenisation mismatch: fall back to commas, semicolons, colons
+        n_fallback += 1; clauses = [[]]
+        for i, (w, p) in enumerate(zip(s["w"], s["punct_after"])):
+            clauses[-1].append((w, v[i]))
+            if p in (",", ";", ":"): clauses.append([])
+        clauses = [c for c in clauses if c]
     for j in range(1, len(clauses)):
         c, prev = clauses[j], clauses[j - 1]
+        if not c or not prev: continue
         if c[0][1] != c[0][1]: continue
         rest = [x for _, x in c[1:] if x == x]
         if c[0][0] == prev[0][0]:
             ana_first.append(c[0][1]); ana_rest.extend(rest)
         else:
             other_first.append(c[0][1]); other_rest.extend(rest)
-R["anaphora_surprisal"] = {"n_anaphoric": len(ana_first), "first_anaphoric": float(np.mean(ana_first)),
+R["anaphora_surprisal"] = {"n_anaphoric": len(ana_first), "n_clause_fallback": n_fallback, "first_anaphoric": float(np.mean(ana_first)),
                            "first_other": float(np.mean(other_first)),
                            "p_first": stats.mannwhitneyu(ana_first, other_first).pvalue,
                            "rest_anaphoric": float(np.mean(ana_rest)), "rest_other": float(np.mean(other_rest)),
@@ -179,7 +196,7 @@ for s in sents:
         if x == x: pk[min(int(10 * i / n), 9)].append(x > thr)
 R["peaks"]["by_decile"] = {k: float(np.mean(v_)) for k, v_ in sorted(pk.items())}
 texts = {(u["id"], i): s["text"] for u in U for i, s in enumerate(u["sentences"])}
-scored = [(np.nanmean(s[best]), s["unit"], s["idx"], len(s["w"])) for s in sents if 12 <= len(s["w"]) <= 40]
+scored = [(np.nanmean(s[best]), s["unit"], s["src_idx"], len(s["w"])) for s in sents if 12 <= len(s["w"]) <= 40]
 scored.sort()
 def sentence_text(unit, idx):
     u = next(x for x in U if x["id"] == unit); return u["sentences"][idx]["text"]

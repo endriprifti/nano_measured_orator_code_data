@@ -1,0 +1,20 @@
+{
+ "items": {
+  "Q": 116,
+  "FRAME": 74,
+  "STAGE": 17,
+  "E": 4
+ },
+ "counts": {
+  "Q_tokens": 2855,
+  "Q_words": 2817,
+  "FRAME_tokens": 265,
+  "FRAME_words": 265,
+  "STAGE_tokens": 169,
+  "STAGE_words": 166,
+  "E_tokens": 16,
+  "E_words": 16
+ },
+ "residual_roman_questions": 3,
+ "residual_roman_question_words": 52
+}

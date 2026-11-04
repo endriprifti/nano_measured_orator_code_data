@@ -222,6 +222,26 @@ for u in U:
     if len(ss) >= 20: per.append((datetime.date.fromisoformat(u["date"]).toordinal(), np.mean(ss), u["term"]))
 rho, p = stats.spearmanr([a for a, _, _ in per], [b for _, b, _ in per])
 R["per_unit_sentlen_trend"] = {"rho": rho, "p": p, "n": len(per)}
+# ---------------------------------------------------------------- additions: Weibull parameters, empirical closure hazard, arc
+_c, _, _sc = stats.weibull_min.fit(L.astype(float), floc=0)
+R["weibull"] = {"shape": float(_c), "scale": float(_sc), "mean": float(_sc * math.gamma(1 + 1 / _c))}
+_cnt = collections.Counter(L.tolist()); _n = len(L); _surv = _n; haz = {}
+for l in range(1, int(L.max()) + 1):
+    if _surv > 0: haz[l] = _cnt.get(l, 0) / _surv
+    _surv -= _cnt.get(l, 0)
+R["closure_hazard_bands"] = {f"{a}-{a + 9}": float(np.mean([haz[l] for l in range(a, a + 10) if l in haz]))
+                             for a in range(1, 81, 10)}
+R["closure_hazard_bands_n_at_risk"] = {f"{a}-{a + 9}": int((L >= a).sum()) for a in range(1, 81, 10)}
+dec2 = collections.defaultdict(list); n_units2 = 0
+for u in U:
+    ss = [s for s in u["sentences"] if s["kind"] not in ("address", "exclamation")]
+    if len(ss) >= 30:
+        n_units2 += 1
+        for i, s in enumerate(ss): dec2[int(10 * i / len(ss))].append(len(s["tokens"]))
+R["arc_no_exclamations"] = {"n_units": n_units2, "first": float(np.mean(dec2[0])), "last": float(np.mean(dec2[9])),
+                            "p": float(stats.mannwhitneyu(dec2[0], dec2[9]).pvalue)}
+R["arc_n_units"] = sum(1 for u in U if len([s for s in u["sentences"] if s["kind"] != "address"]) >= 30)
+
 save("rhythm.json", R)
 
 # ---------------------------------------------------------------- figure
