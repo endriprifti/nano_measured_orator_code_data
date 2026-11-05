@@ -47,6 +47,8 @@
    "decl_share_negative": 0.7415730337078652,
    "decl_n": 623,
    "pause_share_ge_1s": 0.26018099547511314,
+   "speech_rate_est": 4.162087773699354,
+   "speech_share": 0.682741389500833,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 123.3553984032385,
    "f0_ipu_median_ci_hz": [
@@ -110,6 +112,8 @@
    "decl_share_negative": 0.631578947368421,
    "decl_n": 19,
    "pause_share_ge_1s": 0.3333333333333333,
+   "speech_rate_est": 2.8110944527736126,
+   "speech_share": 0.7420289855072463,
    "f0_ipu_median_hz": 87.8112371044378,
    "f0_ipu_median_ci_hz": [
     81.63705762477353,
@@ -172,6 +176,8 @@
    "decl_share_negative": 0.7692307692307693,
    "decl_n": 13,
    "pause_share_ge_1s": 0.18181818181818182,
+   "speech_rate_est": 4.71782890007189,
+   "speech_share": 0.8217109992810928,
    "ipu_syllable_source": "exact (aligned printed text)",
    "f0_ipu_median_hz": 121.19428680657067,
    "f0_ipu_median_ci_hz": [
@@ -231,6 +237,8 @@
    "decl_share_negative": 0.7142857142857143,
    "decl_n": 14,
    "pause_share_ge_1s": 0.3333333333333333,
+   "speech_rate_est": 3.633105705739602,
+   "speech_share": 0.6710310965630117,
    "f0_ipu_median_hz": 131.802726974175,
    "f0_ipu_median_ci_hz": [
     129.0930829832614,
@@ -289,6 +297,8 @@
    "decl_share_negative": 0.8118811881188119,
    "decl_n": 202,
    "pause_share_ge_1s": 0.16972477064220184,
+   "speech_rate_est": 4.339348656056971,
+   "speech_share": 0.7971134199886969,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 152.41577692333007,
    "f0_ipu_median_ci_hz": [
@@ -348,6 +358,8 @@
    "decl_share_negative": 0.6666666666666666,
    "decl_n": 714,
    "pause_share_ge_1s": 0.41293103448275864,
+   "speech_rate_est": 3.257039920199132,
+   "speech_share": 0.5730948830638838,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 156.53260918267878,
    "f0_ipu_median_ci_hz": [
@@ -25625,9 +25637,9 @@
    "phrase boundary, unpunctuated": 2
   },
   "pause_dur_by_site": {
-   "phrase boundary, unpunctuated": 0.5440000000000005,
    "comma": 0.8746666666666663,
-   "inside phrase": 0.5333333333333338
+   "inside phrase": 0.5333333333333338,
+   "phrase boundary, unpunctuated": 0.5440000000000005
   },
   "printed_punctuation_marks": 6,
   "punctuation_marks_realised_as_pause": 6,
