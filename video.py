@@ -400,7 +400,9 @@ FUNC = {"dhe", "e", "si", "që", "se", "për", "me", "në", "nga", "duke", "të"
 
 def sim(h, ref_):
     """Matched characters minus half the unmatched characters on either side: a printed word gains its IPU only if the
-    IPU's transcript contains it (a score proportional to the longer string rewarded attaching unmatched words)."""
+    IPU's transcript contains it (a score proportional to the longer string rewarded attaching unmatched words).
+    The resulting division of ¶9's third clause, "... kombëtare | lejon tashmë | çrrënjosjen ...", was confirmed by the
+    author on listening to the broadcast (5 Nov 2026), who hears the pause before "lejon" as deliberate."""
     hyp = re.sub(r"[^\wëç ]", "", h.lower())
     m = sum(b.size for b in difflib.SequenceMatcher(None, hyp, ref_, autojunk=False).get_matching_blocks())
     return m - 0.5 * ((len(hyp) - m) + (len(ref_) - m))
