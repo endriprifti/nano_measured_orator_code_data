@@ -14,27 +14,27 @@
   "pause_mean": 0.8549502262443436,
   "ipu_dur_median": 1.5679999999999836,
   "ipu_dur_ci": [
-   1.4400000000000546,
-   1.6319999999999766
+   1.4719999999997526,
+   1.6319999999999488
   ],
   "detected_nuclei": 7337,
   "artic_detected": 4.511101601542517,
-  "syllables_est": 9914.958791208792,
+  "syllables_est": 9810.504141398435,
   "syllable_source": "detector, calibrated on a transcribed sample",
-  "artic_est": 6.096140995263737,
+  "artic_est": 6.031917806215343,
   "artic_est_ci": [
-   5.727564748241094,
-   6.51110356472895
+   5.601515504262969,
+   6.509136321460206
   ],
-  "ipu_syl_est_median": 9.459549071618039,
+  "ipu_syl_est_median": 9.359892188876794,
   "ipu_syl_est_ci": [
-   7.723384272740295,
-   9.96334482233858
+   7.549044834984816,
+   9.958291876427774
   ],
   "f0_median_hz": 124.35764777720128,
   "f0_median_ci": [
-   124.17752960714239,
-   124.55918861427995
+   124.18318387315901,
+   124.5562819953956
   ],
   "f0_range_st": 12.053324463913308,
   "f0_sd_st": 4.071075502257807,
@@ -46,7 +46,7 @@
   "decl_share_negative": 0.7415730337078652,
   "decl_n": 623,
   "pause_share_ge_1s": 0.26018099547511314,
-  "speech_rate_est": 4.162087773699354,
+  "speech_rate_est": 4.118239944370279,
   "speech_share": 0.682741389500833,
   "ci_note": "includes the uncertainty of the calibration ratio",
   "f0_ipu_median_hz": 123.3553984032385,
@@ -80,26 +80,26 @@
   "ipu_dur_median": 1.6640000000000015,
   "ipu_dur_ci": [
    1.152000000000001,
-   2.495999999999995
+   2.6559999999999917
   ],
   "detected_nuclei": 149,
   "artic_detected": 3.0314127604166665,
-  "syllables_est": 186.20689655172413,
+  "syllables_est": 187.22706422018348,
   "syllable_source": "automatic transcript, bias-corrected",
-  "artic_est": 3.7883890086206895,
+  "artic_est": 3.809144372969228,
   "artic_est_ci": [
-   3.350622023803598,
-   4.300950010175488
+   3.3690349306133696,
+   4.310366566265195
   ],
-  "ipu_syl_est_median": 6.248553575561212,
+  "ipu_syl_est_median": 6.282787389939043,
   "ipu_syl_est_ci": [
-   3.749132145336727,
-   8.747975005785698
+   3.769672433963426,
+   8.79590234591466
   ],
   "f0_median_hz": 89.5482951066302,
   "f0_median_ci": [
    88.99606700632428,
-   90.2575969282419
+   90.24370102185311
   ],
   "f0_range_st": 10.199398374534212,
   "f0_sd_st": 3.2074867064100925,
@@ -111,7 +111,7 @@
   "decl_share_negative": 0.631578947368421,
   "decl_n": 19,
   "pause_share_ge_1s": 0.3333333333333333,
-  "speech_rate_est": 2.8110944527736126,
+  "speech_rate_est": 2.826495534724992,
   "speech_share": 0.7420289855072463,
   "f0_ipu_median_hz": 87.8112371044378,
   "f0_ipu_median_ci_hz": [
@@ -152,18 +152,18 @@
   "syllable_source": "exact transcript",
   "artic_est": 5.741469816272964,
   "artic_est_ci": [
-   5.321513549872442,
-   6.093030239654184
+   5.3160753200886806,
+   6.088848353121986
   ],
-  "ipu_syl_est_median": 18.0,
+  "ipu_syl_est_median": 17.0,
   "ipu_syl_est_ci": [
    13.0,
    18.0
   ],
   "f0_median_hz": 124.10383311859829,
   "f0_median_ci": [
-   123.2330323324951,
-   124.95135814070639
+   123.22467552160539,
+   124.97038671370709
   ],
   "f0_range_st": 10.85505299090248,
   "f0_sd_st": 3.0964094998573732,
@@ -205,42 +205,42 @@
   "ipu_dur_median": 1.3760000000000012,
   "ipu_dur_ci": [
    0.8639999999999972,
-   2.2080000000000055
+   2.112000000000002
   ],
   "detected_nuclei": 159,
   "artic_detected": 4.039634146341462,
-  "syllables_est": 213.10344827586206,
+  "syllables_est": 217.22477064220183,
   "syllable_source": "automatic transcript, bias-corrected",
-  "artic_est": 5.414213624894868,
+  "artic_est": 5.518922018348622,
   "artic_est_ci": [
-   5.049725633261001,
-   5.807391191719274
+   5.143790800806658,
+   5.934256768649395
   ],
-  "ipu_syl_est_median": 8.711776187378009,
+  "ipu_syl_est_median": 8.880257919335296,
   "ipu_syl_est_ci": [
-   4.02081977878985,
-   12.06245933636955
+   4.098580578154752,
+   12.295741734464254
   ],
   "f0_median_hz": 128.19322583585043,
   "f0_median_ci": [
    126.79680377775733,
-   129.6238804402566
+   129.62552140487108
   ],
   "f0_range_st": 13.902078631919698,
   "f0_sd_st": 4.102022702661617,
   "decl_median": -1.28403168425953,
   "decl_ci": [
-   -2.4489879432095405,
-   0.11157861383753004
+   -2.335842202745442,
+   -0.02016725424649013
   ],
   "decl_share_negative": 0.7142857142857143,
   "decl_n": 14,
   "pause_share_ge_1s": 0.3333333333333333,
-  "speech_rate_est": 3.633105705739602,
+  "speech_rate_est": 3.703368293818226,
   "speech_share": 0.6710310965630117,
   "f0_ipu_median_hz": 131.802726974175,
   "f0_ipu_median_ci_hz": [
-   129.0930829832614,
+   129.24601006525776,
    144.22994556140347
   ]
  },
@@ -256,7 +256,7 @@
   "speech_time_s": 586.752,
   "n_ipus": 219,
   "n_pauses": 218,
-  "pause_
+  "
 {
  "KPD_heldout_cos": {
   "median": 0.7691571712493896,
@@ -352,61 +352,85 @@
   "asr_over_exact": 0.9666666666666667
  },
  "KPD_asr_sample": {
-  "n_valid": 10,
+  "n_valid": 12,
   "n_windows": 12,
-  "asr_syllables": 951,
-  "detected": 728,
-  "detection_ratio": 0.7655099894847529,
+  "asr_syllables": 1144,
+  "detected": 885,
+  "detection_ratio": 0.7736013986013986,
   "ratio_ci": [
-   0.7268020368128887,
-   0.8036498421594013
+   0.7271152299937219,
+   0.8221466627918241
   ]
  },
  "FN1990_asr_sample": {
   "n_valid": 12,
   "n_windows": 12,
-  "asr_syllables": 1216,
+  "asr_syllables": 1502,
   "detected": 1300,
-  "detection_ratio": 1.069078947368421,
+  "detection_ratio": 0.8655126498002663,
   "ratio_ci": [
-   1.0125389378423433,
-   1.1374254782109119
+   0.8192958756111098,
+   0.9219072819894569
   ]
  },
  "FN1991_asr_sample": {
   "n_valid": 12,
   "n_windows": 12,
-  "asr_syllables": 978,
+  "asr_syllables": 1018,
   "detected": 840,
-  "detection_ratio": 0.8588957055214724,
+  "detection_ratio": 0.825147347740668,
   "ratio_ci": [
-   0.8369462527805904,
-   0.8786312298941675
+   0.7818654765710913,
+   0.8613637350517165
   ]
  },
  "FN1": {
-  "asr_syllables": 180,
+  "asr_syllables": 181,
   "detected_nuclei": 149,
-  "detection_ratio_vs_asr": 0.8277777777777777
+  "detection_ratio_vs_asr": 0.8232044198895028
  },
  "FN3": {
-  "asr_syllables": 206,
+  "asr_syllables": 210,
   "detected_nuclei": 159,
-  "detection_ratio_vs_asr": 0.7718446601941747
+  "detection_ratio_vs_asr": 0.7571428571428571
  },
- "asr_bias": 0.9666666666666667
+ "FN1990_exact": {
+  "a": 163.836,
+  "b": 188.548,
+  "text": "por ato duhet t\u00eb k\u00ebnaqin edhe interesat shoq\u00ebrore t\u00eb grupeve e t\u00eb individ\u00ebve. Reforma ekonomike e projektuar nga Partia, synon q\u00eb rezultatet e pun\u00ebs e t\u00eb pron\u00ebs, n\u00eb t\u00eb ardhmen, t\u00eb realizohen t\u00eb diferencuara n\u00eb tri nivele: t\u00eb individit, t\u00eb grupit e t\u00eb shoq\u00ebris\u00eb, t\u00eb kusht\u00ebzuara n\u00eb mas\u00ebn d\u00ebrrmuese me mund\u00ebsit\u00eb ekonomike e t\u00eb ardhurat e nd\u00ebrmarrjes s\u00eb tyre. Kjo reform\u00eb ka n\u00eb themel realizimin e nj\u00eb roli cil\u00ebsisht t\u00eb ri t\u00eb shtetit n\u00eb ekonomi dhe n\u00eb jet\u00ebn shoq\u00ebrore.",
+  "text_syllables_phonetic": 163,
+  "detected": 115,
+  "phonation": 20.160000000000025,
+  "detection_ratio": 0.7055214723926381,
+  "artic_exact": 8.08531746031745,
+  "asr_syllables": 155,
+  "asr_over_exact": 0.950920245398773
+ },
+ "FN1991_exact": {
+  "a": 703.1,
+  "b": 727.94,
+  "text": "pret nga ne, intelektual\u00ebt, kuadrot, profesionist\u00ebt, politikan\u00ebt, dhe kur flas p\u00ebr profesionist\u00ebt, flas p\u00ebr t\u00eb gjitha zanatet intelektuale, vet\u00eb si ekonomist, kuptoj q\u00eb t\u00eb gjith\u00eb ekonomist\u00ebt kan\u00eb detyra shum\u00eb t\u00eb mprehta, sepse situata ekonomike",
+  "text_syllables_phonetic": 78,
+  "detected": 68,
+  "phonation": 13.69600000000014,
+  "detection_ratio": 0.8717948717948718,
+  "artic_exact": 5.695093457943867,
+  "asr_syllables": 78,
+  "asr_over_exact": 1.0
+ },
+ "asr_bias": 0.9667405764966741
 }
-26.82-33.18 31syl [comma] pause 1.216000000000001: Maxhoranca është e bindur se procesi politik i bashkëpunimit me opozitën është i pakthyeshëm  ||  Majoranza është e bindur se procesi politik i bashkunimit më opozitën është i pakthishëm.
-34.40-36.61 15syl [inside phrase] pause 0.5439999999999969: se zhvillimi ekonomik dhe social i vendit  ||  se zhvillimi ekonomik dhe sociali v
-37.15-38.91 9syl [comma] pause 1.1200000000000045: është dinamik dhe i qëndrueshëm  ||  është dinamik dhe i
-40.03-42.59 20syl [inside phrase] pause 0.7680000000000007: se forcimi i institucioneve të sigurisë kombëtare  ||  se forësimi instituzionëve të sigurisë
-43.36-44.64 2syl [inside phrase] pause 0.2880000000000038: lejon  ||  leyon tašma
-44.93-47.52 18syl [end of excerpt] pause None: tashmë çrrënjosjen e trafiqeve dhe të krimit të organizuar  ||  që rënjonsje në trafikeve dhe
-48.06-51.14 13syl [comma] pause 0.7359999999999971: Qeveria e re do të godasë pa mëshirë  ||  Qeveria e re do t'godas pa mëshirë.
-51.87-54.85 18syl [comma] pause 0.7040000000000006: me një vullnet institucional dhe politik të patundur  ||  me një vullnet institizional dhe politik të patundur
-55.55-58.21 18syl [comma] pause 0.7360000000000042: korrupsionin dhe abuzimin me funksionet publike  ||  korupcionin dhe abuzimin me funksionet publike
-58.94-60.83 10syl [phrase boundary, unpunctuated] pause 0.5760000000000005: si dhe çdo lidhje favorizuese  ||  si dhe zdo lidhje favorizuese
-61.41-64.64 18syl [phrase boundary, unpunctuated] pause 0.5120000000000005: të përfaqësuesve të politikës e të administratës  ||  të përfajshusve të politikës a të administ
-65.15-67.68 17syl [comma] pause 0.73599999999999: me botën e trafiqeve dhe të krimit të organizuar  ||  me botën e traficjeve dhe krimit organizuar
-68.42-71.87 21syl [end of excerpt] pause None: që deformojnë parametrat e zhvillimit dhe të integrimit kombëtar  ||  që deformojnë parametrat e shvillimit dhe t'integrim
-{'n_pauses': 11, 'pause_sites': {'comma': 6, 'inside phrase': 3, 'phrase boundary, unpunctuated': 2}, 'pause_dur_by_site': {'comma': 0.8746666666666663, 'inside phrase': 0.5333333333333338, 'phrase boundary, unpunctuated': 0.5440000000000005}, 'printed_punctuation_marks': 6, 'punctuation_marks_realised_as_pause': 6, 'printed_clause_syllables': [31, 24, 40, 13, 18, 18, 45, 21], 'ipu_syllables_exact': [31, 15, 9, 20, 2, 18, 13, 18, 18, 10, 18, 17, 21], 'departures': [{'printed': 'me një vullnet të patundur institucional dhe politik', 'spoken': 'me një vullnet institucional dhe politik të patundur'}], 'ipu_artic_cv': 0.2682572161617326, 'resets': [{'into': 2, 'opens_with_se': True, 'reset_st': 0.1606179720572971}, {'into': 3, 'opens_with_se': False, 'reset_st': -4.018738895902015}, {'into': 4, 'opens_with_se': True, 'reset_st': 6.92851413051866}, {'into': 5, 'opens_with_se': False, 'reset_st': -2.349519418209394}, {'into': 6, 'opens_with_se': False, 'reset_st': -1.7797961674302818}, {'into': 8, 'opens_with_se': False, 'reset_st': -0.8240391860965035}, {'into': 9, 'opens_with_se': False, 'reset_st': 4.701771762507693}, {'into': 10, 'opens_with_se': False, 'reset_st': 5.538951203838998}, {'into': 11, 'opens_with_se': False, 'reset_st': -4.551160642053196}, {'into': 12, 'opens_with_se': False, 'reset_st': -0.19444549910531395}, {'into': 13, 'opens_with_se': False, 'reset_st': 1.467254860959594}], 'reset_se_mean': 3.5445660512879784, 'reset_other_mean': -0.2233024423878243, 'ipu_syl_median': 18.0, 'clause_syl_median': 22.5, 'artic_exact': 5.741469816272964}
+26.82-33.18 31syl [comma] pause 1.216000000000001: Maxhoranca është e bindur se procesi politik i bashkëpunimit me opozitën është i pakthyeshëm  ||  Magjoranta është e bindur se procesi politik i bashkëpunimit më opozitën është i pakthishëm.
+34.40-36.61 15syl [inside phrase] pause 0.5439999999999969: se zhvillimi ekonomik dhe social i vendit  ||  se zhvillimi ekonomik dhe sociali vëndit,
+37.15-38.91 9syl [comma] pause 1.1200000000000045: është dinamik dhe i qëndrueshëm  ||  është dinamik dhe i qëndrushëm.
+40.03-42.59 20syl [inside phrase] pause 0.7680000000000007: se forcimi i institucioneve të sigurisë kombëtare  ||  se forësimi instituciones e të sigurisë komptare
+43.36-44.64 3syl [inside phrase] pause 0.2880000000000038: lejon tashmë  ||  Leon tašma
+44.93-47.52 17syl [end of excerpt] pause None: çrrënjosjen e trafiqeve dhe të krimit të organizuar  ||  që rënjonsjen e trafikjeve dhe të krimit organizuar.
+48.06-51.14 13syl [comma] pause 0.7359999999999971: Qeveria e re do të godasë pa mëshirë  ||  Qeveria e re do të godas pa mëshirë.
+51.87-54.85 18syl [comma] pause 0.7040000000000006: me një vullnet institucional dhe politik të patundur  ||  me një vullnet institucional dhe politik të patundur.
+55.55-58.21 18syl [comma] pause 0.7360000000000042: korrupsionin dhe abuzimin me funksionet publike  ||  korupcionin dhe abuzimin me funksionet publike.
+58.94-60.83 10syl [phrase boundary, unpunctuated] pause 0.5760000000000005: si dhe çdo lidhje favorizuese  ||  si dhe zdo lidi e favorizuese.
+61.41-64.64 18syl [phrase boundary, unpunctuated] pause 0.5120000000000005: të përfaqësuesve të politikës e të administratës  ||  të përfajshusve të politikës a të administratës.
+65.15-67.68 17syl [comma] pause 0.73599999999999: me botën e trafiqeve dhe të krimit të organizuar  ||  me botën e trafikeve dhe krimit organizuar.
+68.42-71.87 21syl [end of excerpt] pause None: që deformojnë parametrat e zhvillimit dhe të integrimit kombëtar  ||  që të deformojnë parametrat e shvillimit dhe t'integrimit komptar.
+{'n_pauses': 11, 'pause_sites': {'comma': 6, 'inside phrase': 3, 'phrase boundary, unpunctuated': 2}, 'pause_dur_by_site': {'phrase boundary, unpunctuated': 0.5440000000000005, 'inside phrase': 0.5333333333333338, 'comma': 0.8746666666666663}, 'printed_punctuation_marks': 6, 'punctuation_marks_realised_as_pause': 6, 'printed_clause_syllables': [31, 24, 40, 13, 18, 18, 45, 21], 'ipu_syllables_exact': [31, 15, 9, 20, 3, 17, 13, 18, 18, 10, 18, 17, 21], 'departures': [{'printed': 'me një vullnet të patundur institucional dhe politik', 'spoken': 'me një vullnet institucional dhe politik të patundur'}], 'ipu_artic_cv': 0.2355325816164965, 'resets': [{'into': 2, 'opens_with_se': True, 'reset_st': 0.1606179720572971}, {'into': 3, 'opens_with_se': False, 'reset_st': -4.018738895902015}, {'into': 4, 'opens_with_se': True, 'reset_st': 6.92851413051866}, {'into': 5, 'opens_with_se': False, 'reset_st': -2.349519418209394}, {'into': 6, 'opens_with_se': False, 'reset_st': -1.7797961674302818}, {'into': 8, 'opens_with_se': False, 'reset_st': -0.8240391860965035}, {'into': 9, 'opens_with_se': False, 'reset_st': 4.701771762507693}, {'into': 10, 'opens_with_se': False, 'reset_st': 5.538951203838998}, {'into': 11, 'opens_with_se': False, 'reset_st': -4.551160642053196}, {'into': 12, 'opens_with_se': False, 'reset_st': -0.19444549910531395}, {'into': 13, 'opens_with_se': False, 'reset_st': 1.467254860959594}], 'reset_se_mean': 3.5445660512879784, 'reset_other_mean': -0.2233024423878243, 'ipu_syl_median': 17.0, 'clause_syl_median': 22.5, 'artic_exact': 5.741469816272964}

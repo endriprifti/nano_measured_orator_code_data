@@ -15,27 +15,27 @@
    "pause_mean": 0.8549502262443436,
    "ipu_dur_median": 1.5679999999999836,
    "ipu_dur_ci": [
-    1.4400000000000546,
-    1.6319999999999766
+    1.4719999999997526,
+    1.6319999999999488
    ],
    "detected_nuclei": 7337,
    "artic_detected": 4.511101601542517,
-   "syllables_est": 9914.958791208792,
+   "syllables_est": 9810.504141398435,
    "syllable_source": "detector, calibrated on a transcribed sample",
-   "artic_est": 6.096140995263737,
+   "artic_est": 6.031917806215343,
    "artic_est_ci": [
-    5.727564748241094,
-    6.51110356472895
+    5.601515504262969,
+    6.509136321460206
    ],
-   "ipu_syl_est_median": 9.459549071618039,
+   "ipu_syl_est_median": 9.359892188876794,
    "ipu_syl_est_ci": [
-    7.723384272740295,
-    9.96334482233858
+    7.549044834984816,
+    9.958291876427774
    ],
    "f0_median_hz": 124.35764777720128,
    "f0_median_ci": [
-    124.17752960714239,
-    124.55918861427995
+    124.18318387315901,
+    124.5562819953956
    ],
    "f0_range_st": 12.053324463913308,
    "f0_sd_st": 4.071075502257807,
@@ -47,7 +47,7 @@
    "decl_share_negative": 0.7415730337078652,
    "decl_n": 623,
    "pause_share_ge_1s": 0.26018099547511314,
-   "speech_rate_est": 4.162087773699354,
+   "speech_rate_est": 4.118239944370279,
    "speech_share": 0.682741389500833,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 123.3553984032385,
@@ -81,26 +81,26 @@
    "ipu_dur_median": 1.6640000000000015,
    "ipu_dur_ci": [
     1.152000000000001,
-    2.495999999999995
+    2.6559999999999917
    ],
    "detected_nuclei": 149,
    "artic_detected": 3.0314127604166665,
-   "syllables_est": 186.20689655172413,
+   "syllables_est": 187.22706422018348,
    "syllable_source": "automatic transcript, bias-corrected",
-   "artic_est": 3.7883890086206895,
+   "artic_est": 3.809144372969228,
    "artic_est_ci": [
-    3.350622023803598,
-    4.300950010175488
+    3.3690349306133696,
+    4.310366566265195
    ],
-   "ipu_syl_est_median": 6.248553575561212,
+   "ipu_syl_est_median": 6.282787389939043,
    "ipu_syl_est_ci": [
-    3.749132145336727,
-    8.747975005785698
+    3.769672433963426,
+    8.79590234591466
    ],
    "f0_median_hz": 89.5482951066302,
    "f0_median_ci": [
     88.99606700632428,
-    90.2575969282419
+    90.24370102185311
    ],
    "f0_range_st": 10.199398374534212,
    "f0_sd_st": 3.2074867064100925,
@@ -112,7 +112,7 @@
    "decl_share_negative": 0.631578947368421,
    "decl_n": 19,
    "pause_share_ge_1s": 0.3333333333333333,
-   "speech_rate_est": 2.8110944527736126,
+   "speech_rate_est": 2.826495534724992,
    "speech_share": 0.7420289855072463,
    "f0_ipu_median_hz": 87.8112371044378,
    "f0_ipu_median_ci_hz": [
@@ -153,18 +153,18 @@
    "syllable_source": "exact transcript",
    "artic_est": 5.741469816272964,
    "artic_est_ci": [
-    5.321513549872442,
-    6.093030239654184
+    5.3160753200886806,
+    6.088848353121986
    ],
-   "ipu_syl_est_median": 18.0,
+   "ipu_syl_est_median": 17.0,
    "ipu_syl_est_ci": [
     13.0,
     18.0
    ],
    "f0_median_hz": 124.10383311859829,
    "f0_median_ci": [
-    123.2330323324951,
-    124.95135814070639
+    123.22467552160539,
+    124.97038671370709
    ],
    "f0_range_st": 10.85505299090248,
    "f0_sd_st": 3.0964094998573732,
@@ -206,42 +206,42 @@
    "ipu_dur_median": 1.3760000000000012,
    "ipu_dur_ci": [
     0.8639999999999972,
-    2.2080000000000055
+    2.112000000000002
    ],
    "detected_nuclei": 159,
    "artic_detected": 4.039634146341462,
-   "syllables_est": 213.10344827586206,
+   "syllables_est": 217.22477064220183,
    "syllable_source": "automatic transcript, bias-corrected",
-   "artic_est": 5.414213624894868,
+   "artic_est": 5.518922018348622,
    "artic_est_ci": [
-    5.049725633261001,
-    5.807391191719274
+    5.143790800806658,
+    5.934256768649395
    ],
-   "ipu_syl_est_median": 8.711776187378009,
+   "ipu_syl_est_median": 8.880257919335296,
    "ipu_syl_est_ci": [
-    4.02081977878985,
-    12.06245933636955
+    4.098580578154752,
+    12.295741734464254
    ],
    "f0_median_hz": 128.19322583585043,
    "f0_median_ci": [
     126.79680377775733,
-    129.6238804402566
+    129.62552140487108
    ],
    "f0_range_st": 13.902078631919698,
    "f0_sd_st": 4.102022702661617,
    "decl_median": -1.28403168425953,
    "decl_ci": [
-    -2.4489879432095405,
-    0.11157861383753004
+    -2.335842202745442,
+    -0.02016725424649013
    ],
    "decl_share_negative": 0.7142857142857143,
    "decl_n": 14,
    "pause_share_ge_1s": 0.3333333333333333,
-   "speech_rate_est": 3.633105705739602,
+   "speech_rate_est": 3.703368293818226,
    "speech_share": 0.6710310965630117,
    "f0_ipu_median_hz": 131.802726974175,
    "f0_ipu_median_ci_hz": [
-    129.0930829832614,
+    129.24601006525776,
     144.22994556140347
    ]
   },
@@ -265,39 +265,39 @@
    "pause_mean": 0.685064220183487,
    "ipu_dur_median": 2.5600000000000023,
    "ipu_dur_ci": [
-    2.3360000000000127,
+    2.368000000000009,
     2.7840000000000202
    ],
    "detected_nuclei": 3301,
    "artic_detected": 5.625886234729494,
-   "syllables_est": 3194.1771883289125,
+   "syllables_est": 3945.13761820748,
    "syllable_source": "detector, calibrated on a transcribed sample",
-   "artic_est": 5.443828377796604,
+   "artic_est": 6.723688403631313,
    "artic_est_ci": [
-    5.03517154327633,
-    5.830418836059456
+    6.214070860765807,
+    7.210649002672784
    ],
-   "ipu_syl_est_median": 13.546949602122016,
+   "ipu_syl_est_median": 16.731877205363443,
    "ipu_syl_est_ci": [
-    11.823434695011521,
-    15.325081139473616
+    14.586334189055469,
+    20.20083245659134
    ],
    "f0_median_hz": 151.7289952599609,
    "f0_median_ci": [
-    151.33805410501662,
-    152.07807288364538
+    151.3391963232891,
+    152.08054191075684
    ],
    "f0_range_st": 10.459890289572831,
    "f0_sd_st": 3.3669443272909483,
    "decl_median": -1.2397131695070978,
    "decl_ci": [
-    -1.4246029981324715,
-    -0.9731928043683864
+    -1.42465165805226,
+    -0.9731144105381374
    ],
    "decl_share_negative": 0.8118811881188119,
    "decl_n": 202,
    "pause_share_ge_1s": 0.16972477064220184,
-   "speech_rate_est": 4.339348656056971,
+   "speech_rate_est": 5.359542258356898,
    "speech_share": 0.7971134199886969,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 152.41577692333007,
@@ -321,7 +321,7 @@
    "pause_median": 0.8320000000003347,
    "pause_median_ci": [
     0.7999999999999545,
-    0.8960000000001287
+    0.8960000000001301
    ],
    "pause_mean": 1.2004689655172398,
    "ipu_dur_median": 1.2800000000000296,
@@ -331,40 +331,40 @@
    ],
    "detected_nuclei": 8821,
    "artic_detected": 4.71860610417843,
-   "syllables_est": 10624.307881773399,
+   "syllables_est": 11057.994424421144,
    "syllable_source": "detector, calibrated on a transcribed sample",
-   "artic_est": 5.683247253554809,
+   "artic_est": 5.915238634060159,
    "artic_est_ci": [
-    5.491450132174521,
-    5.894645044509082
+    5.599161962916015,
+    6.314645736531376
    ],
-   "ipu_syl_est_median": 7.226600985221674,
+   "ipu_syl_est_median": 7.521592398427259,
    "ipu_syl_est_ci": [
-    7.0642794616710445,
-    7.416123235038016
+    7.2053439978826,
+    7.93796657395232
    ],
    "f0_median_hz": 154.88696954220484,
    "f0_median_ci": [
-    154.59122992426754,
-    155.177072460128
+    154.58759186639958,
+    155.17177980502365
    ],
    "f0_range_st": 14.525687427645156,
    "f0_sd_st": 4.462478856696796,
    "decl_median": -1.0768452280935303,
    "decl_ci": [
-    -1.3064886640863316,
-    -0.8053837851834009
+    -1.306478088415043,
+    -0.8060160783109016
    ],
    "decl_share_negative": 0.6666666666666666,
    "decl_n": 714,
    "pause_share_ge_1s": 0.41293103448275864,
-   "speech_rate_est": 3.257039920199132,
+   "speech_rate_est": 3.389992993281674,
    "speech_share": 0.5730948830638838,
    "ci_note": "includes the uncertainty of the calibration ratio",
    "f0_ipu_median_hz": 156.53260918267878,
    "f0_ipu_median_ci_hz": [
-    154.17065817912547,
-    158.5190810047287
+    154.12300441732023,
+    158.54663004947471
    ]
   }
  },
@@ -25064,7 +25064,7 @@
    "detected_nuclei": 160,
    "words": 95,
    "detection_ratio": 0.7619047619047619,
-   "asr_text": "Magjoranta është e bindur se procesi politik i bashkëpunimit më opozitën është i pakthyshëm. Se zhvillimi ekonomik dhe sociali vëndit është dinamik dhe i qëndrushëm. Se forcimi institucionesve të sigurisë komtare lejon tashmë qërënjësje në traficjeve dhe të krimit organizuar Qeveria e re do të goddas pa mërshirë me një vullnet institucional dhe politik të patundur, korruptionin dhe abuzimin me funksionet publike, si dhe shdo lidhje favorizuese të përfajsuzve të politikës a të administratës me botën e trafikeve dhe krimit organizuar, që deformojnë parametrat e zhvillimit dhe t'integrimit kontar.",
+   "asr_text": "Magjoranta është e bindur se procesi politik i bashkëpunimit më opozitën është i pakthyshëm. Se zhvillimi ekonomik dhe sociali vëndit është dinamik dhe i qëndrushëm. Se forcimi institucionesve të sigurisë komtare lejon tashmë qërënjësje në trafikjeve dhe të krimit organizuar. Qeveria e re do të goddas pa mëshirë me një vullnet institucional dhe politik të patundur, korruptionin dhe abuzimin me funksionet publike, si dhe shdo lidhje favorizuese të përfajsuzve të politikës a të administratës me botën e trafikeve dhe krimit organizuar, që deformojnë parametrat e zhvillimit dhe t'integrimit kontar.",
    "asr_syllables": 203,
    "asr_over_exact": 0.9666666666666667
   },
@@ -25073,7 +25073,7 @@
     {
      "a": 31.323999999999998,
      "b": 54.596000000000004,
-     "text": "dhe krenarin e liqme për miratimin nga këshili i internacionale së socialiste të mbledhën në Sandu Domingo, të kandidaturës të Parti Socialistës Shqipëris për të atërsuar me të drejtat plota në organizatën më të madhe politike dhe demokratike të tokës. Kjë vendim.",
+     "text": "dhe krenarin e liqme për miratimin nga këshili i internacionales socialiste të mbledhën në Santo Domingo, të kandidaturës të Parti Socialistës Shqipëris për të antarësuar me të drejtat plota në organizatën më të madhe politike dhe demokratike të tokës. Këj vendim.",
      "asr_syllables": 93,
      "detected": 76,
      "phonation": 16.28799999999999,
@@ -25082,17 +25082,17 @@
     {
      "a": 241.21200000000002,
      "b": 265.98800000000006,
-     "text": "që si do që oft janë interesa të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të të",
-     "asr_syllables": 79,
+     "text": "që si do kjoft janë interesa dytësore në raport më atot programit dhe të majorancës elektorale. Ne sot duhet vazhdojmë të dëshmojmë se ushtrojmë pushtetin. Në dobi të të gjithë shtetasve dhe qytetarve, sepse kështu kandiduam dhe fituam dhe në zjedet e fund. Pra në dobi të të gjithë shtetasve, pavarësisht, nga bindjet politike, përgatësia fetare,",
+     "asr_syllables": 107,
      "detected": 88,
      "phonation": 19.103999999999957,
-     "valid": false
+     "valid": true
     },
     {
      "a": 452.828,
      "b": 477.31600000000003,
-     "text": "dhe për përmirësuar regullat, standartet dhe kriteret që garantojnë ruajtjen, zbatimin dhe zhvillimin e parimeve dhe të blerave tona, për t'i dhe në kështu fund në mënyrë të qartë dhe të qëndrushme edhe tranzicionit vërënda neshë. Ne duhet i abin fund praktikës së shëndërimit proceseve transformuese, përmirësuese",
-     "asr_syllables": 97,
+     "text": "dhe për përmirësuar regullat, standartet dhe kriteret që garantohen ruajtjen, zbatimin dhe zhvillimin e parimeve dhe të blerave tona, për t'i dhe në kështu fund në mënyrë të qartë dhe të qëndrushme edhe tranzicionit përëndanë neshë. Ne duhet i abin fund praktikës së shëndërimit proceseve transformuese, përmirësuese.",
+     "asr_syllables": 98,
      "detected": 74,
      "phonation": 18.656000000000006,
      "valid": true
@@ -25100,7 +25100,7 @@
     {
      "a": 659.068,
      "b": 680.9000000000001,
-     "text": "Shokje dhe shokë. Komiteti për gjithë shumë drejtu si partijës socialisës Shqipërisë është një institucion legitimë dhe pabarsisht nga objekti dhe rendi arbitrarit i ditës përcinën shmë ledhurë ka përgjëshin e lartë të zgjith me urtësi problemet kritike dhe kontradikat reale që janë evidentuar.",
+     "text": "Shokje dhe shokë. Komiteti për gjithë shumë drejtu si partitës socialisë e Shqipëris është një institucion legitimë. Dhe pabarsisht nga objektit dhe rendi arbitrarit i ditës për cilinë shumë ledhur, ka përgjëshin e lartë të zgjidh me urtësi problemet kritike dhe kontradikat reale që janë evidentuar.",
      "asr_syllables": 91,
      "detected": 69,
      "phonation": 16.191999999999894,
@@ -25109,8 +25109,8 @@
     {
      "a": 867.26,
      "b": 887.8760000000001,
-     "text": "Rëndom, jo vetëm nga unë, në për aktive të partisë, të cilat janë instituciones shumë të rëndësishme, po denonsojnë publikishtë, angelë dhe muqo, korupcion dhe abuzivizm me pushtetin, trafik votash dhe influence për interesa të paliqme.",
-     "asr_syllables": 73,
+     "text": "Rëndom, jo vedem nga unë, në për aktive dhe partisa, të cilat janë instituciones shumë të rëndësishme, po të nënësojnë publikishtë, angelë dhe muqo, korupcion dhe abuzivizm me pushtetin, trafik votash dhe influence për interesa të palishme.",
+     "asr_syllables": 75,
      "detected": 54,
      "phonation": 13.088000000000193,
      "valid": true
@@ -25118,7 +25118,7 @@
     {
      "a": 1076.124,
      "b": 1098.82,
-     "text": "jetim, midis realitetit kritik dhe propagandës demagogike qeveritare. Unë jam i vendosur të argumentoj dhe frenoj që realizimi i këture angazhimeve të marra në zgjedit parlamentarit këti vitit të rezikohet sirëzisht nga remineshensat të qeverisje sa shtu që ojtur me dorë të thëvart të tipit berisha.",
+     "text": "jetim, midis realitetit kritik dhe propagandës demagogike qeveritare. Unë jam i vendosur të argumentoj dhe frenoj që realizimi i këtyre angazhimeve të marra në zgjedit parlamentarit këti vitit të rezikohet që rozhisht nga remineshençat të qeverisje sashtu që hojtur me dorë të thëford të tipit berisha.",
      "asr_syllables": 105,
      "detected": 86,
      "phonation": 17.024000000000115,
@@ -25127,8 +25127,8 @@
     {
      "a": 1286.364,
      "b": 1310.0839999999998,
-     "text": "që me afera skandalose shumë i lënëshe, bëjnë pisë gjithë qeverisën tonë. Mëndaj kanë kërkuar dhe vazhdoj të kërkojë kërë ministrit të divorcojt nga praktikat e freqizimit klientelist dhe abuziv të pushtetit. Të mardonjeve selektive me bizneset dëvëndës adhetuaja për qëllime përfitimesh të paliqme.",
-     "asr_syllables": 93,
+     "text": "që me afera skandalose shumë i lënse, bëjnë pisë gjithë qeverisën tonë. Mëndaj kam kërkuar dhe vazhdoj të kërkojë këriministrit të divorcoat nga praktikat e freqezimit klientelist dhe abuziv të pushtetit. Të mardonjeve selektive me bizneset dëvëndës adhetuaja për qëllime përfitimesh të paliqme.",
+     "asr_syllables": 94,
      "detected": 82,
      "phonation": 16.192000000000007,
      "valid": true
@@ -25136,7 +25136,7 @@
     {
      "a": 1493.18,
      "b": 1518.0839999999998,
-     "text": "Kjeverisa. Shokje dhe shok. Partia Socialiste Shqipëris dhe instituciones tona përfajshuse, unë vlerësoj që janë për para alternativave e nde papajtuara, shpresoj i jotë papajtuashme, të shtruara nga kuretari partis dhe nga kureministri. Në detyren politiket kuretarit dhe në emër të antarësis.",
+     "text": "Kjeverisa. Shokje dhe shokë. Partia Socialiste e Shqipëris dhe instituciones tona përfajsuse, unë vlerësoj se janë për para alternativave e ndë apetuara. shpresoj jot papajtueshme, të shtruara nga kuretari partis dhe nga kureministri. Në detyren politiket kuretarit dhe në emër të antarësis.",
      "asr_syllables": 99,
      "detected": 76,
      "phonation": 16.191999999999553,
@@ -25145,8 +25145,8 @@
     {
      "a": 1702.428,
      "b": 1727.204,
-     "text": "për të monitoruar kjeverisjen dhe për të anëziturat të të realizohi objektivat kje përfundojnë me sukses mandatin ton të dytë. Sa për opozitën destruktive, ajo eliminohet, demotivohet apo izolohet, vetëm nëse regullat dhe instituciones demokratike të shtetit të sëdretis funksionojnë në respekt.",
-     "asr_syllables": 103,
+     "text": "për të monitoruar kjeverisjen dhe për të anëziturat të të realizohi objektivat që e përfundojnë me sukses mandatin tonë të dytë. Sa propozitën destruktive, ajo eliminohet, demotivohet apo izolohet, vetëm nëse regullat dhe instituciones demokratike të shtetit të sëdretis funksionojnë në respekt e nështë.",
+     "asr_syllables": 105,
      "detected": 80,
      "phonation": 18.01599999999985,
      "valid": true
@@ -25154,7 +25154,7 @@
     {
      "a": 1909.084,
      "b": 1932.6119999999999,
-     "text": "Në përgjësine kuretaret që drejton partinë socialiste e prej dhe djetërshë, bashkë me ju, në suksese, për të forcuar kredibilitetin dhe rezultatet tona qeverisës, për të përshpejtuar reformat që transformojnë dhe europianizojnë Shqiprin, për të garantuar përfundimin me sukses të mandatit ton të dy të qeverisës.",
+     "text": "Në përgjësine kuretaret që drejton partinë socialiste për edhe djetësh, bashkë me ju, në suksese, për të forcuar kredibilitetin dhe rezultatet tona qeverisës, për të përshpejtuar reformat që transformojnë dhe europianizohenë Shqiprinë, për të garantuar përfundimin me sukses të mandatit ton të dytë qeverisës.",
      "asr_syllables": 98,
      "detected": 65,
      "phonation": 15.744000000000142,
@@ -25163,8 +25163,8 @@
     {
      "a": 2118.844,
      "b": 2142.276,
-     "text": "që të jamin fund praktikëve të abuzimit me pushtetit për interesa politike apo ekonomike të paliqme. Në dëm të interesa dhe madhore të partisë të gjithë shqipërisë dhe të elektoratit tonë që kërkon progresë. Mërënjën i pra të ritheksoj blersimin se shdoz gjithje ndryshe, vetëm sa do të arëndon të krizëm.",
-     "asr_syllables": 99,
+     "text": "që të jamin fund praktikeve të abuzimit me pushtetit për interesa politike apo ekonomike të paliqme. Në dëmë të interesa dhe madhore të partijësësësjësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësësë",
+     "asr_syllables": 107,
      "detected": 66,
      "phonation": 16.352000000000317,
      "valid": true
@@ -25172,21 +25172,21 @@
     {
      "a": 2328.4120000000003,
      "b": 2348.324,
-     "text": "Nuk e shrak port, asper eruditërës.",
-     "asr_syllables": 11,
+     "text": "Për në përgjithë atyre për përgjithë anarkistëve. Unë nuk kontroloj eskluzivitetin e asë një paisi e në të këmën shqiparë përveç mëra e tim. Tare të përgjithë. E onë do të përgjithë. Për përgjithë përgjithë vetë. Nuk është raportë, asë për e rëgjithës",
+     "asr_syllables": 72,
      "detected": 69,
      "phonation": 15.55199999999968,
-     "valid": false
+     "valid": true
     }
    ],
-   "n_valid": 10,
+   "n_valid": 12,
    "n_windows": 12,
-   "asr_syllables": 951,
-   "detected": 728,
-   "detection_ratio": 0.7655099894847529,
+   "asr_syllables": 1144,
+   "detected": 885,
+   "detection_ratio": 0.7736013986013986,
    "ratio_ci": [
-    0.7268020368128887,
-    0.8036498421594013
+    0.7271152299937219,
+    0.8221466627918241
    ]
   },
   "FN1990_asr_sample": {
@@ -25194,8 +25194,8 @@
     {
      "a": 45.596,
      "b": 69.476,
-     "text": "Kanë bindjen së angazhimet e reja, që do të dalin nga kjo aktiv për periudën zgjedhjeve dherin kongres në dhjetë, do të rrisin mëtej besim në pobëllit të këforca realizuse e organizatës sëndës përvuar politike. Transformimet që nëzorën vëndin nga stadij feudal njëtën moderne, të tasim të rësi për harmonizim të drej",
-     "asr_syllables": 103,
+     "text": "Kanë bindjen së angazhimet e reja që do të dalin nga kjo aktiv për periudën zgjedhjeve derin kongres në dhjetë, do të rrisin mëtej besim në pobëllit të këforca realizuse e organizatës të sëndës përvuar politike. Transformimet që nëzorën vëndin nga stadi feudal një jetën moderne, të tasim të rësi për harmonizim të drejt të vlerave komptare me konceptet e reja ideologike, dhe të regojnë se altern",
+     "asr_syllables": 132,
      "detected": 110,
      "phonation": 19.360000000000007,
      "valid": true
@@ -25203,8 +25203,8 @@
     {
      "a": 102.33200000000001,
      "b": 126.084,
-     "text": "Nuk janë konjukturorë, por më të thellë dhe me shtiri e kohore më të gjatë. Ata duen njërë si të tivë nga gjithë masa e nëtarve të partijës, për të ngritu realisht në lartësine militantëve të kohës, për të përterirë gjithë shkatë vjetëruar dhe për të orientuar drejtë politikishtë masat që kë",
-     "asr_syllables": 85,
+     "text": "Nuk janë konjukturorë, por më të thelë dhe me shtiri e kohore më të gjatë. Ata duhe njërë si të të tjilë nga gjithë masa e nëtarëve të partisë, për të ngritu realisht në lartësin e militantëve të kohës, për të përterirë gjithë shkatë vjetëruar dhe për të orientuar drejtë politikishtë masat që këto të angazhojnë me bindjet qarta në proceset e reja zhvillimit akt",
+     "asr_syllables": 108,
      "detected": 93,
      "phonation": 18.11200000000001,
      "valid": true
@@ -25212,8 +25212,8 @@
     {
      "a": 163.836,
      "b": 188.548,
-     "text": "por ato duhet knaxin edhe interesat qëqërorët të grupeve e të individve. Reforma ekonomike e projektuar nga partia, synon që rezultatet e punës e të pronës në tartëme të realizohen e të diferensuarë në tri nivele të individit të grupit të qëqëris, të kushtëzura në masë ndërmuse me mundësit ekonomike e tarduar të ndërmarjes të tyre. Kjo reformë kanë themelë",
-     "asr_syllables": 125,
+     "text": "por ato duhet knaxin edhe interesat qëqërorët të grupeve e të individve. Reforma ekonomike e projektuar nga partia, synon që rezultatet e punës e të pronës në tarthme të realizohen e të diferensuarën e tri nivele, të individit të grupeve e të qëqëris. të kushtë zura në masë ndërmuse me mundësit ekonomike e tardurat e ndërmarjes së tyre. Kjo reformë kanë themel e realizim në një roli cilësisht të rritë shtetit në ekonomi dhe njetën shoqërore.",
+     "asr_syllables": 155,
      "detected": 115,
      "phonation": 20.160000000000025,
      "valid": true
@@ -25221,8 +25221,8 @@
     {
      "a": 222.07600000000002,
      "b": 247.172,
-     "text": "Por vetëmë në mështetje strategjisë ekonomiket për saktuar, për ruetin e përparsive që a përmban, për zhvidim në e kulibruart e ekonomisët kulturës, për nëzitin progresit tekniko shkendësor dhe zhvidim në infrastrukturave, për disa garanci bazës sociale dhe për mëlojt në interesave kontare në shkëmbimet e jashtme. E dyta, bizotrim",
-     "asr_syllables": 108,
+     "text": "Por vetëm në mështetje strategisë ekonomiket për caktuar, për ruatin e përparsive që a përmban, për zhvidim në e kulibruart e ekonomisët kulturës, për nëzitin progresit tekniko shkënësor dhe zhvidim në infrastrukturave, për disa garancij bazë sociale dhe për mëlojt në interes E dyta, bizotrimi prekosh i koncepti teorik se prona, puna, tregu dhe ekonomia socialiste në tërsi kanë karakteronike shumë formësh.",
+     "asr_syllables": 136,
      "detected": 117,
      "phonation": 19.807999999999964,
      "valid": true
@@ -25230,8 +25230,8 @@
     {
      "a": 279.996,
      "b": 301.41200000000003,
-     "text": "Këto shvillohen mënyrët harmonizuar për siguruar rritjet prodhimin dhe të efektivitetit, nëzitjet gjithanshmet iniciativës ekonomiket interesit material të individve të nërmarive kooperativiste ose shtetërore, me synim që rolin e regulatorit në jetin ekonomiket vëndit të luen gjithë një strukturat kolektive të prodhimit e kons",
-     "asr_syllables": 116,
+     "text": "Këtë shvillohen mënyrët harmonizuar për siguruar rritjet prodhimin dhe të efektivitetit, nëzitjet gjithanshmet iniciativës ekonomiket, interesit materialit individve të nërmarive kooperativiste ose shtetërore, me synim që rolin e regulatorit në jetën ekonomiket vëndit të aluan gjithnje strukturat kolektive të prodhimit e konsumit. Mendoj se këtë koncept teorik për ekonomin e tregut në stad",
+     "asr_syllables": 137,
      "detected": 117,
      "phonation": 18.81600000000003,
      "valid": true
@@ -25239,8 +25239,8 @@
     {
      "a": 337.46799999999996,
      "b": 360.77200000000005,
-     "text": "Kras formave më të lërmishme për nëzitin e prodhimit e të interesit material të antarve të këpërative dhe bëqësore. Zvillimi i iniciativës ekonomike private në kufite përsaktuar me ligjë, duke angazhur për këtë qëllimë kursime dhe mjetet finansiarit shtetasve për përmëtarit që ta marim për sipur. Më bës",
-     "asr_syllables": 106,
+     "text": "kras formave më të lërmishme për nëzitin e prodhimit e të interesit material të antarve të kooperativeve bëqësore. Zvillimi inisiativës ekonomike private në kufite përsaktuar me ligjë, duke angazhuar për këtë qëllimë kursime dhe mjetët finansiarit shtetasve për vërmëtarit që ta marim për sipur. Më bështetur pranë garancit të plota ligjore për realizimin e shdoj interesi ekonomik",
+     "asr_syllables": 134,
      "detected": 115,
      "phonation": 18.656000000000006,
      "valid": true
@@ -25248,8 +25248,8 @@
     {
      "a": 397.5,
      "b": 420.74,
-     "text": "Kur stadhë i një intensifikimit të punës e të prodhimit, është ljarë nivellit të tëre. Në këto kushtë e drejtimi ekonomisë merë karakter global dhe stimulon këthim në njerëzve në konsumator pasiv, kras pasojve e negative të imponimit të disa prodhuesve në trekt. Që reforma ekonomikët japë rezultatit balansuara të kuptushme pë",
-     "asr_syllables": 106,
+     "text": "kur stadhë i një intensifikimit të punës e të prodhimit është lërgë nivellit të tyre. Në këto kushtë të drejtimi ekonomis merë karakter global dhe stimulon këthim në njerëzve në konsumator pasiv, kras pasojve e negative të imponimit të disa prodhuesve në trekt. Që reforma ekonomikët jaë rezultatet balansuara të kuptushme për njerëzit, pozita monopol që rrjedhë nga përqendrimet të përur",
+     "asr_syllables": 126,
      "detected": 104,
      "phonation": 18.527999999999906,
      "valid": true
@@ -25257,8 +25257,8 @@
     {
      "a": 457.02,
      "b": 480.26000000000005,
-     "text": "të nevojshëm edhe sferën e veprimit e ligjit vlerës e të mekanizmit kërkes ofertës në prodhim dhe në këmbim. Kjale është për ngushtim të tepruar të mardonimet këmbimit madhrave me para reale e të përgjësive ekonomike që lidhen me tohë. Për përqendrime të thuaj se kretë të rekt",
-     "asr_syllables": 88,
+     "text": "të nevojshëm edhe sferën e veprimit e ligjit vlerës e të mekanizmit kërkes ofertës, në prodhim dhe në këmbim. Fjalla është për ngushtim të tepruar të mardonimet këmbimit malrave me para reale e të përgjësive ekonomike që lidhen me to. Për përqendrime të thuaj se kretë trektis në ndërmarjet specializur e shtetrore, që distansuan jashtë masë e produsit",
+     "asr_syllables": 111,
      "detected": 110,
      "phonation": 19.77600000000001,
      "valid": true
@@ -25266,8 +25266,8 @@
     {
      "a": 513.852,
      "b": 535.812,
-     "text": "Kur si valutore tjerë, mbahen të ngrirë për periodat e gjartë a kohë, pavarësisht nga dinamika ekonomike brënda dhe jashtëvëndit. Prandaj edhe shtetit do të duhet të marë masat të tjera, që oponensa e tregut në dhe planit të veprojë realishtë në mënyrë efikase. Drejtimi efikasi i",
-     "asr_syllables": 91,
+     "text": "Kurësi valutore tjerë, mbahen të ngrirë për periudat e gjartë a kohë, pavarësisht nga dinamika ekonomike brënda dhe jashtë dëvëndit. Prandaj edhe shtetit do të duhet të marrë masat të tjera, që oponensa e tregut nga i planit të veprojë realishtë në mënyrë efikase. Dretimi efikasi i ekonomisë përkon vërtet që banka të fitoj pavarësine nevoj",
+     "asr_syllables": 113,
      "detected": 100,
      "phonation": 17.6959999999998,
      "valid": true
@@ -25275,8 +25275,8 @@
     {
      "a": 572.8919999999999,
      "b": 596.3240000000001,
-     "text": "që të sigurohen të ardhurat mjaftushme për jetes për të gjithë shtetasit. Së fundi, dihet se në fjidhimin dhe kësaj dekate, kur në plan të parë dolin kërkesa për shvidhimi intensive e cilësore të ekonomis, të lidhura me nevoja për inovimet teknike teknologike të ndjeshme, përbalimi të tjyre u kufizuo vet",
-     "asr_syllables": 103,
+     "text": "që të sigurohen të ardhurat mjaftushme për jetes për të gjithë shtetasit. Së fundi, dihet se në fjidhimin dhe kësaj dekate, kur në plan të parë dolin kërkesa për shvidhimi intensive cilësore të ekonomisë, të lidhura me nevoja për inovimet teknike teknologike të ndjeshme, përbalimi të tjyre u kufizuo vetëm e burimet të brendshme materiale e valutore. Njerëzit kërkojnë",
+     "asr_syllables": 125,
      "detected": 96,
      "phonation": 17.248000000000047,
      "valid": true
@@ -25284,8 +25284,8 @@
     {
      "a": 632.22,
      "b": 655.556,
-     "text": "Jo vetëm për fajn ton, ka vazhduar prej vitesh të zërë mëse gjysme në trekti sënë të jashtme, duke mos kryuar mundësi për kapërcimin e prabëmbetjes teknologike. Si rridoj pjesmarja dhëndin ndarën dhe kontarët punës nuk është gjeruar. Pesha eksporteve në produktin tonë shëqërorë ka mbetur në nivelin p",
-     "asr_syllables": 90,
+     "text": "Jo vetëm për fajnë ton, ka vazhduar prej vitesh të zërë mëse gjysme në trekti sën të jashtme, duke mos kryuar mundësi për kapërcimin e prabëmbetjes teknologike. Si rridoj pjesmarja dhëndin, darin dhe kontaret punës nuk është gjeruar. Pesha eksporteve në produktin ton shëqërorë ka mbetur në nivelin për 10% dhe shkurë, mesataria botrore arin bishë 7-10%. Në një koqë vend",
+     "asr_syllables": 107,
      "detected": 119,
      "phonation": 19.424000000000092,
      "valid": true
@@ -25293,8 +25293,8 @@
     {
      "a": 689.276,
      "b": 711.236,
-     "text": "sepse presionet kishën filluar. Thot pra ka marrë rëndësit veçantë informimi i gjëre konkreti popullit për vështisit që kallojme, për luften e përpjeket që bëjmë për kapërcimin me tyre, për qartësim në perspektivave që kanë qerru reformet ekonomike e politike të nëmarë nga partia, për bashkëpun",
-     "asr_syllables": 95,
+     "text": "sepse presionet kishin filluar. Sot pra ka marrë rëndësit veçantë informimi i gjëre konkretit popullit për vështishtit që kallojmë, për luftën e përpjeket që bëjmë për kapërcinit me tyre, për qartësim në perspektivave që kanë qerru reformet ekonomike e politike të nëmarën nga partia, për bashkëpunime me kapital në huaj dhe për përshirën e vendit në proceset e integr",
+     "asr_syllables": 118,
      "detected": 104,
      "phonation": 17.888000000000034,
      "valid": true
@@ -25302,12 +25302,12 @@
    ],
    "n_valid": 12,
    "n_windows": 12,
-   "asr_syllables": 1216,
+   "asr_syllables": 1502,
    "detected": 1300,
-   "detection_ratio": 1.069078947368421,
+   "detection_ratio": 0.8655126498002663,
    "ratio_ci": [
-    1.0125389378423433,
-    1.1374254782109119
+    0.8192958756111098,
+    0.9219072819894569
    ]
   },
   "FN1991_asr_sample": {
@@ -25315,8 +25315,8 @@
     {
      "a": 128.22,
      "b": 153.09199999999998,
-     "text": "Duk e ardhën një salë ku janë shtuar me së shokar rige, të regoni angazhim për situatën, të regoni angazhim politik, sepse mbi gjitha në kërkohet angazhim politik gjithë, për të diskutuar së bashku, nësë këndër më nëmbaj fjalime.",
-     "asr_syllables": 69,
+     "text": "duke ardhën në një salë ku janë shtuar me së shokarike, të regoni angazhim për situatën, të regoni angazhim politikë. sepse mbi gjitha nga kërkohet angajim politik gjithë për të diskutuar së bashku, në skandër më në baj fjalime. Rrethë...",
+     "asr_syllables": 71,
      "detected": 60,
      "phonation": 14.656000000000006,
      "valid": true
@@ -25324,7 +25324,7 @@
     {
      "a": 420.828,
      "b": 445.28400000000005,
-     "text": "të zdoore me situata që dalin jash kontrolit për munges angazhimi tonën, apo për veprimet pakontroluara të të tjerve, por është një qeveri që po punon edhe për qelur diqka, aqësa mundet në kachko për perspektivën.",
+     "text": "të zdoore me situata që dalin jash kontrolit për munges angazhimi tonën, apo për veprimet pakontroluara të të tjerve, por është një qeveri që po punon edhe për qelur diçka, aqësa mundet në kachko për perspektivën.",
      "asr_syllables": 69,
      "detected": 65,
      "phonation": 15.168000000000006,
@@ -25333,8 +25333,8 @@
     {
      "a": 703.1,
      "b": 727.94,
-     "text": "Pret nga ne, intelektualet, kuadrët, profesionistët, politikanët, dhe ku flasë profesionistët, flasë për gjitha, zanatet intelektualet, vetës i ekonomistët. Kuptoj që të gjithë ekonomistët kanë detyra shumë të mpretë, sepse situatë e ekonomike.",
-     "asr_syllables": 77,
+     "text": "Pret nga ne, intelektualet, kuadrët, profesionistët, politikanët, të ku flasë profesionistët, flasë për gjitha, zanatet intelektualet, vetës i ekonomistët. kuptoj që të gjithë ekonomistët kanë detyra shumë të mpreta, sepse situata ekonomike...",
+     "asr_syllables": 78,
      "detected": 68,
      "phonation": 13.69600000000014,
      "valid": true
@@ -25342,7 +25342,7 @@
     {
      "a": 992.764,
      "b": 1015.428,
-     "text": "të mundurën dhe të pa mundurën. Që nga zgjidhje një problemi të thjeshtë, si që janë përmësimi kusteve të punët, sa përvënje gjamave në repartë, dhe dhe dyfishimi rogëve. Punëtorët, pshatarët, kanë vëshqishira ale. Paguen në masën e...",
+     "text": "të mundurën dhe të pa mundurën. Që nga zgjidhje një problemi të thjeshtë, si që janë përmërshimi kusteve të punët, sa përvënje gjamave në repartë, dhe i të dyfishimi rogëve. Puntorët, pshetarët, kanë vëshqishira ale. Paguen në masën e...",
      "asr_syllables": 72,
      "detected": 55,
      "phonation": 11.807999999999993,
@@ -25351,8 +25351,8 @@
     {
      "a": 1280.7320000000002,
      "b": 1305.412,
-     "text": "me ose pa parti, punojnë realisht në mënyrë shumë të hapur për të kontaktuar me të gjitha, me të gjithë specialistët e forcave tjera politike, jo për të bërë qeverin dhe zyrat klube të lafeve dhe diskutime politike, por për të shmangur dhe një të keqet madhe që dashi pa dashi, sepse në mungon kultura demokratike në vëshme.",
-     "asr_syllables": 104,
+     "text": "me ose pa parti, punojnë realisht në mënyrë shumë të hapur për të kontaktuar me të gjitha, me të gjithë specialistet e forçave tjera politike. Jo për të bërë qeverin dhe zyrat klube të lafeve dhe diskutime politike, por për të shmangur dhe një të keqet madhe që dashi e pa dashi, sepse në mungon kultura demokratike në vëshme.",
+     "asr_syllables": 105,
      "detected": 89,
      "phonation": 18.46400000000017,
      "valid": true
@@ -25360,8 +25360,8 @@
     {
      "a": 1569.4040000000002,
      "b": 1590.82,
-     "text": "Rënje që e bartur në vite në kasilë në një situatë totalet krizës ekonomike, është e para që duhet sulmuar dhe atakuar me gjitha mjetet, me mjetet politike, me mjetet ekonomike, me mjetet njërzore, me dialog, me komunikim, me ide të qartë.",
-     "asr_syllables": 79,
+     "text": "rënje që e bartur në vite në kasi në një situatë totalet krizës ekonomike, është e para që duhet sëllumor dhe atakuar me gjitha mjetet, me mjetet politike, me mjetet ekonomike, me mjetet njërzore, me dialog, me komunikim, me ide të qartë.",
+     "asr_syllables": 80,
      "detected": 67,
      "phonation": 14.367999999999483,
      "valid": true
@@ -25369,8 +25369,8 @@
     {
      "a": 1858.2040000000002,
      "b": 1879.0439999999999,
-     "text": "Përmërshisht se kanalet zyrtare të informacionit janë të detyruar në i framnyre për të shpëtuar demokracinë, për të ruetur pluralizmin, të mos flasin me adresa, tjenit sigur të ato janë shumë të adresuara. Përmërshisht se në thonë, identifikoheni këto forqat e rta.",
-     "asr_syllables": 84,
+     "text": "Për të rruetur pluralizmin, të mos flasin me adresa, tjenit sigur të ato janë shumë të adresuara. Për të rruetur pluralizmin, të mos flasin me adresa, tjenit sigur të ato janë shumë të adresuara. Për të rruetur pluralizmin, të mos flasin me adresa, tjenit sigur të ato janë shumë të adresuara. Për të rruetur pluralizmin, të mos flasin me adres",
+     "asr_syllables": 105,
      "detected": 71,
      "phonation": 13.760000000000218,
      "valid": true
@@ -25378,8 +25378,8 @@
     {
      "a": 2147.164,
      "b": 2171.46,
-     "text": "Zgjithin një, mbyllin një brim të të dhe hapin të rëbrim atë tjera. Jo shok, program i partizë punës dhe reforma ekonomike që më shtetë qeveria, është e tilë që bugjeti i shtetit kryohet me sankcionet sakta ligjore, se cila duhet jetë ndarja e të ardurave që kryohen, midi zdo subjektit dhe shtetit si përfajsusi.",
-     "asr_syllables": 98,
+     "text": "Zgjidhin një, mbyllin një brim të të dhe hapin të rëbrim atë tjera. Jo shok, program i partizë punës dhe reforma ekonomike që më shtetë qeveria është e tjilë që bugjeti i shtetit kryojt me sankcionet sakta ligjore se cila duhet jetë ndarja e të ardhurave që kryojnë, midi zdo subjektit dhe shtetit si përfajsusi.",
+     "asr_syllables": 96,
      "detected": 81,
      "phonation": 18.55999999999949,
      "valid": true
@@ -25387,8 +25387,8 @@
     {
      "a": 2437.6600000000003,
      "b": 2462.532,
-     "text": "banka private ose të përbashta me të huajt, pse jo, të cilat janë detyruara nga ligji dhe jo nga urdhri, që një piesë depositave tyre ta depositojnë në bankën qëndrore e cilat garanton stabilitetin e qarkullimit monetar. Dhe si funksionojnë të banka, funksionojnë vetëm mi bazën e interesave komerciale.",
-     "asr_syllables": 101,
+     "text": "banka private ose të përbashta me të huajt, pse jo, të cilat janë detyruara nga ligji dhe jo nga urdri, që një piesë depositave tyre ta depositojnë në bankën qëndrore e cila garanton stabilitetin e qërkullimit monetarë. dhe si funksionojnë në do banka, funksionojnë vetëm mi bazën e interesave komerciale.",
+     "asr_syllables": 102,
      "detected": 90,
      "phonation": 17.215999999999894,
      "valid": true
@@ -25396,8 +25396,8 @@
     {
      "a": 2726.3,
      "b": 2749.764,
-     "text": "sepse nuk arrim të imbulojmë pjesërisht ose plotësish në punë. Dhe janë gjithë do muaj 25 milion lektër e e, që dalin qagullim në të formë, në mënyrë të shumë të pasër inflacioniste. është diskutuar shumë dhe për inflacionin, po hapërë në të se për kacë.",
-     "asr_syllables": 74,
+     "text": "sepse nuk arrim të imbulojmë pjesërisht ose plotësisht me punë. Dhe janë gjithë do muaj 25 milion lektër e e, që dalin që agullim në të formë, në mënyrë të shumë të pasër inflacioniste. është diskutuar shumë dhe për inflacionin, po hapër anëtese për kacë.",
+     "asr_syllables": 76,
      "detected": 63,
      "phonation": 12.89600000000064,
      "valid": true
@@ -25405,8 +25405,8 @@
     {
      "a": 3011.964,
      "b": 3033.764,
-     "text": "Nuk të falj asë sekunden për të shkuar për të marë rogën dhe për të kërkuar rogën më të madhe. Gjëme e vështirë është të mbyllësh rubinetat nga rrjedhë ekonomia për dit. Asë njëri nga kuadrët e pushtetit.",
-     "asr_syllables": 58,
+     "text": "Nuk të falj asë sekundin për të shkuar për të marë rogën dhe për të kërkuar rogën më të madhe. Gjë e më e vështirë është të mbyllësh rubinetat nga rjedhë ekonomia për dit. Asë njëri nga kuadrët e pushtetit.",
+     "asr_syllables": 59,
      "detected": 50,
      "phonation": 10.559999999999945,
      "valid": true
@@ -25414,8 +25414,8 @@
     {
      "a": 3299.9,
      "b": 3323.908,
-     "text": "dhe me mundësit me njërsh me zhvillimi ama në vend, në turizm, në infrastruktura që në lidhën me botën dhe përshpejtojnë lëvizijën e madrave të kapitaleve me të e tjera, tjera. Po kjo alternativ e këthimit njërësve në punë e blokon të tjetërën, po të gjukonin bardezi. Atere, ka një rrug t",
-     "asr_syllables": 93,
+     "text": "dhe me mundësit me njërës me zhvillimi ama në vend, në turizm, në infrastruktura që në lidhën me botën dhe përshpejtojnë lëvizijën e madrave të kapitaleve me të etyra etyra. Po kjo alternativ e këtimit njërësve në pun e blokon të tjetërën. Po të gjukonin bardezi. Atere, ka një rrug të mesme, ka një rrug zgjidhje, një pajtim?",
+     "asr_syllables": 105,
      "detected": 81,
      "phonation": 15.071999999999662,
      "valid": true
@@ -25423,34 +25423,60 @@
    ],
    "n_valid": 12,
    "n_windows": 12,
-   "asr_syllables": 978,
+   "asr_syllables": 1018,
    "detected": 840,
-   "detection_ratio": 0.8588957055214724,
+   "detection_ratio": 0.825147347740668,
    "ratio_ci": [
-    0.8369462527805904,
-    0.8786312298941675
+    0.7818654765710913,
+    0.8613637350517165
    ]
   },
   "FN1": {
-   "asr_text": "Ne kemi dëgjurë të façdemisht me shqecimin dhe vëmëndin e duhur analizat dhe informacionet që Kriminisët i Metan kanë darë në kërësire partis dhe me mua si kërëtar i sajë. nevojën e përbalimit më të mirë, me më shumë racionalitet, me më shumë rezultate, me më shumë përgjëjsi dhe ashtu të detyreve qeverise edhe në sektorin që ju përmëndin, në sektorin e infrastrukturës. Në pahë ka bashkënimin fritëshumë dhe krejtë partnerial me mua dhe me partinë ti. Në që fëtë që ju pris një ndryshime që s'ka ndodur, unë jam këtu për t'ju s'jel në vëmëndje që ndryshimet ndodhin vëzdimisht.",
-   "asr_syllables": 180,
+   "asr_text": "Ne kemi dëgjurë të façdimisht me shqetsimin dhe vëmëndin e duhur analizat dhe informacionet që Kriminisri Metan kanë darë në kërësire partis dhe me mua si kërëtar i sajë për... nevojën e përbalimit më të mirë, me më shumë racionalitet, me më shumë rezultate, me më shumë përgjëjsi dhe ashtu të detyreve qeverise edhe në sektorin që ju përmëndin, në sektorin e infrastrukturës. Në pahë ka bashkënimin fritëshumë dhe krejtë partnerial me mua dhe me partinë ti. Në që fëtë që ju pris një ndryshime që s'ka ndodur, unë jam këtu për t'ju s'jelë në vëmëndje që ndryshimet ndodur në vazhdimisht.",
+   "asr_syllables": 181,
    "detected_nuclei": 149,
-   "detection_ratio_vs_asr": 0.8277777777777777
+   "detection_ratio_vs_asr": 0.8232044198895028
   },
   "FN3": {
-   "asr_text": "Për ndaj dhe eftoj me pozitën të mos kërkoj gjilpëra në kashtë, për balë në interesë e Europianë e Shqipërisë, për shkak të pa mundësis kandidimit zëdi Berisha dhe të mundësis kandidimit tim zëdi Berisha. Unë për vazhdoj të uftoj të kuptoj të gjithë së bashku, që me konvencione se kushe ka... mikun më të madhë në Evropë dhe leporin më të madhë në Shqipri në Barkë, nuk mund nëndërtohet asë një formullë konsensus i Zotipi Lisha. Unë po vazhdoj të qfaqë solemnisht në emërët maqëranësës angajimin për të punuar me ju. në dobi të një procesi konsensual që orientohet nga interesat prioritare të integrimit sa më të spet të Shqipëris në bashkimin europian.",
-   "asr_syllables": 206,
+   "asr_text": "Për ndaj dhe eftoj me pozitën të mos kërkoj gjilpëra në kashtë për balë në interesë e Europianës Shqipërisë për shkak të pamunësis kandidimit Zodit Berisha dhe të mundësis kandidimit tim Zodit Berisha. Unë për vazhdoj... Të juftoj, të kuptojme të gjithë së bashku, që me konvencione, se kushe ka... mikun më të madhë në Evropë dhe leporin më të madhë në Shqipëri në Barkë, nuk mundë ndërtojët asë një formullë konsensus i Zotibërishë. Unë po vazhdoj të qfajqë solemnisht në emërët maqëranësës angajimin për të punuar me ju në shqipër. në dobi të një procesi konsensual që orientohet nga interesat prioritare të integrimit sa më të spet të Shqipëris në bashkimin e Europian.",
+   "asr_syllables": 210,
    "detected_nuclei": 159,
-   "detection_ratio_vs_asr": 0.7718446601941747
+   "detection_ratio_vs_asr": 0.7571428571428571
   },
-  "asr_bias": 0.9666666666666667
+  "FN1990_exact": {
+   "a": 163.836,
+   "b": 188.548,
+   "text": "por ato duhet të kënaqin edhe interesat shoqërore të grupeve e të individëve. Reforma ekonomike e projektuar nga Partia, synon që rezultatet e punës e të pronës, në të ardhmen, të realizohen të diferencuara në tri nivele: të individit, të grupit e të shoqërisë, të kushtëzuara në masën dërrmuese me mundësitë ekonomike e të ardhurat e ndërmarrjes së tyre. Kjo reformë ka në themel realizimin e një roli cilësisht të ri të shtetit në ekonomi dhe në jetën shoqërore.",
+   "text_syllables_phonetic": 163,
+   "detected": 115,
+   "phonation": 20.160000000000025,
+   "detection_ratio": 0.7055214723926381,
+   "artic_exact": 8.08531746031745,
+   "asr_text": "por ato duhet knaxin edhe interesat qëqërorët të grupeve e të individve. Reforma ekonomike e projektuar nga partia, synon që rezultatet e punës e të pronës në tarthme të realizohen e të diferensuarën e tri nivele, të individit të grupeve e të qëqëris. të kushtë zura në masë ndërmuse me mundësit ekonomike e tardurat e ndërmarjes së tyre. Kjo reformë kanë themel e realizim në një roli cilësisht të rritë shtetit në ekonomi dhe njetën shoqërore.",
+   "asr_syllables": 155,
+   "asr_over_exact": 0.950920245398773
+  },
+  "FN1991_exact": {
+   "a": 703.1,
+   "b": 727.94,
+   "text": "pret nga ne, intelektualët, kuadrot, profesionistët, politikanët, dhe kur flas për profesionistët, flas për të gjitha zanatet intelektuale, vetë si ekonomist, kuptoj që të gjithë ekonomistët kanë detyra shumë të mprehta, sepse situata ekonomike",
+   "text_syllables_phonetic": 78,
+   "detected": 68,
+   "phonation": 13.69600000000014,
+   "detection_ratio": 0.8717948717948718,
+   "artic_exact": 5.695093457943867,
+   "asr_text": "Pret nga ne, intelektualet, kuadrët, profesionistët, politikanët, të ku flasë profesionistët, flasë për gjitha, zanatet intelektualet, vetës i ekonomistët. kuptoj që të gjithë ekonomistët kanë detyra shumë të mpreta, sepse situata ekonomike...",
+   "asr_syllables": 78,
+   "asr_over_exact": 1.0
+  },
+  "asr_bias": 0.9667405764966741
  },
  "fn2_alignment": {
   "ipus": [
    {
     "a": 26.816,
     "b": 33.184,
-    "asr": "Majoranza është e bindur se procesi politik i bashkunimit më opozitën është i pakthishëm.",
+    "asr": "Magjoranta është e bindur se procesi politik i bashkëpunimit më opozitën është i pakthishëm.",
     "text": "Maxhoranca është e bindur se procesi politik i bashkëpunimit me opozitën është i pakthyeshëm",
     "syl": 31,
     "site_after": "comma",
@@ -25464,7 +25490,7 @@
    {
     "a": 34.4,
     "b": 36.608000000000004,
-    "asr": "se zhvillimi ekonomik dhe sociali v",
+    "asr": "se zhvillimi ekonomik dhe sociali vëndit,",
     "text": "se zhvillimi ekonomik dhe social i vendit",
     "syl": 15,
     "site_after": "inside phrase",
@@ -25478,7 +25504,7 @@
    {
     "a": 37.152,
     "b": 38.912,
-    "asr": "është dinamik dhe i",
+    "asr": "është dinamik dhe i qëndrushëm.",
     "text": "është dinamik dhe i qëndrueshëm",
     "syl": 9,
     "site_after": "comma",
@@ -25492,7 +25518,7 @@
    {
     "a": 40.032000000000004,
     "b": 42.592,
-    "asr": "se forësimi instituzionëve të sigurisë",
+    "asr": "se forësimi instituciones e të sigurisë komptare",
     "text": "se forcimi i institucioneve të sigurisë kombëtare",
     "syl": 20,
     "site_after": "inside phrase",
@@ -25506,35 +25532,35 @@
    {
     "a": 43.36,
     "b": 44.64,
-    "asr": "leyon tašma",
-    "text": "lejon",
-    "syl": 2,
+    "asr": "Leon tašma",
+    "text": "lejon tashmë",
+    "syl": 3,
     "site_after": "inside phrase",
     "f0_first": 2.9015868073489397,
     "f0_last": 5.053278662759874,
     "f0_med": 5.018987580990315,
     "decl": 1.261280820189059,
     "pause_after": 0.2880000000000038,
-    "artic": 1.5624999999999987
+    "artic": 2.343749999999998
    },
    {
     "a": 44.928000000000004,
     "b": 47.52,
-    "asr": "që rënjonsje në trafikeve dhe",
-    "text": "tashmë çrrënjosjen e trafiqeve dhe të krimit të organizuar",
-    "syl": 18,
+    "asr": "që rënjonsjen e trafikjeve dhe të krimit organizuar.",
+    "text": "çrrënjosjen e trafiqeve dhe të krimit të organizuar",
+    "syl": 17,
     "site_after": "end of excerpt",
     "f0_first": 3.2734824953295925,
     "f0_last": 0.504217671043113,
     "f0_med": 2.7818751235732178,
     "decl": -1.6020314645978317,
     "pause_after": null,
-    "artic": 6.944444444444448
+    "artic": 6.558641975308645
    },
    {
     "a": 48.064,
     "b": 51.136,
-    "asr": "Qeveria e re do t'godas pa mëshirë.",
+    "asr": "Qeveria e re do të godas pa mëshirë.",
     "text": "Qeveria e re do të godasë pa mëshirë",
     "syl": 13,
     "site_after": "comma",
@@ -25548,7 +25574,7 @@
    {
     "a": 51.872,
     "b": 54.848,
-    "asr": "me një vullnet institizional dhe politik të patundur",
+    "asr": "me një vullnet institucional dhe politik të patundur.",
     "text": "me një vullnet institucional dhe politik të patundur",
     "syl": 18,
     "site_after": "comma",
@@ -25562,7 +25588,7 @@
    {
     "a": 55.552,
     "b": 58.208,
-    "asr": "korupcionin dhe abuzimin me funksionet publike",
+    "asr": "korupcionin dhe abuzimin me funksionet publike.",
     "text": "korrupsionin dhe abuzimin me funksionet publike",
     "syl": 18,
     "site_after": "comma",
@@ -25576,7 +25602,7 @@
    {
     "a": 58.944,
     "b": 60.832,
-    "asr": "si dhe zdo lidhje favorizuese",
+    "asr": "si dhe zdo lidi e favorizuese.",
     "text": "si dhe çdo lidhje favorizuese",
     "syl": 10,
     "site_after": "phrase boundary, unpunctuated",
@@ -25590,7 +25616,7 @@
    {
     "a": 61.408,
     "b": 64.64,
-    "asr": "të përfajshusve të politikës a të administ",
+    "asr": "të përfajshusve të politikës a të administratës.",
     "text": "të përfaqësuesve të politikës e të administratës",
     "syl": 18,
     "site_after": "phrase boundary, unpunctuated",
@@ -25604,7 +25630,7 @@
    {
     "a": 65.152,
     "b": 67.68,
-    "asr": "me botën e traficjeve dhe krimit organizuar",
+    "asr": "me botën e trafikeve dhe krimit organizuar.",
     "text": "me botën e trafiqeve dhe të krimit të organizuar",
     "syl": 17,
     "site_after": "comma",
@@ -25618,7 +25644,7 @@
    {
     "a": 68.416,
     "b": 71.872,
-    "asr": "që deformojnë parametrat e shvillimit dhe t'integrim",
+    "asr": "që të deformojnë parametrat e shvillimit dhe t'integrimit komptar.",
     "text": "që deformojnë parametrat e zhvillimit dhe të integrimit kombëtar",
     "syl": 21,
     "site_after": "end of excerpt",
@@ -25637,9 +25663,9 @@
    "phrase boundary, unpunctuated": 2
   },
   "pause_dur_by_site": {
-   "comma": 0.8746666666666663,
+   "phrase boundary, unpunctuated": 0.5440000000000005,
    "inside phrase": 0.5333333333333338,
-   "phrase boundary, unpunctuated": 0.5440000000000005
+   "comma": 0.8746666666666663
   },
   "printed_punctuation_marks": 6,
   "punctuation_marks_realised_as_pause": 6,
@@ -25658,8 +25684,8 @@
    15,
    9,
    20,
-   2,
-   18,
+   3,
+   17,
    13,
    18,
    18,
@@ -25678,7 +25704,7 @@
     "spoken": "me një vullnet institucional dhe politik të patundur"
    }
   ],
-  "ipu_artic_cv": 0.2682572161617326,
+  "ipu_artic_cv": 0.2355325816164965,
   "resets": [
    {
     "into": 2,
@@ -25738,7 +25764,7 @@
   ],
   "reset_se_mean": 3.5445660512879784,
   "reset_other_mean": -0.2233024423878243,
-  "ipu_syl_median": 18.0,
+  "ipu_syl_median": 17.0,
   "clause_syl_median": 22.5,
   "artic_exact": 5.741469816272964
  },
@@ -25764,7 +25790,7 @@
     {
      "decile": 0,
      "n_ipu": 76,
-     "ipu_syl_mean_est": 12.944646098003632,
+     "ipu_syl_mean_est": 12.808273521620876,
      "f0_med": 123.88744140148756,
      "f0_p90": 152.5909571556887,
      "pause_share": 0.32956316157111354,
@@ -25773,7 +25799,7 @@
     {
      "decile": 1,
      "n_ipu": 84,
-     "ipu_syl_mean_est": 12.660995100958155,
+     "ipu_syl_mean_est": 12.52761080381979,
      "f0_med": 119.83381520872351,
      "f0_p90": 156.233279480381,
      "pause_share": 0.26710010209016255,
@@ -25782,7 +25808,7 @@
     {
      "decile": 2,
      "n_ipu": 86,
-     "ipu_syl_mean_est": 11.706584814543918,
+     "ipu_syl_mean_est": 11.583255283576763,
      "f0_med": 127.84415802890005,
      "f0_p90": 168.41912878765223,
      "pause_share": 0.30430927945838293,
@@ -25791,7 +25817,7 @@
     {
      "decile": 3,
      "n_ipu": 86,
-     "ipu_syl_mean_est": 11.926574327837361,
+     "ipu_syl_mean_est": 11.800927194945992,
      "f0_med": 120.36869203039956,
      "f0_p90": 158.1046978170295,
      "pause_share": 0.2808016764279212,
@@ -25800,7 +25826,7 @@
     {
      "decile": 4,
      "n_ipu": 89,
-     "ipu_syl_mean_est": 12.435586981790005,
+     "ipu_syl_mean_est": 12.304577371894212,
      "f0_med": 118.76699572384419,
      "f0_p90": 154.40274706887806,
      "pause_share": 0.2825479555101763,
@@ -25809,7 +25835,7 @@
     {
      "decile": 5,
      "n_ipu": 96,
-     "ipu_syl_mean_est": 10.599762575786285,
+     "ipu_syl_mean_est": 10.488093479500336,
      "f0_med": 126.38795343923036,
      "f0_p90": 163.50009208209138,
      "pause_share": 0.30672720434152345,
@@ -25818,7 +25844,7 @@
     {
      "decile": 6,
      "n_ipu": 93,
-     "ipu_syl_mean_est": 11.21777555036732,
+     "ipu_syl_mean_est": 11.099595652554354,
      "f0_med": 124.86011815673007,
      "f0_p90": 173.2951885131477,
      "pause_share": 0.3245929826446725,
@@ -25827,7 +25853,7 @@
     {
      "decile": 7,
      "n_ipu": 97,
-     "ipu_syl_mean_est": 9.807838801795432,
+     "ipu_syl_mean_est": 9.704512667112317,
      "f0_med": 135.69501929265437,
      "f0_p90": 186.5749667456737,
      "pause_share": 0.3395035194239978,
@@ -25836,7 +25862,7 @@
     {
      "decile": 8,
      "n_ipu": 100,
-     "ipu_syl_mean_est": 8.054130352406215,
+     "ipu_syl_mean_est": 7.969279635100813,
      "f0_med": 115.38489115058199,
      "f0_p90": 145.9588932387163,
      "pause_share": 0.36798130138090357,
@@ -25845,7 +25871,7 @@
     {
      "decile": 9,
      "n_ipu": 78,
-     "ipu_syl_mean_est": 11.677172297198823,
+     "ipu_syl_mean_est": 11.554152628759997,
      "f0_med": 139.92857609081523,
      "f0_p90": 196.2912744964895,
      "pause_share": 0.3694589221428166,
@@ -25882,7 +25908,7 @@
     {
      "decile": 0,
      "n_ipu": 20,
-     "ipu_syl_mean_est": 16.062811671087534,
+     "ipu_syl_mean_est": 19.839225829216655,
      "f0_med": 128.65604687786447,
      "f0_p90": 155.86204999405348,
      "pause_share": 0.1914098161109421,
@@ -25891,7 +25917,7 @@
     {
      "decile": 1,
      "n_ipu": 25,
-     "ipu_syl_mean_est": 11.766493368700266,
+     "ipu_syl_mean_est": 14.532830486944247,
      "f0_med": 134.41995552171198,
      "f0_p90": 165.99396544292554,
      "pause_share": 0.22923096987349434,
@@ -25900,7 +25926,7 @@
     {
      "decile": 2,
      "n_ipu": 21,
-     "ipu_syl_mean_est": 15.943008715422506,
+     "ipu_syl_mean_est": 19.6912568471284,
      "f0_med": 149.95393989011274,
      "f0_p90": 175.05902464977726,
      "pause_share": 0.17880276485675806,
@@ -25909,7 +25935,7 @@
     {
      "decile": 3,
      "n_ipu": 19,
-     "ipu_syl_mean_est": 16.857294429708222,
+     "ipu_syl_mean_est": 20.820493815696615,
      "f0_med": 152.8959595566949,
      "f0_p90": 183.83211590267487,
      "pause_share": 0.22966569577881146,
@@ -25918,7 +25944,7 @@
     {
      "decile": 4,
      "n_ipu": 21,
-     "ipu_syl_mean_est": 15.943008715422506,
+     "ipu_syl_mean_est": 19.6912568471284,
      "f0_med": 155.36162754675348,
      "f0_p90": 187.55837506727025,
      "pause_share": 0.1879320088684091,
@@ -25927,7 +25953,7 @@
     {
      "decile": 5,
      "n_ipu": 24,
-     "ipu_syl_mean_est": 13.506631299734748,
+     "ipu_syl_mean_est": 16.68207995177605,
      "f0_med": 160.95968147542865,
      "f0_p90": 190.6401762513379,
      "pause_share": 0.20227796374386375,
@@ -25936,7 +25962,7 @@
     {
      "decile": 6,
      "n_ipu": 21,
-     "ipu_syl_mean_est": 14.652823039029935,
+     "ipu_syl_mean_est": 18.097744732331886,
      "f0_med": 158.52392845261448,
      "f0_p90": 191.38698757440838,
      "pause_share": 0.21271138547146007,
@@ -25945,7 +25971,7 @@
     {
      "decile": 7,
      "n_ipu": 22,
-     "ipu_syl_mean_est": 14.118736435977816,
+     "ipu_syl_mean_est": 17.438092801693717,
      "f0_med": 157.5905086070756,
      "f0_p90": 185.3978533877779,
      "pause_share": 0.21227665956614616,
@@ -25954,7 +25980,7 @@
     {
      "decile": 8,
      "n_ipu": 24,
-     "ipu_syl_mean_est": 13.46631299734748,
+     "ipu_syl_mean_est": 16.632282698188657,
      "f0_med": 162.02548712517063,
      "f0_p90": 193.04877866337705,
      "pause_share": 0.2018432378385403,
@@ -25963,7 +25989,7 @@
     {
      "decile": 9,
      "n_ipu": 22,
-     "ipu_syl_mean_est": 14.690523269833614,
+     "ipu_syl_mean_est": 18.14430839802399,
      "f0_med": 155.59063472321978,
      "f0_p90": 193.2820843095973,
      "pause_share": 0.1827152980046054,
@@ -26010,7 +26036,7 @@
     {
      "decile": 0,
      "n_ipu": 123,
-     "ipu_syl_mean_est": 8.19602306860507,
+     "ipu_syl_mean_est": 8.530586500655307,
      "f0_med": 120.46696470069463,
      "f0_p90": 155.08674394787496,
      "pause_share": 0.4016834091979281,
@@ -26019,7 +26045,7 @@
     {
      "decile": 1,
      "n_ipu": 126,
-     "ipu_syl_mean_est": 8.717804363124559,
+     "ipu_syl_mean_est": 9.073667020324947,
      "f0_med": 140.54002799986375,
      "f0_p90": 183.21653879982767,
      "pause_share": 0.4086485638047386,
@@ -26028,7 +26054,7 @@
     {
      "decile": 2,
      "n_ipu": 122,
-     "ipu_syl_mean_est": 8.124989905515624,
+     "ipu_syl_mean_est": 8.456653748504966,
      "f0_med": 146.14872044171716,
      "f0_p90": 192.27604576847173,
      "pause_share": 0.4620153822005977,
@@ -26037,7 +26063,7 @@
     {
      "decile": 3,
      "n_ipu": 111,
-     "ipu_syl_mean_est": 9.472706696844627,
+     "ipu_syl_mean_est": 9.859384630370867,
      "f0_med": 149.8110565082762,
      "f0_p90": 203.4611683103653,
      "pause_share": 0.43670538377020507,
@@ -26046,7 +26072,7 @@
     {
      "decile": 4,
      "n_ipu": 119,
-     "ipu_syl_mean_est": 8.775158339197747,
+     "ipu_syl_mean_est": 9.133362198090243,
      "f0_med": 160.51453916966392,
      "f0_p90": 218.8573277426932,
      "pause_share": 0.4075694553445307,
@@ -26055,7 +26081,7 @@
     {
      "decile": 5,
      "n_ipu": 110,
-     "ipu_syl_mean_est": 9.81065830721003,
+     "ipu_syl_mean_est": 10.211131498470946,
      "f0_med": 157.31315498709935,
      "f0_p90": 206.1225767589621,
      "pause_share": 0.4292497253178402,
@@ -26064,7 +26090,7 @@
     {
      "decile": 6,
      "n_ipu": 117,
-     "ipu_syl_mean_est": 9.460464822533787,
+     "ipu_syl_mean_est": 9.846643040106342,
      "f0_med": 169.04456885459814,
      "f0_p90": 221.8451732279809,
      "pause_share": 0.40825616072830684,
@@ -26073,7 +26099,7 @@
     {
      "decile": 7,
      "n_ipu": 120,
-     "ipu_syl_mean_est": 8.802401477832513,
+     "ipu_syl_mean_est": 9.16171740752876,
      "f0_med": 168.26226178870576,
      "f0_p90": 226.73692928629492,
      "pause_share": 0.4440629414534625,
@@ -26082,7 +26108,7 @@
     {
      "decile": 8,
      "n_ipu": 104,
-     "ipu_syl_mean_est": 9.809184350132627,
+     "ipu_syl_mean_est": 10.20959737414726,
      "f0_med": 171.75591373470374,
      "f0_p90": 229.7897199565994,
      "pause_share": 0.4643698006592366,
@@ -26091,7 +26117,7 @@
     {
      "decile": 9,
      "n_ipu": 109,
-     "ipu_syl_mean_est": 10.71835314321869,
+     "ipu_syl_mean_est": 11.155878633752968,
      "f0_med": 171.01083556084268,
      "f0_p90": 226.53712186986218,
      "pause_share": 0.40649034688431585,
@@ -26119,12 +26145,12 @@
   }
  },
  "c1_corrections": {
-  "factor": 1.351364153088291,
-  "speech_rate": 4.227171490206831,
-  "articulation_rate": 6.824378917078729,
-  "ipu_syllables_median": 6.7568207654414545,
+  "factor": 1.3371274555538277,
+  "speech_rate": 4.182638000255326,
+  "articulation_rate": 6.752483700470397,
+  "ipu_syllables_median": 6.685637277769139,
   "ks_ipu_vs_clause_corrected": 0.4251185952327781,
   "clause_syllables_median": 17.0,
-  "kpd_vad_articulation_rate": 6.096140995263737
+  "kpd_vad_articulation_rate": 6.031917806215343
  }
 }
