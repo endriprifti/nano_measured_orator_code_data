@@ -1,3 +1,19 @@
+# Changes of 5 November 2026 (afternoon): recogniser fix
+
+Found with the author's exact transcriptions, by ear, of one window of each tape.
+- `asr.py`: every stretch is decoded with 5 s of silence appended. Without it the decoder dropped the last one to two
+  seconds of speech (in a 24.7-s window of FN1990 it lost the final 30 of 163 syllables). Stretches that would not fit
+  one padded Whisper window are cut at the longest pause in their middle third (`video.split_long`).
+- `video.py`: of the three decodes with widened edges, the longest that does not loop is kept (was: the median),
+  because the decoder's failures on these recordings are omissions; on the three exact transcripts the two rules agree
+  within 1%. A calibration window whose detector/transcript ratio exceeds 1.5 times the recording's median counts as
+  stopped early. The bias of the automatic syllable count is pooled over three exact transcripts (FN2 printed text and
+  the two tape windows, `EXACT_TAPES`): 0.967.
+- `video.py`: the IPU-to-text alignment of FN2 scores matched characters minus half the unmatched ones. The previous
+  score, proportional to the longer string, attached "tashmë" to IPU 6 although both decodes of IPU 5 contain it;
+  Table C2 now reads IPU 5 "lejon tashmë" (3 syllables) and IPU 6 from "çrrënjosjen" (17).
+- All ASR-based numbers were recomputed (`results/asr_cache.json` rebuilt; keys now carry the padding).
+
 # Changes of 5 November 2026
 
 Appendix C.2

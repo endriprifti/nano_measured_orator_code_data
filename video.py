@@ -231,18 +231,35 @@ cache = json.load(open(CACHE)) if os.path.exists(CACHE) else {}
 
 
 def transcribe(name, a, b):
-    key = f"{name}:{a:.2f}-{b:.2f}"
+    key = f"pad{asr.PAD:g}|{name}:{a:.2f}-{b:.2f}"
     if key not in cache:
         w = load(REC[name]["wav"]); cache[key] = asr.transcribe(w, a, b)
         json.dump(cache, open(CACHE, "w"), ensure_ascii=False, indent=0)
     return cache[key]
 
 
+def split_long(name, a, b):
+    """A stretch that would not fit, with its padding and widened edges, in one Whisper window is cut at the longest
+    pause in its middle third (recursively)."""
+    if b - a + 0.4 <= asr.MAXSEG: return [(a, b)]
+    ip = [x for x in A[name]["ipus"] if x[0] >= a - 0.05 and x[1] <= b + 0.05]
+    gaps = [(ip[i + 1][0] - ip[i][1], (ip[i][1] + ip[i + 1][0]) / 2) for i in range(len(ip) - 1)
+            if a + (b - a) / 3 <= ip[i][1] <= b - (b - a) / 3]
+    m = max(gaps)[1] if gaps else (a + b) / 2
+    return split_long(name, a, m) + split_long(name, m, b)
+
+
 def transcribe_robust(name, a, b):
-    """Whisper occasionally truncates or skips a stretch when a window edge moves by 0.1 s. Decode three windows with
-    edges widened by 0, 0.1 and 0.2 s (all inside the surrounding pauses) and keep the decode of median length."""
-    hyps = [transcribe(name, max(0.0, a - d), b + d) for d in (0.0, 0.1, 0.2)]
-    return sorted(hyps, key=lambda h: nsyl(h))[1]
+    """Whisper occasionally truncates, skips or loops over a stretch when a window edge moves by 0.1 s. Decode three
+    windows with edges widened by 0, 0.1 and 0.2 s (all inside the surrounding pauses)."""
+    out = []
+    for x, y in split_long(name, a, b):
+        hyps = [transcribe(name, max(0.0, x - d), y + d) for d in (0.0, 0.1, 0.2)]
+        # the decoder's failures on these recordings are omissions (a skipped or truncated stretch) and loops; keep the
+        # longest decode that does not loop (on the three exact transcripts this rule and the median agree within 1%)
+        ok = [h for h in hyps if not degenerate(h)] or hyps
+        out.append(max(ok, key=nsyl))
+    return " ".join(out)
 
 
 def degenerate(text):
@@ -289,6 +306,10 @@ def asr_sample(name, n=12, L=25.0):
         # (fewer recognised syllables than half the detected nuclei)
         valid = not degenerate(txt) and nsyl(txt) >= 0.5 * det
         out.append({"a": a, "b": b, "text": txt, "asr_syllables": nsyl(txt), "detected": det, "phonation": phon, "valid": valid})
+    # a window whose detector/transcript ratio exceeds 1.5 times the recording's median also counts as stopped early
+    med = np.median([k["detected"] / max(k["asr_syllables"], 1) for k in out if k["valid"]])
+    for k in out:
+        if k["valid"] and k["detected"] / max(k["asr_syllables"], 1) > 1.5 * med: k["valid"] = False
     kv = [k for k in out if k["valid"]]
     return {"windows": out, "n_valid": len(kv), "n_windows": len(out),
             "asr_syllables": int(sum(k["asr_syllables"] for k in kv)), "detected": int(sum(k["detected"] for k in kv)),
@@ -296,7 +317,7 @@ def asr_sample(name, n=12, L=25.0):
             "ratio_ci": ratio_boot([k["detected"] for k in kv], [k["asr_syllables"] for k in kv])}
 
 
-# KPD and the two archival recordings: 12 windows of 25 s each
+# KPD and the two archival recordings: 12 windows of about 25 s each (decoded in halves when longer than one padded window)
 for name in LONG:
     CAL[f"{name}_asr_sample"] = asr_sample(name)
 # same check on the exact transcript, to measure the bias of the automatic syllable count itself
@@ -310,7 +331,30 @@ for name, spans in (("FN1", [(42.8, 66.5), (66.5, 85.8), (105.6, 119.0), (119.0,
     CAL[name] = {"asr_text": " ".join(transcribe_robust(name, a, b) for a, b in spans)}
     CAL[name]["asr_syllables"] = nsyl(CAL[name]["asr_text"]); CAL[name]["detected_nuclei"] = len(A[name]["nuclei"])
     CAL[name]["detection_ratio_vs_asr"] = CAL[name]["detected_nuclei"] / CAL[name]["asr_syllables"]
-CAL["asr_bias"] = CAL["FN2"]["asr_over_exact"]          # the one exact transcript left after FN5 was withdrawn
+# exact transcripts of one calibration window of each tape, transcribed by ear by the author (5 Nov 2026); Albanian
+# diacritics restored and two typing slips corrected (diferendcuara, ekonimike); "..." in the author's FN1991 text marks
+# hesitations, not omitted words
+EXACT_TAPES = {
+    "FN1990": (163.836, 188.548,
+               "por ato duhet të kënaqin edhe interesat shoqërore të grupeve e të individëve. Reforma ekonomike e "
+               "projektuar nga Partia, synon që rezultatet e punës e të pronës, në të ardhmen, të realizohen të "
+               "diferencuara në tri nivele: të individit, të grupit e të shoqërisë, të kushtëzuara në masën dërrmuese me "
+               "mundësitë ekonomike e të ardhurat e ndërmarrjes së tyre. Kjo reformë ka në themel realizimin e një roli "
+               "cilësisht të ri të shtetit në ekonomi dhe në jetën shoqërore."),
+    "FN1991": (703.1, 727.94,
+               "pret nga ne, intelektualët, kuadrot, profesionistët, politikanët, dhe kur flas për profesionistët, flas "
+               "për të gjitha zanatet intelektuale, vetë si ekonomist, kuptoj që të gjithë ekonomistët kanë detyra shumë "
+               "të mprehta, sepse situata ekonomike")}
+for name, (a, b, text) in EXACT_TAPES.items():
+    a_ = A[name]; det = int(((a_["nuclei"] >= a) & (a_["nuclei"] <= b)).sum())
+    phon = sum(min(y, b) - max(x, a) for x, y in a_["ipus"] if y > a and x < b)
+    hyp = transcribe_robust(name, a, b); ex = nsyl(text)
+    CAL[f"{name}_exact"] = {"a": a, "b": b, "text": text, "text_syllables_phonetic": ex, "detected": det, "phonation": phon,
+                            "detection_ratio": det / ex, "artic_exact": ex / phon, "asr_text": hyp,
+                            "asr_syllables": nsyl(hyp), "asr_over_exact": nsyl(hyp) / ex}
+# bias of the automatic syllable count, pooled over the three exact transcripts (FN2 printed text, two tape windows)
+EX = [CAL["FN2"], CAL["FN1990_exact"], CAL["FN1991_exact"]]
+CAL["asr_bias"] = sum(e["asr_syllables"] for e in EX) / sum(e["text_syllables_phonetic"] for e in EX)
 R["calibration"] = CAL
 BIAS = CAL["asr_bias"]
 
@@ -355,8 +399,11 @@ FUNC = {"dhe", "e", "si", "që", "se", "për", "me", "në", "nga", "duke", "të"
 
 
 def sim(h, ref_):
+    """Matched characters minus half the unmatched characters on either side: a printed word gains its IPU only if the
+    IPU's transcript contains it (a score proportional to the longer string rewarded attaching unmatched words)."""
     hyp = re.sub(r"[^\wëç ]", "", h.lower())
-    return difflib.SequenceMatcher(None, hyp, ref_).ratio() * max(len(hyp), len(ref_))
+    m = sum(b.size for b in difflib.SequenceMatcher(None, hyp, ref_, autojunk=False).get_matching_blocks())
+    return m - 0.5 * ((len(hyp) - m) + (len(ref_) - m))
 
 
 def align(hyps, text):
