@@ -340,6 +340,8 @@ for k, a in A.items():
         "decl_median": float(np.median(decl)) if len(decl) else np.nan, "decl_ci": boot(decl),
         "decl_share_negative": float((decl < 0).mean()) if len(decl) else np.nan, "decl_n": int(len(decl)),
         "pause_share_ge_1s": float((a["pauses"] >= 1).mean()) if len(a["pauses"]) else np.nan,
+        # tempo including silent pauses (syllables per second of speaking time = phonation + pauses between IPUs)
+        "speech_rate_est": float(tsyl / (phon + a["pauses"].sum())), "speech_share": float(phon / (phon + a["pauses"].sum())),
     }
 
 # ------------------------------------------------------------------ 4. FN2: IPUs against the printed text

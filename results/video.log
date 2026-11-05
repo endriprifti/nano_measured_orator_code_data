@@ -46,6 +46,8 @@
   "decl_share_negative": 0.7415730337078652,
   "decl_n": 623,
   "pause_share_ge_1s": 0.26018099547511314,
+  "speech_rate_est": 4.162087773699354,
+  "speech_share": 0.682741389500833,
   "ci_note": "includes the uncertainty of the calibration ratio",
   "f0_ipu_median_hz": 123.3553984032385,
   "f0_ipu_median_ci_hz": [
@@ -109,6 +111,8 @@
   "decl_share_negative": 0.631578947368421,
   "decl_n": 19,
   "pause_share_ge_1s": 0.3333333333333333,
+  "speech_rate_est": 2.8110944527736126,
+  "speech_share": 0.7420289855072463,
   "f0_ipu_median_hz": 87.8112371044378,
   "f0_ipu_median_ci_hz": [
    81.63705762477353,
@@ -171,6 +175,8 @@
   "decl_share_negative": 0.7692307692307693,
   "decl_n": 13,
   "pause_share_ge_1s": 0.18181818181818182,
+  "speech_rate_est": 4.71782890007189,
+  "speech_share": 0.8217109992810928,
   "ipu_syllable_source": "exact (aligned printed text)",
   "f0_ipu_median_hz": 121.19428680657067,
   "f0_ipu_median_ci_hz": [
@@ -230,6 +236,8 @@
   "decl_share_negative": 0.7142857142857143,
   "decl_n": 14,
   "pause_share_ge_1s": 0.3333333333333333,
+  "speech_rate_est": 3.633105705739602,
+  "speech_share": 0.6710310965630117,
   "f0_ipu_median_hz": 131.802726974175,
   "f0_ipu_median_ci_hz": [
    129.0930829832614,
@@ -248,20 +256,7 @@
   "speech_time_s": 586.752,
   "n_ipus": 219,
   "n_pauses": 218,
-  "pause_median": 0.5760000000000218,
-  "pause_median_ci": [
-   0.5439999999999827,
-   0.6399999999999864
-  ],
-  "pause_mean": 0.685064220183487,
-  "ipu_dur_median": 2.5600000000000023,
-  "ipu_dur_ci": [
-   2.3360000000000127,
-   2.7840000000000202
-  ],
-  "detected_nuclei": 3301,
-  "artic_detected": 5.625886234729494,
-
+  "pause_
 {
  "KPD_heldout_cos": {
   "median": 0.7691571712493896,
@@ -414,4 +409,4 @@
 61.41-64.64 18syl [phrase boundary, unpunctuated] pause 0.5120000000000005: të përfaqësuesve të politikës e të administratës  ||  të përfajshusve të politikës a të administ
 65.15-67.68 17syl [comma] pause 0.73599999999999: me botën e trafiqeve dhe të krimit të organizuar  ||  me botën e traficjeve dhe krimit organizuar
 68.42-71.87 21syl [end of excerpt] pause None: që deformojnë parametrat e zhvillimit dhe të integrimit kombëtar  ||  që deformojnë parametrat e shvillimit dhe t'integrim
-{'n_pauses': 11, 'pause_sites': {'comma': 6, 'inside phrase': 3, 'phrase boundary, unpunctuated': 2}, 'pause_dur_by_site': {'phrase boundary, unpunctuated': 0.5440000000000005, 'comma': 0.8746666666666663, 'inside phrase': 0.5333333333333338}, 'printed_punctuation_marks': 6, 'punctuation_marks_realised_as_pause': 6, 'printed_clause_syllables': [31, 24, 40, 13, 18, 18, 45, 21], 'ipu_syllables_exact': [31, 15, 9, 20, 2, 18, 13, 18, 18, 10, 18, 17, 21], 'departures': [{'printed': 'me një vullnet të patundur institucional dhe politik', 'spoken': 'me një vullnet institucional dhe politik të patundur'}], 'ipu_artic_cv': 0.2682572161617326, 'resets': [{'into': 2, 'opens_with_se': True, 'reset_st': 0.1606179720572971}, {'into': 3, 'opens_with_se': False, 'reset_st': -4.018738895902015}, {'into': 4, 'opens_with_se': True, 'reset_st': 6.92851413051866}, {'into': 5, 'opens_with_se': False, 'reset_st': -2.349519418209394}, {'into': 6, 'opens_with_se': False, 'reset_st': -1.7797961674302818}, {'into': 8, 'opens_with_se': False, 'reset_st': -0.8240391860965035}, {'into': 9, 'opens_with_se': False, 'reset_st': 4.701771762507693}, {'into': 10, 'opens_with_se': False, 'reset_st': 5.538951203838998}, {'into': 11, 'opens_with_se': False, 'reset_st': -4.551160642053196}, {'into': 12, 'opens_with_se': False, 'reset_st': -0.19444549910531395}, {'into': 13, 'opens_with_se': False, 'reset_st': 1.467254860959594}], 'reset_se_mean': 3.5445660512879784, 'reset_other_mean': -0.2233024423878243, 'ipu_syl_median': 18.0, 'clause_syl_median': 22.5, 'artic_exact': 5.741469816272964}
+{'n_pauses': 11, 'pause_sites': {'comma': 6, 'inside phrase': 3, 'phrase boundary, unpunctuated': 2}, 'pause_dur_by_site': {'comma': 0.8746666666666663, 'inside phrase': 0.5333333333333338, 'phrase boundary, unpunctuated': 0.5440000000000005}, 'printed_punctuation_marks': 6, 'punctuation_marks_realised_as_pause': 6, 'printed_clause_syllables': [31, 24, 40, 13, 18, 18, 45, 21], 'ipu_syllables_exact': [31, 15, 9, 20, 2, 18, 13, 18, 18, 10, 18, 17, 21], 'departures': [{'printed': 'me një vullnet të patundur institucional dhe politik', 'spoken': 'me një vullnet institucional dhe politik të patundur'}], 'ipu_artic_cv': 0.2682572161617326, 'resets': [{'into': 2, 'opens_with_se': True, 'reset_st': 0.1606179720572971}, {'into': 3, 'opens_with_se': False, 'reset_st': -4.018738895902015}, {'into': 4, 'opens_with_se': True, 'reset_st': 6.92851413051866}, {'into': 5, 'opens_with_se': False, 'reset_st': -2.349519418209394}, {'into': 6, 'opens_with_se': False, 'reset_st': -1.7797961674302818}, {'into': 8, 'opens_with_se': False, 'reset_st': -0.8240391860965035}, {'into': 9, 'opens_with_se': False, 'reset_st': 4.701771762507693}, {'into': 10, 'opens_with_se': False, 'reset_st': 5.538951203838998}, {'into': 11, 'opens_with_se': False, 'reset_st': -4.551160642053196}, {'into': 12, 'opens_with_se': False, 'reset_st': -0.19444549910531395}, {'into': 13, 'opens_with_se': False, 'reset_st': 1.467254860959594}], 'reset_se_mean': 3.5445660512879784, 'reset_other_mean': -0.2233024423878243, 'ipu_syl_median': 18.0, 'clause_syl_median': 22.5, 'artic_exact': 5.741469816272964}

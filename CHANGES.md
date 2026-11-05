@@ -10,6 +10,8 @@ Appendix C.2
   counted with the nucleus detector calibrated on 12 transcribed windows of each recording, as for the KPD recording.
 - `video.py` reads the archival WAVs from `../audio90` (`NANO_AUDIO90`); speaker embeddings are computed in batches.
 - Figure 10b–e shows six recordings.
+- `results/video.json` also records, per recording, the speech rate including silent pauses (`speech_rate_est`)
+  and the share of speaking time filled by phonation (`speech_share`), used to compare tempo before and after 1997.
 
 # Changes after the review of 4 November 2026
 
