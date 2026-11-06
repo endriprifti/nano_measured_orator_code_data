@@ -15,11 +15,17 @@ python3 semantics.py                       # Section 9
 python3 stylometry.py                      # Sections 7.4 and 10
 python3 make_figs.py fig1 fig2 fig3 fig4 fig5 fig6 fig7 fig8
 
+# Section 11: comparison with Marx's German originals (texts fetched from a pinned public mirror, not redistributed)
+bash get_marx.sh
+python3 marx_corpus.py > results/marx_corpus.log   # Marx corpus -> marx_corpus.json (local), results/marx_corpus_stats.json
+python3 marx.py > results/marx.log                 # ~10 min on 2 CPU cores
+python3 make_figs.py fig_marx
+
 # Appendix C (optional): acoustic pilot on the recording of 3 December 2001, Nano's segment from 2:40 to the end
 if [ -n "${2:-}" ]; then
   ffmpeg -hide_banner -loglevel error -y -ss 160 -i "$2" -ac 1 -ar 16000 nano_seg.wav
   python3 acoustic.py nano_seg.wav
-  python3 make_figs.py fig9
+  python3 make_figs.py fig9              # Figure 10 of the paper
 fi
 
 # Appendix C.2 (optional): broadcast clips FN1-FN3 and archival audio FN1990, FN1991 supplied by the author
@@ -36,5 +42,5 @@ if [ -n "${3:-}" ]; then
   done
   [ -f silero_vad.onnx ] || bash get_models.sh
   python3 video.py > results/video.log      # ~30 min on 2 CPU cores, mostly automatic transcription
-  python3 make_figs.py fig10
+  python3 make_figs.py fig10             # Figure 11 of the paper
 fi

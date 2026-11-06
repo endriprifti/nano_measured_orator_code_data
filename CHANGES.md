@@ -1,3 +1,13 @@
+# Changes of 6 November 2026: Section 11, Nano and Marx
+
+- New Section 11 compares Nano's parliamentary speech with Marx's German originals (`get_marx.sh`, `marx_corpus.py`,
+  `marx.py`, Figure 9 = `figures/fig_marx`, Tables 6 and 7 of the paper). Later sections are renumbered (12-14) and
+  the appendix figures become Figures 10 and 11.
+- Only measures that survive translation are compared; four works are measured in German and in English to test this.
+- In `marx.py` Nano's 119 enumeration numerals ("1.", "2.", ...) that the segmentation of `prep.py` keeps as sentences
+  of their own are excluded. The earlier sections still include them (open issue: they raise the DFA exponent of
+  Section 6.3 from 0.70 to 0.76).
+
 # Changes of 5 November 2026 (afternoon): recogniser fix
 
 Found with the author's exact transcriptions, by ear, of one window of each tape.
