@@ -1,0 +1,1254 @@
+{
+ "nano": {
+  "documents": 104,
+  "sentences": 6807,
+  "words": 226278,
+  "mean_len": 33.241956809167036,
+  "median_len": 29.0,
+  "cv": 0.6233214864132435,
+  "cv_ci": [
+   0.6087658625119533,
+   0.6364762693167864
+  ],
+  "weibull_k": 1.6730718848477732,
+  "weibull_k_ci": [
+   1.6413737105079749,
+   1.7092378199563236
+  ],
+  "long_share": 0.11120904950785955,
+  "long_share_ci": [
+   0.0940135154987513,
+   0.11767298369325695
+  ],
+  "dfa": {
+   "n": 6807,
+   "alpha": 0.6940228897683831,
+   "null_mean": 0.5114999785524516,
+   "null_sd": 0.01549541437543832,
+   "z": 11.779156516475444,
+   "alpha_small": 0.6637294133597362,
+   "small_within_null_mean": 0.5654578769821399,
+   "small_within_null_sd": 0.010245980297673136,
+   "z_small_within": 9.591228318086246
+  },
+  "anaphora_sentence": {
+   "observed": 356,
+   "null_mean": 163.29,
+   "null_sd": 12.309585695708853,
+   "ratio": 2.180170249249801,
+   "z": 15.655279126671104
+  },
+  "epistrophe_sentence": {
+   "observed": 110,
+   "null_mean": 33.163333333333334,
+   "null_sd": 5.8323799220863135,
+   "ratio": 3.3169162729922603,
+   "z": 13.174153209001044
+  },
+  "anaphora_clause": {
+   "observed": 823,
+   "expected": 586.2199417541523,
+   "null_mean": 584.905,
+   "null_sd": 16.177638115621207,
+   "ratio": 1.403909934447689,
+   "ratio_ci": [
+    1.3425896239687525,
+    1.46565675972333
+   ],
+   "z": 14.717537770244368
+  },
+  "epistrophe_clause": {
+   "observed": 140,
+   "expected": 124.73997555076502,
+   "null_mean": 124.97,
+   "null_sd": 7.940976010541777,
+   "ratio": 1.1223346756471397,
+   "ratio_ci": [
+    1.0027698017430813,
+    1.2617183082329053
+   ],
+   "z": 1.8927144446787683
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 26,
+   "parallel": 116,
+   "index": 0.18309859154929578,
+   "index_ci": [
+    0.11538461538461539,
+    0.25892106333921056
+   ],
+   "chiastic_per_10k_words": 1.149029070435482,
+   "chiastic_per_10k_ci": [
+    0.6999028954025927,
+    1.7521062964669503
+   ],
+   "examples": [
+    "Kudo në Shqipëri dhe tek të gjithë shqiptarët, kudo që jetojnë, po rilind shpresa dhe besimi i humbur, pa të cilat nuk mund të ringjallen krenaria dhe dinjiteti kombëtar i të qenit shqiptar.",
+    "Përballë të drejtave të mbrojtura me ligj për nëpunësin civil do të sanksionohen gjithashtu më mirë përgjegjësitë juridike, përgjegjësia civile, penale dhe administrative e funksionarëve.",
+    "Natyrshëm, sistemi aktual i vendit, në përputhje me ligjin për shkencën, ka qendra kërkimore si niveli më i ulët, institute kërkimore e qendra kombëtare si niveli më i lartë.",
+    "Ai u bë me ndjenjë të plotë të përgjegjësisë politike dhe u përgjigjet plotësisht ndjenjave paqedashëse të shumicës dërrmuese të popullit grek.”",
+    "Tashmë është bërë e qartë për të gjithë se policia nuk ka nevojë për trima ose histori trimash, ajo ka nevojë për punë sistematike profesionale, për zbatim korrekt të ligjit dhe mbi të gjitha për ndershmëri të lartë në detyrë.",
+    "Në zërin “shpenzime kapitale të shëndetësisë”, ose siç thuhet në zhargonin e përditshëm “investime”, ky sektor do të përfitojë për vitin 2005 rreth 3 miliardë lekë, nga 1,9 miliardë lekë që përfitoi në vitin 2003."
+   ]
+  },
+  "questions": 0.004260320258557367,
+  "exclamations": 0.020860878507418832,
+  "not_only": 183,
+  "not_only_per_1000": 26.884089907448214,
+  "not_only_per_10k_words": 8.087396918834354
+ },
+ "marx_written": {
+  "documents": 7,
+  "sentences": 5364,
+  "words": 122347,
+  "mean_len": 22.80891126025354,
+  "median_len": 19.0,
+  "cv": 0.6955253753002534,
+  "cv_ci": [
+   0.655064495315978,
+   0.7393674333214593
+  ],
+  "weibull_k": 1.572737819251353,
+  "weibull_k_ci": [
+   1.5127876008848182,
+   1.634178747590451
+  ],
+  "long_share": 0.13571961222967935,
+  "long_share_ci": [
+   0.12069817300521998,
+   0.14411819537658463
+  ],
+  "dfa": {
+   "n": 5364,
+   "alpha": 0.6344105413015938,
+   "null_mean": 0.5155676301252307,
+   "null_sd": 0.016659898596209203,
+   "z": 7.13347146082898,
+   "alpha_small": 0.6413181946368308,
+   "small_within_null_mean": 0.5413929932719677,
+   "small_within_null_sd": 0.012274756247388007,
+   "z_small_within": 8.14070759133214
+  },
+  "anaphora_sentence": {
+   "observed": 452,
+   "null_mean": 243.97666666666666,
+   "null_sd": 14.274083352550369,
+   "ratio": 1.8526361810555654,
+   "z": 14.573498570481974
+  },
+  "epistrophe_sentence": {
+   "observed": 68,
+   "null_mean": 12.536666666666667,
+   "null_sd": 3.5273203552964802,
+   "ratio": 5.4240893379420365,
+   "z": 15.723928576561484
+  },
+  "anaphora_clause": {
+   "observed": 882,
+   "expected": 733.3860554478201,
+   "null_mean": 734.18,
+   "null_sd": 17.61867191362618,
+   "ratio": 1.2026408103184254,
+   "ratio_ci": [
+    1.1435994982023356,
+    1.2585390429507055
+   ],
+   "z": 8.3899626898482
+  },
+  "epistrophe_clause": {
+   "observed": 116,
+   "expected": 122.37281267413064,
+   "null_mean": 120.95,
+   "null_sd": 7.769652501881922,
+   "ratio": 0.9479229696950666,
+   "ratio_ci": [
+    0.832504634642562,
+    1.0644783455553446
+   ],
+   "z": -0.6370941298598671
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 93,
+   "parallel": 187,
+   "index": 0.33214285714285713,
+   "index_ci": [
+    0.2706544240996538,
+    0.39416396850141905
+   ],
+   "chiastic_per_10k_words": 7.601330641535959,
+   "chiastic_per_10k_ci": [
+    5.805375799596943,
+    9.68768935439592
+   ],
+   "examples": [
+    "Die Zunftmeister wurden verdrängt durch den industriellen Mittelstand; die Teilung der Arbeit zwischen den verschiedenen Korporationen verschwand vor der Teilung der Arbeit in der einzelnen Werkstatt selbst.",
+    "Wenn also das Kapital in ein gemeinschaftliches, allen Mitgliedern der Gesellschaft angehöriges Eigentum verwandelt wird, so verwandelt sich nicht persönliches Eigentum in gesellschaftliches.",
+    "Hiernach müßte die bürgerliche Gesellschaft längst an der Trägheit zugrunde gegangen sein; denn die in ihr arbeiten, erwerben nicht, und die in ihr erwerben, arbeiten nicht.",
+    "Die herrschenden Ideen einer Zeit waren stets nur die Ideen der herrschenden Klasse.",
+    "Er proklamierte die deutsche Nation als die normale Nation und den deutschen Spießbürger als den Normalmenschen.",
+    "Der Kapitalist kauft mit einem Teil seines vorhandnen Vermögens, seines Kapitals, die Arbeitskraft des Webers ganz so, wie er mit einem andern Teil seines Vermögens den Rohstoff - das Garn - und das Arbeitsinstrument - den Webstuhl - angekauft hat.",
+    "Wir haben nun gesehn, wie das wechselnde Verhältnis von Nachfrage und Zufuhr bald Steigen, bald Fallen der Preise, bald hohe, bald niedrige Preise hervorbringt.",
+    "Die anarchische Bewegung, worin das Steigen durch das Fallen und das Fallen durch das Steigen ausgeglichen wird, betrachten sie als Zufälligkeit.",
+    "Das Kapital setzt also die Lohnarbeit, die Lohnarbeit setzt das Kapital voraus.",
+    "Der Profit steigt in dem Maße, worin der Arbeitslohn fällt, er fällt in dem Maße, worin der Arbeitslohn steigt.",
+    "Der Profit ist zwar nicht gestiegen, weil der Arbeitslohn gefallen ist, aber der Arbeitslohn ist gefallen, weil der Profit gestiegen ist.",
+    "Wir sehen also, daß selbst, wenn wir innerhalb des Verhältnisses von Kapital und Lohnarbeit stehnbleiben, die Interessen des Kapitals und die Interessen der Lohnarbeit sich schnurstracks gegenüberstehn.",
+    "Ihr Hauptverdienst suchte die junge Republik darin, nicht abzuschrecken, vielmehr selbst beständig zu erschrecken und durch die weiche Nachgiebigkeit und Widerstandslosigkeit ihrer Existenz Existenz zu gewinnen und den Widerstand zu entwaffnen.",
+    "Was ihm aus dem Spiegel entgegenstrahlte, war Guizot, den er stets beneidet, der ihn stets gemeistert hatte, Guizot selbst, aber Guizot mit der olympischen Stirne Odilons.",
+    "Hinter dem Ministerium stand der Präsident, und hinter dem Präsidenten standen 6 Millionen, die ebenso viele Mißtrauensvota gegen die Konstituante in die Wahlurne niedergelegt hatten.",
+    "Aber die Konstituante war die Mutter der Konstitution, und die Konstitution war die Mutter des Präsidenten.",
+    "Ehe der König restauriert wurde, mußte die Macht restauriert werden, welche die Könige heiligt.",
+    "Abgesehen von ihrem Royalismus: ohne das alte, seiner weltlichen Herrschaft unterworfene Rom kein Papst, ohne den Papst kein Katholizismus, ohne den Katholizismus keine französische Religion, und ohne Religion, was wurde aus der alten französischen Gesellschaft?",
+    "Das Ministerium bewies, daß es in Norditalien nur die Politik Cavaignacs und Cavaignac nur die Politik der provisorischen Regierung, d.h. Ledru-Rollins fortgesetzt habe.",
+    "Und die malkontenten Zwischenklassen der französischen Gesellschaft begannen die Verheißungen der roten Republik mit ihren problematischen Schrecken, den Schrecken der roten Monarchie mit ihrer tatsächlichen Hoffnungslosigkeit vorzuziehen.",
+    "Um dieser Verschuldung zu entgehen, muß der Staat entweder seine Ausgaben einschränken, d.h. den Regierungsorganismus vereinfachen, verkürzen, möglichst wenig regieren, möglichst wenig Personal beschäftigen, möglichst wenig in Beziehung zur bürgerlichen Gesellschaft treten.",
+    "Mit diesem Staatshaushalt notwendig die Staatsverschuldung, und mit der Staatsverschuldung notwendig die Herrschaft des Staatsschuldenhandels, der Staatsgläubiger, der Bankiers, der Geldhändler, der Börsenwölfe.",
+    "Die französische Industrie beherrscht nicht die französische Produktion, die französischen Industriellen beherrschen daher nicht die französische Bourgeoisie.",
+    "Fould, der Ledru-Rollin den Staatsbankerott empfahl, empfahl der Legislative das Staatsdefizit.",
+    "Während sie die städtischen Arbeiter unfähig macht, den Wein zu bezahlen, macht sie die Weinbauern unfähig, ihn zu verkaufen.",
+    "Die Einfuhrzölle in Frankreich in den ersten neun Monaten betrugen 1848 - 63 Millionen Francs, 1849 - 95 Millionen Francs und 1850 - 93 Millionen Francs.",
+    "Nicht die Regierung schlug also der Versammlung, die Majorität der Versammlung schlug sich selbst die Aufhebung des allgemeinen Stimmrechts vor.",
+    "Sie haben nicht nur die Karikatur des alten Napoleons, sie haben den alten Napoleon selbst karikiert, wie er sich ausnehmen muß in der Mitte des neunzehnten Jahrhunderts.",
+    "Dort ging die Phrase über den Inhalt, hier geht der Inhalt über die Phrase hinaus.",
+    "Dies ist überhaupt das Verhältnis der politischen und literarischen Vertreter einer Klasse zu der Klasse, die sie vertreten.",
+    "Sie entläßt Yon zur Belohnung seines Diensteifers und beraubt sich einer parlamentarischen Prärogative, unerläßlich gegen einen Menschen, der nicht in der Nacht beschließt, um bei Tage auszuführen, sondern bei Tage beschließt und in der Nacht ausführt.",
+    "Jetzt aber sollte der Orleanist Legitimist, der Legitimist Orleanist werden.",
+    "Die Kuriere flogen von Paris nach Venedig, von Venedig nach Claremont, von Claremont nach Paris.",
+    "Die Majorität des Parlaments erklärte sich so gegen die Verfassung, aber diese Verfassung selbst erklärte sich für die Minorität und ihren Beschluß für bindend.",
+    "Sie vernichtet die revolutionäre Presse; ihre eigne Presse ist vernichtet.",
+    "Sie verdrängt die Jurys durch Militärkommissionen, ihre Jurys sind durch Militärkommissionen verdrängt.",
+    "Sie unterwarf den Volksunterricht den Pfaffen; die Pfaffen unterwerfen sie ihrem eignen Unterricht.",
+    "Sie transportierte ohne Urteil; sie wird ohne Urteil transportiert.",
+    "Die Parzelle, der Bauer und die Familie; daneben eine andre Parzelle, ein andrer Bauer und eine andre Familie.",
+    "Qui si convien lasciare ogni sospetto Ogni viltà convien che qui sia morta."
+   ]
+  },
+  "questions": 0.03747203579418344,
+  "exclamations": 0.027404921700223715,
+  "not_only": 45,
+  "not_only_per_1000": 8.389261744966444,
+  "not_only_per_10k_words": 3.678063213646432
+ },
+ "marx_spoken": {
+  "documents": 2,
+  "sentences": 518,
+  "words": 9697,
+  "mean_len": 18.72007722007722,
+  "median_len": 17.0,
+  "cv": 0.5621553200626855,
+  "cv_ci": [
+   0.5208751576932374,
+   0.6021860255710645
+  ],
+  "weibull_k": 1.8777285291650245,
+  "weibull_k_ci": [
+   1.7600530769858587,
+   2.025445900214028
+  ],
+  "long_share": 0.09845559845559845,
+  "long_share_ci": [
+   0.06756756756756757,
+   0.1274131274131274
+  ],
+  "dfa": {
+   "n": 518,
+   "alpha": 0.5985392662141453,
+   "null_mean": 0.5315667731456117,
+   "null_sd": 0.037087994654875306,
+   "z": 1.805772830042454,
+   "alpha_small": 0.6014620303751732,
+   "small_within_null_mean": 0.5321297277852781,
+   "small_within_null_sd": 0.03775250392218411,
+   "z_small_within": 1.8364954741228192
+  },
+  "anaphora_sentence": {
+   "observed": 41,
+   "null_mean": 21.63,
+   "null_sd": 4.29337862294953,
+   "ratio": 1.8955154877484977,
+   "z": 4.511598370677335
+  },
+  "epistrophe_sentence": {
+   "observed": 4,
+   "null_mean": 1.3433333333333333,
+   "null_sd": 1.1713762086632211,
+   "ratio": 2.977667493796526,
+   "z": 2.267987557727901
+  },
+  "anaphora_clause": {
+   "observed": 96,
+   "expected": 75.45505050505051,
+   "null_mean": 75.315,
+   "null_sd": 5.337206666412684,
+   "ratio": 1.2722806406918292,
+   "ratio_ci": [
+    1.1217024443608734,
+    1.4439837145783165
+   ],
+   "z": 3.875622829104927
+  },
+  "epistrophe_clause": {
+   "observed": 8,
+   "expected": 9.265873015873016,
+   "null_mean": 9.21,
+   "null_sd": 2.1484645680113044,
+   "ratio": 0.8633832976445396,
+   "ratio_ci": [
+    0.4382147424610309,
+    1.311105059056866
+   ],
+   "z": -0.5631929043726424
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 5,
+   "parallel": 5,
+   "index": 0.5,
+   "index_ci": [
+    0.0,
+    0.8333333333333334
+   ],
+   "chiastic_per_10k_words": 5.156233886769104,
+   "chiastic_per_10k_ci": [
+    0.0,
+    13.327349366946182
+   ],
+   "examples": [
+    "Hier haben Sie ein Beispiel von der erhabenen Unparteilichkeit des Parquets, ein Beispiel, wie der Oberprokurator zugleich als Parteimann und der Parteimann zugleich als Oberprokurator auftrat.",
+    "Die Behauptung von Gesetzen, die einer vergangenen Gesellschaftsepoche angehören, die von Vertretern untergegangener oder untergehender gesellschaftlicher Interessen gemacht sind, also auch nur diese im Widerspruch mit den allgemeinen Bedürfnissen befindlichen Interessen zum Gesetz erheben.",
+    "Aber, meine Herren, die Krone stand der Versammlung nicht in eigener Person gegenüber, sie stand ihr gegenüber in der Person des Ministeriums Brandenburg."
+   ]
+  },
+  "questions": 0.0945945945945946,
+  "exclamations": 0.04247104247104247,
+  "not_only": 1,
+  "not_only_per_1000": 1.9305019305019304,
+  "not_only_per_10k_words": 1.0312467773538208
+ },
+ "transl_de": {
+  "documents": 4,
+  "sentences": 3379,
+  "words": 79737,
+  "mean_len": 23.597810002959456,
+  "median_len": 19.0,
+  "cv": 0.7320493802383743,
+  "cv_ci": [
+   0.684540755527527,
+   0.7925996833156076
+  ],
+  "weibull_k": 1.5134823634156431,
+  "weibull_k_ci": [
+   1.4405953194549135,
+   1.5795262668443868
+  ],
+  "long_share": 0.1497484462858834,
+  "long_share_ci": [
+   0.12621337673868008,
+   0.15773897602841078
+  ],
+  "dfa": {
+   "n": 3379,
+   "alpha": 0.6663489302575526,
+   "null_mean": 0.5166023435438747,
+   "null_sd": 0.01911239258866018,
+   "z": 7.835051839743287,
+   "alpha_small": 0.6567773905307193,
+   "small_within_null_mean": 0.5384038517955712,
+   "small_within_null_sd": 0.016598627185635418,
+   "z_small_within": 7.131525843148613
+  },
+  "anaphora_sentence": {
+   "observed": 312,
+   "null_mean": 169.96,
+   "null_sd": 11.091967063300059,
+   "ratio": 1.8357260531889856,
+   "z": 12.805663701433724
+  },
+  "epistrophe_sentence": {
+   "observed": 34,
+   "null_mean": 6.29,
+   "null_sd": 2.290392979381486,
+   "ratio": 5.405405405405405,
+   "z": 12.098360521294913
+  },
+  "anaphora_clause": {
+   "observed": 709,
+   "expected": 580.833036244801,
+   "null_mean": 581.895,
+   "null_sd": 15.040078955909772,
+   "ratio": 1.220660595657271,
+   "ratio_ci": [
+    1.1584042320541896,
+    1.293017661314152
+   ],
+   "z": 8.451085953246011
+  },
+  "epistrophe_clause": {
+   "observed": 52,
+   "expected": 54.96565316697115,
+   "null_mean": 55.795,
+   "null_sd": 5.500270447896176,
+   "ratio": 0.9460453392964825,
+   "ratio_ci": [
+    0.7278489269896898,
+    1.164021312380499
+   ],
+   "z": -0.6899660727503989
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 62,
+   "parallel": 100,
+   "index": 0.38271604938271603,
+   "index_ci": [
+    0.28714383561643836,
+    0.47392045454545445
+   ],
+   "chiastic_per_10k_words": 7.775562160602982,
+   "chiastic_per_10k_ci": [
+    5.204093011847555,
+    10.725123527390068
+   ],
+   "examples": [
+    "Die Zunftmeister wurden verdrängt durch den industriellen Mittelstand; die Teilung der Arbeit zwischen den verschiedenen Korporationen verschwand vor der Teilung der Arbeit in der einzelnen Werkstatt selbst.",
+    "Die Arbeit der Proletarier hat durch die Ausdehnung der Maschinerie und die Teilung der Arbeit allen selbständigen Charakter und damit allen Reiz für die Arbeiter verloren.",
+    "Im Anfang kämpfen die einzelnen Arbeiter, dann die Arbeiter einer Fabrik, dann die Arbeiter eines Arbeitszweiges an einem Ort gegen den einzelnen Bourgeois, der sie direkt ausbeutet.",
+    "Wenn also das Kapital in ein gemeinschaftliches, allen Mitgliedern der Gesellschaft angehöriges Eigentum verwandelt wird, so verwandelt sich nicht persönliches Eigentum in gesellschaftliches.",
+    "Der Durchschnittspreis der Lohnarbeit ist das Minimum des Arbeitslohnes, d.h. die Summe der Lebensmittel, die notwendig sind, um den Arbeiter als Arbeiter am Leben zu erhalten.",
+    "Hiernach müßte die bürgerliche Gesellschaft längst an der Trägheit zugrunde gegangen sein; denn die in ihr arbeiten, erwerben nicht, und die in ihr erwerben, arbeiten nicht.",
+    "Die herrschenden Ideen einer Zeit waren stets nur die Ideen der herrschenden Klasse.",
+    "Er proklamierte die deutsche Nation als die normale Nation und den deutschen Spießbürger als den Normalmenschen.",
+    "Ihr Hauptverdienst suchte die junge Republik darin, nicht abzuschrecken, vielmehr selbst beständig zu erschrecken und durch die weiche Nachgiebigkeit und Widerstandslosigkeit ihrer Existenz Existenz zu gewinnen und den Widerstand zu entwaffnen.",
+    "Was ihm aus dem Spiegel entgegenstrahlte, war Guizot, den er stets beneidet, der ihn stets gemeistert hatte, Guizot selbst, aber Guizot mit der olympischen Stirne Odilons.",
+    "Hinter dem Ministerium stand der Präsident, und hinter dem Präsidenten standen 6 Millionen, die ebenso viele Mißtrauensvota gegen die Konstituante in die Wahlurne niedergelegt hatten.",
+    "Ehe der König restauriert wurde, mußte die Macht restauriert werden, welche die Könige heiligt.",
+    "Abgesehen von ihrem Royalismus: ohne das alte, seiner weltlichen Herrschaft unterworfene Rom kein Papst, ohne den Papst kein Katholizismus, ohne den Katholizismus keine französische Religion, und ohne Religion, was wurde aus der alten französischen Gesellschaft?",
+    "Das Ministerium bewies, daß es in Norditalien nur die Politik Cavaignacs und Cavaignac nur die Politik der provisorischen Regierung, d.h. Ledru-Rollins fortgesetzt habe.",
+    "Und die malkontenten Zwischenklassen der französischen Gesellschaft begannen die Verheißungen der roten Republik mit ihren problematischen Schrecken, den Schrecken der roten Monarchie mit ihrer tatsächlichen Hoffnungslosigkeit vorzuziehen.",
+    "Um dieser Verschuldung zu entgehen, muß der Staat entweder seine Ausgaben einschränken, d.h. den Regierungsorganismus vereinfachen, verkürzen, möglichst wenig regieren, möglichst wenig Personal beschäftigen, möglichst wenig in Beziehung zur bürgerlichen Gesellschaft treten.",
+    "Mit diesem Staatshaushalt notwendig die Staatsverschuldung, und mit der Staatsverschuldung notwendig die Herrschaft des Staatsschuldenhandels, der Staatsgläubiger, der Bankiers, der Geldhändler, der Börsenwölfe.",
+    "Fould, der Ledru-Rollin den Staatsbankerott empfahl, empfahl der Legislative das Staatsdefizit.",
+    "Während sie die städtischen Arbeiter unfähig macht, den Wein zu bezahlen, macht sie die Weinbauern unfähig, ihn zu verkaufen.",
+    "Die Einfuhrzölle in Frankreich in den ersten neun Monaten betrugen 1848 - 63 Millionen Francs, 1849 - 95 Millionen Francs und 1850 - 93 Millionen Francs.",
+    "Nicht die Regierung schlug also der Versammlung, die Majorität der Versammlung schlug sich selbst die Aufhebung des allgemeinen Stimmrechts vor.",
+    "Sie haben nicht nur die Karikatur des alten Napoleons, sie haben den alten Napoleon selbst karikiert, wie er sich ausnehmen muß in der Mitte des neunzehnten Jahrhunderts.",
+    "Dort ging die Phrase über den Inhalt, hier geht der Inhalt über die Phrase hinaus.",
+    "Dies ist überhaupt das Verhältnis der politischen und literarischen Vertreter einer Klasse zu der Klasse, die sie vertreten.",
+    "Sie entläßt Yon zur Belohnung seines Diensteifers und beraubt sich einer parlamentarischen Prärogative, unerläßlich gegen einen Menschen, der nicht in der Nacht beschließt, um bei Tage auszuführen, sondern bei Tage beschließt und in der Nacht ausführt.",
+    "Jetzt aber sollte der Orleanist Legitimist, der Legitimist Orleanist werden.",
+    "Die Majorität des Parlaments erklärte sich so gegen die Verfassung, aber diese Verfassung selbst erklärte sich für die Minorität und ihren Beschluß für bindend.",
+    "Sie vernichtet die revolutionäre Presse; ihre eigne Presse ist vernichtet.",
+    "Sie verdrängt die Jurys durch Militärkommissionen, ihre Jurys sind durch Militärkommissionen verdrängt.",
+    "Sie unterwarf den Volksunterricht den Pfaffen; die Pfaffen unterwerfen sie ihrem eignen Unterricht.",
+    "Sie transportierte ohne Urteil; sie wird ohne Urteil transportiert.",
+    "Die Parzelle, der Bauer und die Familie; daneben eine andre Parzelle, ein andrer Bauer und eine andre Familie.",
+    "Dieser Satz ist unstreitig richtig, denn wenn die vereinzelte Arbeit (ihre sachlichen Bedingungen vorausgesetzt) auch Gebrauchswerte schaffen kann, kann sie weder Reichtum noch Kultur schaffen.",
+    "Wie die Phrase des \"unverkürzten Arbeitsertrags\" verschwunden ist, verschwindet jetzt die Phrase des \"Arbeitsertrags\" überhaupt.",
+    "Aber die Arbeiterpartei mußte doch bei dieser Gelegenheit ihr Bewußtsein darüber aussprechen, daß die bürgerliche \"Gewissensfreiheit\" nichts ist außer der Duldung aller möglichen Sorten religiöser Gewissensfreiheit, und daß sie vielmehr die Gewissen vom religiösen Spuk zu befreien strebt."
+   ]
+  },
+  "questions": 0.04350399526487126,
+  "exclamations": 0.037585084344480615,
+  "not_only": 23,
+  "not_only_per_1000": 6.806747558449246,
+  "not_only_per_10k_words": 2.8844827369978807
+ },
+ "transl_en": {
+  "documents": 4,
+  "sentences": 3359,
+  "words": 93782,
+  "mean_len": 27.91961893420661,
+  "median_len": 23.0,
+  "cv": 0.748555998058767,
+  "cv_ci": [
+   0.7004827564400843,
+   0.8088593982582232
+  ],
+  "weibull_k": 1.4792062868823455,
+  "weibull_k_ci": [
+   1.4194746675277288,
+   1.5459212032796779
+  ],
+  "long_share": 0.14617445668353676,
+  "long_share_ci": [
+   0.13247990473355165,
+   0.16165525454004168
+  ],
+  "dfa": {
+   "n": 3359,
+   "alpha": 0.6482628757688542,
+   "null_mean": 0.5146874539840527,
+   "null_sd": 0.01927888951856388,
+   "z": 6.928584846973687,
+   "alpha_small": 0.6545678803247509,
+   "small_within_null_mean": 0.5397350180548502,
+   "small_within_null_sd": 0.0158789228656367,
+   "z_small_within": 7.231779084865285
+  },
+  "anaphora_sentence": {
+   "observed": 362,
+   "null_mean": 235.91,
+   "null_sd": 13.395841394502499,
+   "ratio": 1.534483489466322,
+   "z": 9.412622640616355
+  },
+  "epistrophe_sentence": {
+   "observed": 70,
+   "null_mean": 14.486666666666666,
+   "null_sd": 3.817043649504446,
+   "ratio": 4.832029452369995,
+   "z": 14.543541659666491
+  },
+  "anaphora_clause": {
+   "observed": 718,
+   "expected": 574.3182650305379,
+   "null_mean": 574.4,
+   "null_sd": 15.337209654953536,
+   "ratio": 1.250177895633917,
+   "ratio_ci": [
+    1.192609957747183,
+    1.3161519420341463
+   ],
+   "z": 9.362850429160092
+  },
+  "epistrophe_clause": {
+   "observed": 145,
+   "expected": 130.7991590109237,
+   "null_mean": 130.505,
+   "null_sd": 7.3878261349330625,
+   "ratio": 1.1085698187699382,
+   "ratio_ci": [
+    0.9550560408513002,
+    1.248568727525801
+   ],
+   "z": 1.962011522098623
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 38,
+   "parallel": 84,
+   "index": 0.3114754098360656,
+   "index_ci": [
+    0.2200126878781964,
+    0.4098032564450475
+   ],
+   "chiastic_per_10k_words": 4.0519502676419785,
+   "chiastic_per_10k_ci": [
+    2.569349836982106,
+    5.729583379376303
+   ],
+   "examples": [
+    "All property relations in the past have continually been subject to historical change consequent upon the change in historical conditions.",
+    "In bourgeois society, therefore, the past dominates the present; in Communist society, the present dominates the past.",
+    "According to this, bourgeois society ought long ago to have gone to the dogs through sheer idleness; for those of its members who work, acquire nothing, and those who acquire anything do not work.",
+    "The introduction of these philosophical phrases at the back of the French historical criticisms, they dubbed “Philosophy of Action”, “True Socialism”, “German Science of Socialism”, “Philosophical Foundation of Socialism”, and so on.",
+    "It proclaimed the German nation to be the model nation, and the German petty Philistine to be the typical man.",
+    "Historical action is to yield to their personal inventive action; historically created conditions of emancipation to fantastic ones; and the gradual, spontaneous class organisation of the proletariat to an organisation of society especially contrived by these inventors.",
+    "The ministry proved that it had only continued in North Italy the policy of Cavaignac and Cavaignac only the policy of the Provisional Government, that is, of Ledru-Rollin.",
+    "While it renders the urban workers incapable of paying for wine, it renders the wine growers incapable of selling it.",
+    "Now they have not only a caricature of the old Napoleon, but the old Napoleon himself, caricatured as he would have to be in the middle of the nineteenth century.",
+    "There the phrase went beyond the content – here the content goes beyond the phrase.",
+    "Now, however, Orleanist was to become Legitimist and Legitimist Orleanist.",
+    "Parliament had declared for him, but the constitution declared against parliament.",
+    "It destroyed the revolutionary press; its own press is destroyed.",
+    "It disbanded the democratic National Guard, its own National Guard is disbanded.",
+    "It imposed a state of siege; a state of siege is imposed upon it.",
+    "It supplanted the juries by military commissions; its juries are supplanted by military commissions.",
+    "A small holding, the peasant and his family; beside it another small holding, another peasant and another family.",
+    "A few score of these constitute a village, and a few score villages constitute a department.",
+    "Thus the great mass of the French nation is formed by the simple addition of homologous magnitudes, much as potatoes in a sack form a sack of potatoes.",
+    "That this may not be lost, the nonsense is perpetrated of speaking of the \"abolition of the wage system\" (it should read: system of wage labor), \"together with the iron law of wages\"."
+   ]
+  },
+  "questions": 0.041976778803215244,
+  "exclamations": 0.04019053289669545,
+  "not_only": 31,
+  "not_only_per_1000": 9.228937183685622,
+  "not_only_per_10k_words": 3.3055383762342454
+ },
+ "nano_T1": {
+  "documents": 16,
+  "sentences": 1026,
+  "words": 32474,
+  "mean_len": 31.651072124756336,
+  "median_len": 28.0,
+  "cv": 0.6888921906224672,
+  "cv_ci": [
+   0.6473539485355383,
+   0.7264358552839315
+  ],
+  "weibull_k": 1.5136683360640537,
+  "weibull_k_ci": [
+   1.438586523309742,
+   1.5965103421909679
+  ],
+  "long_share": 0.11500974658869395,
+  "long_share_ci": [
+   0.09890350877192983,
+   0.14035087719298245
+  ],
+  "dfa": {
+   "n": 1026,
+   "alpha": 0.6930819905803633,
+   "null_mean": 0.5268292165108825,
+   "null_sd": 0.028430844584371652,
+   "z": 5.847619952903877,
+   "alpha_small": 0.6532038291444584,
+   "small_within_null_mean": 0.548000367917424,
+   "small_within_null_sd": 0.022332420728030055,
+   "z_small_within": 4.710795238376937
+  },
+  "anaphora_sentence": {
+   "observed": 55,
+   "null_mean": 26.846666666666668,
+   "null_sd": 4.419255844847888,
+   "ratio": 2.048671467593742,
+   "z": 6.3706049891081555
+  },
+  "epistrophe_sentence": {
+   "observed": 15,
+   "null_mean": 3.9466666666666668,
+   "null_sd": 1.8664999925588592,
+   "ratio": 3.8006756756756754,
+   "z": 5.921957341226602
+  },
+  "anaphora_clause": {
+   "observed": 125,
+   "expected": 96.39158181000286,
+   "null_mean": 96.205,
+   "null_sd": 6.1945923998274495,
+   "ratio": 1.29679374124586,
+   "ratio_ci": [
+    1.1555095855386273,
+    1.4453730029593257
+   ],
+   "z": 4.648409151311084
+  },
+  "epistrophe_clause": {
+   "observed": 35,
+   "expected": 21.35228046806994,
+   "null_mean": 21.56,
+   "null_sd": 2.8993792439072195,
+   "ratio": 1.639169176910109,
+   "ratio_ci": [
+    1.3432793828761804,
+    1.9743000505580688
+   ],
+   "z": 4.635474999775532
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 2,
+   "parallel": 8,
+   "index": 0.2,
+   "index_ci": [
+    0.0,
+    0.4860294117647052
+   ],
+   "chiastic_per_10k_words": 0.6158773172384061,
+   "chiastic_per_10k_ci": [
+    0.0,
+    1.5284537167621413
+   ],
+   "examples": []
+  },
+  "questions": 0.0009746588693957114,
+  "exclamations": 0.009746588693957114,
+  "not_only": 14,
+  "not_only_per_1000": 13.645224171539962,
+  "not_only_per_10k_words": 4.311141220668842
+ },
+ "nano_T2": {
+  "documents": 15,
+  "sentences": 1589,
+  "words": 56299,
+  "mean_len": 35.430459408432974,
+  "median_len": 31.0,
+  "cv": 0.6167413320342818,
+  "cv_ci": [
+   0.5861420655140447,
+   0.6432931031561359
+  ],
+  "weibull_k": 1.7179414413015786,
+  "weibull_k_ci": [
+   1.6514136886807225,
+   1.7940421707350784
+  ],
+  "long_share": 0.10320956576463185,
+  "long_share_ci": [
+   0.0868470736312146,
+   0.12367841409691628
+  ],
+  "dfa": {
+   "n": 1589,
+   "alpha": 0.6822499523598983,
+   "null_mean": 0.5243432753851529,
+   "null_sd": 0.021310710864344724,
+   "z": 7.409732973241237,
+   "alpha_small": 0.6199492687916146,
+   "small_within_null_mean": 0.5443266843755844,
+   "small_within_null_sd": 0.02294925697892824,
+   "z_small_within": 3.295208401974236
+  },
+  "anaphora_sentence": {
+   "observed": 104,
+   "null_mean": 37.11333333333334,
+   "null_sd": 5.833851405565814,
+   "ratio": 2.802227411532243,
+   "z": 11.465267456564476
+  },
+  "epistrophe_sentence": {
+   "observed": 32,
+   "null_mean": 6.286666666666667,
+   "null_sd": 2.4855225249878994,
+   "ratio": 5.090137857900317,
+   "z": 10.345242529418845
+  },
+  "anaphora_clause": {
+   "observed": 252,
+   "expected": 168.84084526584525,
+   "null_mean": 169.03,
+   "null_sd": 8.371923315463418,
+   "ratio": 1.4925298413616566,
+   "ratio_ci": [
+    1.3848738586135552,
+    1.6114959431956146
+   ],
+   "z": 9.910506447992626
+  },
+  "epistrophe_clause": {
+   "observed": 26,
+   "expected": 27.72135087135087,
+   "null_mean": 28.365,
+   "null_sd": 3.9486421716838307,
+   "ratio": 0.9379052312659902,
+   "ratio_ci": [
+    0.6779430439627419,
+    1.2033730371868836
+   ],
+   "z": -0.5989400652608349
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 10,
+   "parallel": 26,
+   "index": 0.2777777777777778,
+   "index_ci": [
+    0.16061290322580646,
+    0.38461538461538464
+   ],
+   "chiastic_per_10k_words": 1.7762304836675606,
+   "chiastic_per_10k_ci": [
+    0.7168755604316964,
+    2.9439345071148577
+   ],
+   "examples": []
+  },
+  "questions": 0.0006293266205160479,
+  "exclamations": 0.011327879169288861,
+  "not_only": 67,
+  "not_only_per_1000": 42.16488357457521,
+  "not_only_per_10k_words": 11.900744240572656
+ },
+ "nano_T3": {
+  "documents": 73,
+  "sentences": 4192,
+  "words": 137505,
+  "mean_len": 32.801765267175576,
+  "median_len": 29.0,
+  "cv": 0.6075675988505158,
+  "cv_ci": [
+   0.5888191618946057,
+   0.6241523764215827
+  ],
+  "weibull_k": 1.7062086149302587,
+  "weibull_k_ci": [
+   1.662294141049404,
+   1.7577552003581003
+  ],
+  "long_share": 0.10400763358778627,
+  "long_share_ci": [
+   0.08646827290076335,
+   0.11128936068702289
+  ],
+  "dfa": {
+   "n": 4192,
+   "alpha": 0.6673085339467663,
+   "null_mean": 0.5140127381914039,
+   "null_sd": 0.018452156808331413,
+   "z": 8.307744040314414,
+   "alpha_small": 0.6523590146714483,
+   "small_within_null_mean": 0.5700175237279861,
+   "small_within_null_sd": 0.012135534480334786,
+   "z_small_within": 6.785155699313759
+  },
+  "anaphora_sentence": {
+   "observed": 197,
+   "null_mean": 99.57,
+   "null_sd": 9.245454739131729,
+   "ratio": 1.9785075826052025,
+   "z": 10.538151205004977
+  },
+  "epistrophe_sentence": {
+   "observed": 63,
+   "null_mean": 22.243333333333332,
+   "null_sd": 4.253326802502824,
+   "ratio": 2.832309306159149,
+   "z": 9.582303114513527
+  },
+  "anaphora_clause": {
+   "observed": 446,
+   "expected": 320.98751467830414,
+   "null_mean": 320.18,
+   "null_sd": 11.661800890085544,
+   "ratio": 1.3894621429340772,
+   "ratio_ci": [
+    1.30557906184465,
+    1.4792580212296573
+   ],
+   "z": 10.78907118942219
+  },
+  "epistrophe_clause": {
+   "observed": 79,
+   "expected": 75.66634421134421,
+   "null_mean": 75.595,
+   "null_sd": 5.300091980333926,
+   "ratio": 1.044057312711508,
+   "ratio_ci": [
+    0.8751468294727758,
+    1.2366458853663485
+   ],
+   "z": 0.6424416807546561
+  },
+  "pairs": {
+   "span": 10,
+   "chiastic": 11,
+   "parallel": 67,
+   "index": 0.14102564102564102,
+   "index_ci": [
+    0.042992599444958375,
+    0.25
+   ],
+   "chiastic_per_10k_words": 0.7999709101487219,
+   "chiastic_per_10k_ci": [
+    0.2195199725138813,
+    1.4561292064561164
+   ],
+   "examples": [
+    "Përballë të drejtave të mbrojtura me ligj për nëpunësin civil do të sanksionohen gjithashtu më mirë përgjegjësitë juridike, përgjegjësia civile, penale dhe administrative e funksionarëve.",
+    "Natyrshëm, sistemi aktual i vendit, në përputhje me ligjin për shkencën, ka qendra kërkimore si niveli më i ulët, institute kërkimore e qendra kombëtare si niveli më i lartë.",
+    "Ai u bë me ndjenjë të plotë të përgjegjësisë politike dhe u përgjigjet plotësisht ndjenjave paqedashëse të shumicës dërrmuese të popullit grek.”",
+    "Tashmë është bërë e qartë për të gjithë se policia nuk ka nevojë për trima ose histori trimash, ajo ka nevojë për punë sistematike profesionale, për zbatim korrekt të ligjit dhe mbi të gjitha për ndershmëri të lartë në detyrë.",
+    "Në zërin “shpenzime kapitale të shëndetësisë”, ose siç thuhet në zhargonin e përditshëm “investime”, ky sektor do të përfitojë për vitin 2005 rreth 3 miliardë lekë, nga 1,9 miliardë lekë që përfitoi në vitin 2003."
+   ]
+  },
+  "questions": 0.006440839694656489,
+  "exclamations": 0.02719465648854962,
+  "not_only": 102,
+  "not_only_per_1000": 24.33206106870229,
+  "not_only_per_10k_words": 7.417912075924511
+ },
+ "vocabulary": {
+  "class": {
+   "marx_written": {
+    "count": 278,
+    "per_10k": 22.722257186526846
+   },
+   "marx_spoken": {
+    "count": 3,
+    "per_10k": 3.0937403320614623
+   },
+   "nano_T1": {
+    "count": 1,
+    "per_10k": 0.30793865861920305
+   },
+   "nano_T2": {
+    "count": 6,
+    "per_10k": 1.0657382902005363
+   },
+   "nano_T3": {
+    "count": 18,
+    "per_10k": 1.3090433075160903
+   },
+   "nano": {
+    "count": 25,
+    "per_10k": 1.104835644649502
+   }
+  },
+  "capital": {
+   "marx_written": {
+    "count": 466,
+    "per_10k": 38.08838794576083
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 15,
+    "per_10k": 4.619079879288046
+   },
+   "nano_T2": {
+    "count": 12,
+    "per_10k": 2.1314765804010727
+   },
+   "nano_T3": {
+    "count": 42,
+    "per_10k": 3.0544343842042108
+   },
+   "nano": {
+    "count": 69,
+    "per_10k": 3.049346379232625
+   }
+  },
+  "bourgeoisie": {
+   "marx_written": {
+    "count": 499,
+    "per_10k": 40.78563430243488
+   },
+   "marx_spoken": {
+    "count": 1,
+    "per_10k": 1.0312467773538208
+   },
+   "nano_T1": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T2": {
+    "count": 1,
+    "per_10k": 0.17762304836675608
+   },
+   "nano_T3": {
+    "count": 1,
+    "per_10k": 0.07272462819533836
+   },
+   "nano": {
+    "count": 2,
+    "per_10k": 0.08838685157196015
+   }
+  },
+  "proletariat": {
+   "marx_written": {
+    "count": 277,
+    "per_10k": 22.640522448445815
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T2": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T3": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano": {
+    "count": 0,
+    "per_10k": 0.0
+   }
+  },
+  "revolution": {
+   "marx_written": {
+    "count": 333,
+    "per_10k": 27.217667780983597
+   },
+   "marx_spoken": {
+    "count": 32,
+    "per_10k": 32.999896875322264
+   },
+   "nano_T1": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T2": {
+    "count": 2,
+    "per_10k": 0.35524609673351215
+   },
+   "nano_T3": {
+    "count": 1,
+    "per_10k": 0.07272462819533836
+   },
+   "nano": {
+    "count": 3,
+    "per_10k": 0.13258027735794023
+   }
+  },
+  "communism": {
+   "marx_written": {
+    "count": 71,
+    "per_10k": 5.803166403753259
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 1,
+    "per_10k": 0.30793865861920305
+   },
+   "nano_T2": {
+    "count": 6,
+    "per_10k": 1.0657382902005363
+   },
+   "nano_T3": {
+    "count": 15,
+    "per_10k": 1.0908694229300753
+   },
+   "nano": {
+    "count": 22,
+    "per_10k": 0.9722553672915617
+   }
+  },
+  "worker": {
+   "marx_written": {
+    "count": 316,
+    "per_10k": 25.828177233606056
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 22,
+    "per_10k": 6.774650489622467
+   },
+   "nano_T2": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T3": {
+    "count": 4,
+    "per_10k": 0.2908985127813534
+   },
+   "nano": {
+    "count": 26,
+    "per_10k": 1.149029070435482
+   }
+  },
+  "commodity": {
+   "marx_written": {
+    "count": 667,
+    "per_10k": 54.517070300048225
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 26,
+    "per_10k": 8.00640512409928
+   },
+   "nano_T2": {
+    "count": 8,
+    "per_10k": 1.4209843869340486
+   },
+   "nano_T3": {
+    "count": 10,
+    "per_10k": 0.7272462819533835
+   },
+   "nano": {
+    "count": 44,
+    "per_10k": 1.9445107345831234
+   }
+  },
+  "property": {
+   "marx_written": {
+    "count": 101,
+    "per_10k": 8.255208546184214
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 21,
+    "per_10k": 6.4667118310032645
+   },
+   "nano_T2": {
+    "count": 24,
+    "per_10k": 4.262953160802145
+   },
+   "nano_T3": {
+    "count": 125,
+    "per_10k": 9.090578524417294
+   },
+   "nano": {
+    "count": 170,
+    "per_10k": 7.512882383616613
+   }
+  },
+  "market": {
+   "marx_written": {
+    "count": 45,
+    "per_10k": 3.678063213646432
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 57,
+    "per_10k": 17.552503541294573
+   },
+   "nano_T2": {
+    "count": 70,
+    "per_10k": 12.433613385672924
+   },
+   "nano_T3": {
+    "count": 193,
+    "per_10k": 14.035853241700302
+   },
+   "nano": {
+    "count": 320,
+    "per_10k": 14.141896251513625
+   }
+  },
+  "privatisation": {
+   "marx_written": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "marx_spoken": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "nano_T1": {
+    "count": 19,
+    "per_10k": 5.850834513764858
+   },
+   "nano_T2": {
+    "count": 68,
+    "per_10k": 12.078367288939413
+   },
+   "nano_T3": {
+    "count": 44,
+    "per_10k": 3.1998836405948876
+   },
+   "nano": {
+    "count": 131,
+    "per_10k": 5.7893387779633905
+   }
+  }
+ },
+ "vocabulary_nano_special": {
+  "political_class": {
+   "T1": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "T2": {
+    "count": 5,
+    "per_10k": 0.8881152418337803
+   },
+   "T3": {
+    "count": 3,
+    "per_10k": 0.21817388458601505
+   },
+   "all": {
+    "count": 8,
+    "per_10k": 0.3535474062878406
+   }
+  },
+  "market_economy": {
+   "T1": {
+    "count": 15,
+    "per_10k": 4.619079879288046
+   },
+   "T2": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "T3": {
+    "count": 1,
+    "per_10k": 0.07272462819533836
+   },
+   "all": {
+    "count": 16,
+    "per_10k": 0.7070948125756812
+   }
+  },
+  "marxist_doctrine": {
+   "T1": {
+    "count": 0,
+    "per_10k": 0.0
+   },
+   "T2": {
+    "count": 1,
+    "per_10k": 0.17762304836675608
+   },
+   "T3": {
+    "count": 2,
+    "per_10k": 0.1454492563906767
+   },
+   "all": {
+    "count": 3,
+    "per_10k": 0.13258027735794023
+   }
+  }
+ },
+ "vocabulary_contexts": [
+  {
+   "date": "1991-05-09",
+   "session": "S02",
+   "text": "Rrënjët e kësaj krize janë vetë sistemi i drejtimit të centralizuar e të komanduar të ekonomisë me metoda administrative, të papërshtatshme sot për të përballuar problemet e zhvillimit intensiv e të rritjes së efektivitetit të ekonomisë, me fetishizimin e parimit të mbështetjes në forcat e veta e në të ashtuquajturën “epërsi të pronës shoqërore”, në mospranimin e ndihmave e të kredive, në gabimet në fushën e investimeve, të prioriteteve, në zhvillimin e degëve e të nëndegëve të ekonomisë."
+  },
+  {
+   "date": "1991-05-29",
+   "session": "S06",
+   "text": "Qeveria e re, siç kam deklaruar, nuk do të bartë mbi vete gabimet, të metat, stilin burokratik të komunizmit me punonjësit."
+  },
+  {
+   "date": "1997-11-10",
+   "session": "S12",
+   "text": "Pra, kjo është një vijë e konsoliduar e filozofisë sonë politike dhe e kemi për nder që përkon me kërkesën e vazhdueshme që bota demokratike ka pasur që në ditët e para të rrëzimit të komunizmit në Shqipëri dhe që, për fat të keq, nuk u realizua as edhe një ditë gjatë gjithë kohës së kaluar."
+  },
+  {
+   "date": "1997-11-10",
+   "session": "S12",
+   "text": "Nuk është faji i kësaj qeverie, por është dhe përgjegjësia e saj dhe e qeverive që do të pasojnë që disa zgjidhje, ndryshime e reforma që i kanë bërë revolucionet borgjeze, personalitetet e tyre në Europë dhe në evolucionin e saj deri më sot, është misioni i brezit aktual të politikës shqiptare, i institucioneve të sotme t'i kryejnë pa humbur kohë."
+  },
+  {
+   "date": "1997-11-10",
+   "session": "S12",
+   "text": "Këto realitete do t'i bënin edhe zgjedhësit, edhe qytetarët, edhe shtetasit e këtyre shoqërive ende të mbyllura të shikonin me më shumë vëmendje ndaj Perëndimit, ndaj shoqërive të zhvilluara demokratike, siç ndodhi në përgjithësi me Lindjen ish-komuniste përballë Perëndimit të qytetëruar, kur shpërtheu Lindja dhe ra komunizmi."
+  },
+  {
+   "date": "1998-04-29",
+   "session": "S15",
+   "text": "Kam përshtypjen se duhet, herët ose vonë, që ju të kaloni nëpër atë proces normal dhe të natyrshëm që kaloi edhe e majta e sotme, duke u ndarë institucionalisht me komunizmin e dikurshëm."
+  },
+  {
+   "date": "2003-06-23",
+   "session": "S41",
+   "text": "Dhe për ta treguar këtë po citoj shokun Bamir, meqenëse ka vënë dhe emrin në këtë kërkesë që mbrojti zoti Gjana: “Se ne po i zgjerojmë rrugët e Tiranës, siç bëri borgjezia parisiane, që të mos kishte mundësi të na ngriheshin barrikada.”"
+  },
+  {
+   "date": "2003-07-15",
+   "session": "S42",
+   "text": "Fluksi i huadhënies nga qytetarët në firmat piramidale u shtua ndjeshëm kur ish-presidenti i Republikës, sot lideri i opozitës, deklaroi se kompanitë rentiere ishin mrekullia e kapitalizmit demokratik shqiptar."
+  },
+  {
+   "date": "2004-06-21",
+   "session": "S53",
+   "text": "Janë rrjedhimet e zhvillimit të vrullshëm të ekonomisë, të ndryshimit të hapave demokratikë të vendit nga zhvendosja e popullsisë dhe të mungesës së një strategjie të qartë e zhvillimit të sistemit në vitet e para pas komunizmit."
+  },
+  {
+   "date": "2004-10-11",
+   "session": "S57",
+   "text": "Ndërkaq dëshiroj të theksoj se ne jemi të vendosur të mbrojmë edhe pronën shtetërore krahas asaj private edhe në gjirin e Kakomesë, duke e kapitalizuar atë në përputhje me ligjin, duke mos lejuar realizimin e interesave spekulative, që shpesh ushqehen prej piratëve të rinj të betonit ose edhe prej ndonjë politikani, që mbështet pikërisht ato këshilla komunale që vendosin të mos njohin ligjin në fuqi, ose tubimet me kohezion negativ, që përpiqen të mbajnë me çdo kusht peng këtë ecuri, që krijojnë artificialisht klimë të nxehtë në hapësirën midis premtimeve piramidale për ndarje tokash shtetërore dhe vendosmërisë së qeverisë për një zhvillim të qëndrueshëm bashkëkohor në përputhje me ligjin dhe natyrisht duke ndarë interesat kombëtarë me partnerët e mëdhenj ndërkombëtarë."
+  },
+  {
+   "date": "2005-05-05",
+   "session": "S63",
+   "text": "Deri në vitin 1997, kur në Shqipëri gëlonin faturat prej bakalli të Sude- Alimuçëve, korrupsioni dhe konflikti i interesave konsideroheshin nga lidershipi i kohës si pleh që ndihmonte lulëzimin e kapitalizmit të ri shqiptar."
+  }
+ ]
+}

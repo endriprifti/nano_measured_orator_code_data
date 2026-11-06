@@ -21,6 +21,10 @@ redistributed here; `get_models.sh` fetches them (Silero VAD and the Resemblyzer
 Whisper large-v3-turbo as an int8 ONNX export from the sherpa-onnx releases). PyTorch is not needed: the speaker
 encoder runs in NumPy (`voice_encoder_np.py`) and the VAD and recogniser in onnxruntime.
 
+Section 11 compares Nano with Marx's German originals. `get_marx.sh` fetches the texts of the Marx-Engels-Werke (and
+English translations of four works, used only to test which measures survive translation) from the public repository
+github.com/MARX-EBOOKS/mlraw, pinned at commit a3a7d3e; the texts themselves are not redistributed here.
+
 The language-model step (`lm.py`) trains a 5-gram Kneser–Ney model and a 2.2M-parameter Transformer in five
 cross-validation folds; it takes about 1.5 hours on two CPU cores. Every other step takes seconds to a few minutes.
 
@@ -38,11 +42,13 @@ cross-validation folds; it takes about 1.5 hours on two CPU cores. Every other s
 | `surprisal.py` | 8.3–8.7 | `results/surprisal_analysis.json` |
 | `semantics.py` | 9 | `results/semantics.json` |
 | `stylometry.py` | 7.4, 10 | `results/stylometry.json` |
+| `get_marx.sh`, `marx_corpus.py` | 11.1 | fetches and cleans the Marx corpus: `marx_corpus.json` (local), `results/marx_corpus_stats.json` |
+| `marx.py` | 11 | `results/marx.json` — vocabulary of political economy; length shape, DFA, anaphora, chiasmus, questions, translation check |
 | `acoustic.py` | Appendix C.1 | `results/acoustic.json`, `results/acoustic_ipus.json` (needs ffmpeg and praat-parselmouth) |
 | `video.py` | Appendix C.2 | `results/video.json`, `results/asr_cache.json`, `results/video.log` — speaker attribution, VAD-based IPUs, calibration of the syllable detector, register comparison of six recordings, alignment of clip FN2 with session S18 |
 | `prosody.py`, `vad_np.py`, `voice_encoder_np.py`, `asr.py` | Appendix C.2 | shared segmentation; Silero VAD in onnxruntime; GE2E speaker encoder in NumPy; Whisper turbo via sherpa-onnx |
 | `get_models.sh` | Appendix C.2 | downloads the pretrained components |
-| `make_figs.py` | all figures | `figures/fig1…fig10` (PNG at 300 dpi and vector PDF) |
+| `make_figs.py` | all figures | `figures/fig1…fig8` (Figures 1–8), `fig_marx` (Figure 9), `fig9_acoustic` (Figure 10), `fig10_broadcast` (Figure 11); PNG at 300 dpi and vector PDF |
 | `common.py` | shared | loading, figure style |
 
 All random seeds are fixed. Numbers in the paper are read from the JSON files in `results/`.

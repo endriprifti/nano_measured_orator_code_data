@@ -349,6 +349,58 @@ def fig10():
         b.grid(axis="x", color=GREY, alpha=0.25, lw=0.5)
     savefig(fig, "fig10_broadcast")
 
+def fig_marx():
+    """Section 11: Nano and Marx. (a) Sentence length relative to the median of each corpus; (b) measures that
+    survive translation, with the shift from German original to English translation of four works."""
+    import json, collections
+    R = json.load(open(os.path.join(HERE, "results", "marx.json")))
+    U = json.load(open(os.path.join(HERE, "units.json"), encoding="utf-8"))
+    MC = json.load(open(os.path.join(HERE, "marx_corpus.json"), encoding="utf-8"))
+    w = lambda s: len([t for t in s["tokens"] if not t[0].isdigit()])
+    L = {"Nano": [w(s) for u in U for s in u["sentences"] if s["kind"] != "address" and w(s)],
+         "Marx, writings": [w(s) for x in MC["de"] if x["mode"] == "written" for s in x["sentences"] if w(s)],
+         "Marx, court speeches": [w(s) for x in MC["de"] if x["mode"] == "spoken" for s in x["sentences"] if w(s)]}
+    sty = {"Nano": dict(color=ACCENT, lw=1.6, ls="-"), "Marx, writings": dict(color=DARK, lw=1.2, ls="-"),
+           "Marx, court speeches": dict(color=GREY, lw=1.2, ls="--")}
+    fig = plt.figure(figsize=(7.4, 4.6))
+    gs = fig.add_gridspec(6, 2, width_ratios=[1.05, 1], wspace=0.35, hspace=1.3, top=0.88)
+    ax = fig.add_subplot(gs[:, 0])
+    for k, v in L.items():
+        r = np.sort(np.array(v, float) / np.median(v)); y = 1 - np.arange(len(r)) / len(r)
+        ax.step(r, y, where="post", label=f"{k} ({int(np.median(v))})", **sty[k])
+    ax.set_xscale("log"); ax.set_yscale("log"); ax.set_ylim(1e-3, 1.05); ax.set_xlim(0.05, 10)
+    ax.set_xlabel("sentence length / median length of the corpus"); ax.set_ylabel("share of sentences at least this long")
+    ax.legend(loc="lower left", fontsize=7.2, title="median length in words", title_fontsize=7)
+    ax.set_title("(a) Distribution of sentence length", loc="left")
+    rows = [("CV of sentence length", lambda r: (r["cv"], r["cv_ci"])),
+            ("Weibull shape k", lambda r: (r["weibull_k"], r["weibull_k_ci"])),
+            ("DFA excess over shuffle", lambda r: (r["dfa"]["alpha_small"] - r["dfa"]["small_within_null_mean"],
+                                                   [r["dfa"]["alpha_small"] - r["dfa"]["small_within_null_mean"] - 1.96 * r["dfa"]["small_within_null_sd"],
+                                                    r["dfa"]["alpha_small"] - r["dfa"]["small_within_null_mean"] + 1.96 * r["dfa"]["small_within_null_sd"]])),
+            ("clause anaphora / null", lambda r: (r["anaphora_clause"]["ratio"], r["anaphora_clause"]["ratio_ci"])),
+            ("chiasmus index", lambda r: (r["pairs"]["index"], r["pairs"]["index_ci"])),
+            ("questions (%)", lambda r: (100 * r["questions"], [100 * (r["questions"] - 1.96 * np.sqrt(r["questions"] * (1 - r["questions"]) / r["sentences"])),
+                                                                 100 * (r["questions"] + 1.96 * np.sqrt(r["questions"] * (1 - r["questions"]) / r["sentences"]))]))]
+    who = [("nano", "Nano", ACCENT, "o", 2), ("marx_written", "Marx, writings", DARK, "s", 1), ("marx_spoken", "Marx, court", GREY, "D", 0)]
+    for i, (lab, fn) in enumerate(rows):
+        a = fig.add_subplot(gs[i, 1])
+        for key, nm, col, mk, yy in who:
+            v, ci = fn(R[key]); a.errorbar(v, yy, xerr=[[v - ci[0]], [ci[1] - v]], fmt=mk, color=col, ms=4.5, lw=1, capsize=0)
+        vd, _ = fn(R["transl_de"]); ve, _ = fn(R["transl_en"])
+        a.annotate("", xy=(ve, -1), xytext=(vd, -1), arrowprops=dict(arrowstyle="->", color=GREY, lw=0.9))
+        a.plot([vd], [-1], "o", mfc="white", mec=GREY, ms=4)
+        lo, hi = a.get_xlim(); pad = 0.04 * (hi - lo); a.set_xlim(min(lo, vd, ve) - pad, max(hi, vd, ve) + pad)
+        a.set_ylim(-1.7, 2.7); a.set_yticks([]); a.spines["left"].set_visible(False)
+        a.set_title(lab, loc="left", fontsize=7.8, pad=2); a.tick_params(axis="x", labelsize=7)
+    from matplotlib.lines import Line2D
+    hd = [Line2D([], [], marker=mk, color=col, ls="", ms=4.5, label=nm) for _, nm, col, mk, _ in who]
+    hd.append(Line2D([], [], marker="o", mfc="white", mec=GREY, color=GREY, ls="", ms=4, label="German → English (four works)"))
+    fig.legend(handles=hd, loc="upper left", bbox_to_anchor=(0.535, 0.985), ncol=2, fontsize=6.8, handletextpad=0.3,
+               columnspacing=0.8)
+    fig.text(0.535, 1.0, "(b) Measures that survive translation", fontsize=9.5)
+    savefig(fig, "fig_marx")
+
+
 if __name__ == "__main__":
     for name in sys.argv[1:]:
         globals()[name]()

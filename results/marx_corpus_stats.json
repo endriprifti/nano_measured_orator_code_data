@@ -1,0 +1,101 @@
+{
+ "de": [
+  {
+   "title": "Manifest der Kommunistischen Partei",
+   "mode": "written",
+   "year": 1848,
+   "sentences": 439,
+   "words": 9413
+  },
+  {
+   "title": "Lohnarbeit und Kapital",
+   "mode": "written",
+   "year": 1849,
+   "sentences": 418,
+   "words": 9403
+  },
+  {
+   "title": "Die Klassenkämpfe in Frankreich",
+   "mode": "written",
+   "year": 1850,
+   "sentences": 1401,
+   "words": 33213
+  },
+  {
+   "title": "Der achtzehnte Brumaire des Louis Bonaparte",
+   "mode": "written",
+   "year": 1852,
+   "sentences": 1299,
+   "words": 32029
+  },
+  {
+   "title": "Zur Kritik der Politischen Ökonomie, Vorwort",
+   "mode": "written",
+   "year": 1859,
+   "sentences": 46,
+   "words": 1383
+  },
+  {
+   "title": "Das Kapital I (Vorwort, Kap. 1, 4, 24)",
+   "mode": "written",
+   "year": 1867,
+   "sentences": 1521,
+   "words": 31824
+  },
+  {
+   "title": "Kritik des Gothaer Programms",
+   "mode": "written",
+   "year": 1875,
+   "sentences": 240,
+   "words": 5082
+  },
+  {
+   "title": "Verteidigungsrede im ersten Preßprozeß",
+   "mode": "spoken",
+   "year": 1849,
+   "sentences": 181,
+   "words": 3432
+  },
+  {
+   "title": "Verteidigungsrede im Prozeß gegen den Kreisausschuß",
+   "mode": "spoken",
+   "year": 1849,
+   "sentences": 337,
+   "words": 6265
+  }
+ ],
+ "en": [
+  {
+   "title": "Manifesto of the Communist Party",
+   "mode": null,
+   "year": null,
+   "sentences": 436,
+   "words": 11222
+  },
+  {
+   "title": "The Class Struggles in France",
+   "mode": null,
+   "year": null,
+   "sentences": 1417,
+   "words": 39121
+  },
+  {
+   "title": "The Eighteenth Brumaire of Louis Bonaparte",
+   "mode": null,
+   "year": null,
+   "sentences": 1269,
+   "words": 37191
+  },
+  {
+   "title": "Critique of the Gotha Programme",
+   "mode": null,
+   "year": null,
+   "sentences": 237,
+   "words": 6248
+  }
+ ],
+ "source": {
+  "repository": "https://github.com/MARX-EBOOKS/mlraw",
+  "commit": "a3a7d3ea087e9ca069f10f5101103c8abe8afb22"
+ }
+}
