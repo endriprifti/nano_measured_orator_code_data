@@ -215,7 +215,7 @@
  },
  "text_clause_syllables": {
   "median": 17.0,
-  "mean": 21.089372765680857,
+  "mean": 21.095249152463662,
   "q": [
    4.0,
    9.0,
@@ -224,8 +224,8 @@
   ]
  },
  "ipu_vs_clause_ks": {
-  "statistic": 0.5050451119674388,
-  "pvalue": 3.663058972883158e-242,
+  "statistic": 0.5050465177479528,
+  "pvalue": 3.650904133171183e-242,
   "statistic_location": 11,
   "statistic_sign": 1
  },

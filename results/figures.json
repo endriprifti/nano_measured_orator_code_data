@@ -6,59 +6,59 @@
   "all": 227054
  },
  "anaphora_sentence": {
-  "observed": 331,
-  "pairs": 6822,
-  "null_mean": 161.373,
-  "null_sd": 11.841362717187577,
-  "ratio": 2.051148581237258,
-  "z": 14.324956008128078,
+  "observed": 358,
+  "pairs": 6697,
+  "null_mean": 164.285,
+  "null_sd": 11.16215816945809,
+  "ratio": 2.1791399093039536,
+  "z": 17.354618798544102,
   "p_perm": 0.000999000999000999
  },
  "epistrophe_sentence": {
-  "observed": 100,
-  "pairs": 6822,
-  "null_mean": 32.161,
-  "null_sd": 5.50827368601089,
-  "ratio": 3.109356052361556,
-  "z": 12.315836842364531,
+  "observed": 112,
+  "pairs": 6697,
+  "null_mean": 32.828,
+  "null_sd": 5.689676264955678,
+  "ratio": 3.4117217009869623,
+  "z": 13.91502720245134,
   "p_perm": 0.000999000999000999
  },
  "anaphora_sentence_words": [
   [
    "në",
-   92
+   98
+  ],
+  [
+   "ministër",
+   30
   ],
   [
    "për",
    22
   ],
   [
-   "ministër",
-   18
-  ],
-  [
    "ne",
    17
+  ],
+  [
+   "të",
+   12
   ],
   [
    "qeveria",
    12
   ],
   [
-   "të",
-   11
-  ],
-  [
    "kjo",
    11
   ],
   [
-   "nuk",
-   8
+   "me",
+   9
   ],
   [
-   "me",
-   7
+   "nuk",
+   8
   ],
   [
    "e",
@@ -88,24 +88,24 @@
  "anaphora_clause": {
   "observed": 823,
   "pairs": 14744,
-  "nullA_within_mean": 585.62,
-  "nullA_within_sd": 16.524696668925575,
-  "zA": 14.36516534953342,
-  "nullB_across_mean": 274.788,
-  "nullB_across_sd": 15.69939667630575,
-  "ratioB": 2.9950361733409028,
-  "zB": 34.91930367154725
+  "nullA_within_mean": 584.23,
+  "nullA_within_sd": 16.16314016520305,
+  "zA": 14.772500736833178,
+  "nullB_across_mean": 276.424,
+  "nullB_across_sd": 16.235646707168765,
+  "ratioB": 2.977310219083727,
+  "zB": 33.66518192088167
  },
  "epistrophe_clause": {
   "observed": 140,
   "pairs": 14744,
-  "nullA_within_mean": 124.915,
-  "nullA_within_sd": 7.50185143814512,
-  "zA": 2.010836941304433,
-  "nullB_across_mean": 17.792,
-  "nullB_across_sd": 3.8580741309622337,
-  "ratioB": 7.868705035971223,
-  "zB": 31.6759076813074
+  "nullA_within_mean": 124.185,
+  "nullA_within_sd": 8.276519497953231,
+  "zA": 1.9108273718090099,
+  "nullB_across_mean": 17.908,
+  "nullB_across_sd": 4.133707294910949,
+  "ratioB": 7.817735090462363,
+  "zB": 29.53571486551763
  },
  "anaphora_clause_words": [
   [
@@ -206,28 +206,29 @@
  },
  "runs_sentence": {
   "counts": {
-   "2": 202,
-   "3": 32,
-   "4": 4,
+   "2": 205,
+   "3": 34,
+   "4": 7,
    "5": 3,
    "6": 3,
    "9": 1,
+   "12": 1,
    "19": 1
   },
-  "P_ge3_given_ge2": 0.17886178861788618,
-  "P_ge4_given_ge3": 0.2727272727272727,
-  "P_ge5_given_ge4": 0.6666666666666666
+  "P_ge3_given_ge2": 0.19607843137254902,
+  "P_ge4_given_ge3": 0.32,
+  "P_ge5_given_ge4": 0.5625
  },
  "runs_clause_null": {
   "counts": {
-   "2": 51603,
-   "3": 1648,
-   "4": 55,
-   "5": 4
+   "2": 51697,
+   "3": 1651,
+   "4": 60,
+   "5": 1
   },
-  "P_ge3_given_ge2": 0.032020258863252674,
-  "P_ge4_given_ge3": 0.03456356180433509,
-  "P_ge5_given_ge4": 0.06779661016949153
+  "P_ge3_given_ge2": 0.032054522645995995,
+  "P_ge4_given_ge3": 0.035630841121495324,
+  "P_ge5_given_ge4": 0.01639344262295082
  },
  "runs_clause_hazard_test": {
   "table": [
@@ -681,27 +682,27 @@
  "sentence_kinds": {
   "T1": {
    "address": 15,
-   "declarative": 1026,
+   "declarative": 1015,
    "exclamation": 10,
    "question": 1
   },
   "T2": {
    "address": 52,
-   "declarative": 1619,
+   "declarative": 1570,
    "exclamation": 18,
    "question": 1
   },
   "T3": {
    "address": 132,
-   "declarative": 4110,
+   "declarative": 4045,
    "exclamation": 114,
    "question": 27
   }
  },
  "question_per_1000_sent": {
-  "T1": 0.9505703422053232,
-  "T2": 0.591715976331361,
-  "T3": 6.160164271047228
+  "T1": 0.9606147934678194,
+  "T2": 0.6093845216331505,
+  "T3": 6.252894858730894
  },
  "question_marks_total": 32,
  "exclamations": {
@@ -742,18 +743,18 @@
  "recurrence_speech_shuffle": {
   "k": 20,
   "observed_rate": 0.02788273848964023,
-  "null_rate_mean": 0.009779104958722086,
-  "null_rate_sd": 0.00034046310173206087,
-  "ratio": 2.8512566955088583,
-  "z": 53.17355519237858
+  "null_rate_mean": 0.00979581908155895,
+  "null_rate_sd": 0.0002560095681898443,
+  "ratio": 2.846391736871772,
+  "z": 70.64938836453524
  },
  "recurrence_paragraph_shuffle": {
   "k": 20,
   "observed_rate": 0.024408588671406314,
-  "null_rate_mean": 0.020974134894909954,
-  "null_rate_sd": 0.00036442268222087337,
-  "ratio": 1.1637471005934,
-  "z": 9.424368855324897
+  "null_rate_mean": 0.021024426496660163,
+  "null_rate_sd": 0.00035202761082442856,
+  "ratio": 1.160963352569153,
+  "z": 9.613343018238364
  },
  "recurrence_by_term": {
   "T1": 0.024345283498601576,
@@ -762,11 +763,11 @@
  },
  "alliteration": {
   "observed": 5684,
-  "pairs": 98375,
-  "null_mean": 5931.62,
-  "null_sd": 71.56425271507183,
-  "ratio": 0.958254237459581,
-  "z": -3.4601073944820184
+  "pairs": 98381,
+  "null_mean": 5936.326666666667,
+  "null_sd": 71.25433288969559,
+  "ratio": 0.9574944775051687,
+  "z": -3.5412115507035633
  },
  "burstiness": {
   "n_words": 500,
@@ -929,18 +930,18 @@
  "burstiness_function_words_median": 0.08365380233577624,
  "marker_tests_bh_family": 26,
  "anaphora_sentence_no_titles": {
-  "observed": 311,
-  "null_mean": 160.624,
-  "null_sd": 11.507850537785066,
-  "ratio": 1.936198824584122,
-  "z": 13.067253481113
+  "observed": 323,
+  "null_mean": 163.038,
+  "null_sd": 11.776780374958173,
+  "ratio": 1.9811332327432867,
+  "z": 13.582829509170338
  },
  "anaphora_sentence_no_titles_no_ne": {
-  "observed": 219,
-  "null_mean": 100.301,
-  "null_sd": 9.591371069873171,
-  "ratio": 2.1834278820749544,
-  "z": 12.375602938857998
+  "observed": 225,
+  "null_mean": 102.011,
+  "null_sd": 9.3677574157319,
+  "ratio": 2.2056444893197793,
+  "z": 13.12896935113375
  },
  "epistrophe_sentence_words": [
   [
@@ -952,11 +953,19 @@
    9
   ],
   [
+   "ps-së",
+   6
+  ],
+  [
    "qind",
    4
   ],
   [
    "dollarë",
+   3
+  ],
+  [
+   "shtetit",
    3
   ],
   [
@@ -988,19 +997,11 @@
    2
   ],
   [
-   "shtetit",
-   2
-  ],
-  [
    "greqinë",
    2
   ],
   [
    "vitit",
-   2
-  ],
-  [
-   "vitin",
    2
   ]
  ],

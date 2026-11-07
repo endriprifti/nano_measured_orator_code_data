@@ -14,6 +14,7 @@ Vocabulary: the concepts of political economy in Marx (per 10,000 words) and in 
 Output: results/marx.json
 """
 import json, os, re, collections
+import zlib
 import numpy as np
 from scipy import stats
 from common import load_units, save, HERE, TERMS
@@ -29,7 +30,7 @@ def words(s): return [t for t in s["tokens"] if not t[0].isdigit()]
 
 
 # ------------------------------------------------------------------ documents (lists of sentences, in order)
-# sentences without a word are enumeration numerals ("1.", "2.") split off by the segmentation of Section 3.4
+# guard: a sentence without a word would have no length in words (prep.py no longer produces any)
 nano_docs = [[s for s in u["sentences"] if s["kind"] != "address" and words(s)] for u in U]
 nano_docs_term = {t: [d for d, u in zip(nano_docs, U) if u["term"] == t] for t in TERMS}
 de = sorted(MC["de"], key=lambda w: w["year"])
@@ -177,6 +178,8 @@ def surface(docs, lang):
 
 
 for name, docs in CORPORA.items():
+    # each corpus draws its own random stream, so its nulls and intervals do not depend on the others
+    rng = np.random.default_rng([1848, zlib.crc32(name.encode())])
     S = [s for d in docs for s in d]; L = length_shape(S)
     r = {"documents": len(docs), "sentences": len(S), "words": int(L.sum()), "mean_len": float(L.mean()),
          "median_len": float(np.median(L)), "cv": cv(S), "cv_ci": boot(cv, S), "weibull_k": wshape(S),

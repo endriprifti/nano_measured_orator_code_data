@@ -1,91 +1,95 @@
-fold 0: train units 85, test units 19, train pieces 310274
+fold 0: train units 85, test units 19, train pieces 309915
+  KN fitted (1s), D=['0.75', '0.33', '0.68', '0.82', '0.91', '0.92']
+    epoch 1: train 6.325 val 5.403 nats/token  (123s)
+    epoch 2: train 4.887 val 4.685 nats/token  (118s)
+    epoch 3: train 4.386 val 4.470 nats/token  (111s)
+    epoch 4: train 4.209 val 4.369 nats/token  (121s)
+    epoch 5: train 4.083 val 4.300 nats/token  (122s)
+    epoch 6: train 3.955 val 4.192 nats/token  (120s)
+    epoch 7: train 3.805 val 4.091 nats/token  (93s)
+    epoch 8: train 3.673 val 4.003 nats/token  (74s)
+    epoch 9: train 3.570 val 3.962 nats/token  (69s)
+    epoch 10: train 3.467 val 3.897 nats/token  (80s)
+    epoch 11: train 3.391 val 3.866 nats/token  (72s)
+    epoch 12: train 3.330 val 3.833 nats/token  (113s)
+    epoch 13: train 3.275 val 3.820 nats/token  (121s)
+    epoch 14: train 3.237 val 3.810 nats/token  (121s)
+  kn: mean 5.269 bits/piece over 79143 pieces
+  gpt: mean 5.240 bits/piece over 79124 pieces
+fold 1: train units 84, test units 20, train pieces 310660
+  KN fitted (1s), D=['0.75', '0.35', '0.68', '0.82', '0.91', '0.91']
+    epoch 1: train 6.294 val 5.377 nats/token  (114s)
+    epoch 2: train 4.839 val 4.689 nats/token  (70s)
+    epoch 3: train 4.344 val 4.474 nats/token  (69s)
+    epoch 4: train 4.173 val 4.372 nats/token  (69s)
+    epoch 5: train 4.033 val 4.300 nats/token  (69s)
+    epoch 6: train 3.913 val 4.202 nats/token  (71s)
+    epoch 7: train 3.752 val 4.101 nats/token  (69s)
+    epoch 8: train 3.630 val 4.027 nats/token  (69s)
+    epoch 9: train 3.510 val 3.966 nats/token  (68s)
+    epoch 10: train 3.411 val 3.927 nats/token  (68s)
+    epoch 11: train 3.330 val 3.885 nats/token  (70s)
+    epoch 12: train 3.269 val 3.867 nats/token  (69s)
+    epoch 13: train 3.226 val 3.847 nats/token  (68s)
+    epoch 14: train 3.186 val 3.836 nats/token  (69s)
+  kn: mean 5.451 bits/piece over 78791 pieces
+  gpt: mean 5.468 bits/piece over 78771 pieces
+fold 2: train units 82, test units 22, train pieces 309816
   KN fitted (2s), D=['0.75', '0.31', '0.68', '0.82', '0.91', '0.92']
-    epoch 1: train 6.328 val 5.405 nats/token  (72s)
-    epoch 2: train 4.899 val 4.676 nats/token  (69s)
-    epoch 3: train 4.377 val 4.444 nats/token  (76s)
-    epoch 4: train 4.186 val 4.356 nats/token  (72s)
-    epoch 5: train 4.078 val 4.292 nats/token  (77s)
-    epoch 6: train 3.955 val 4.192 nats/token  (106s)
-    epoch 7: train 3.822 val 4.099 nats/token  (116s)
-    epoch 8: train 3.691 val 4.017 nats/token  (111s)
-    epoch 9: train 3.573 val 3.972 nats/token  (93s)
-    epoch 10: train 3.488 val 3.915 nats/token  (69s)
-    epoch 11: train 3.402 val 3.872 nats/token  (63s)
-    epoch 12: train 3.323 val 3.843 nats/token  (64s)
-    epoch 13: train 3.283 val 3.824 nats/token  (60s)
-    epoch 14: train 3.254 val 3.814 nats/token  (65s)
-  kn: mean 5.255 bits/piece over 79193 pieces
-  gpt: mean 5.251 bits/piece over 79174 pieces
-fold 1: train units 83, test units 21, train pieces 310610
-  KN fitted (3s), D=['0.75', '0.34', '0.69', '0.82', '0.90', '0.91']
-    epoch 1: train 6.295 val 5.403 nats/token  (69s)
-    epoch 2: train 4.848 val 4.689 nats/token  (75s)
-    epoch 3: train 4.350 val 4.483 nats/token  (65s)
-    epoch 4: train 4.174 val 4.370 nats/token  (67s)
-    epoch 5: train 4.024 val 4.298 nats/token  (65s)
-    epoch 6: train 3.889 val 4.196 nats/token  (105s)
-    epoch 7: train 3.746 val 4.100 nats/token  (104s)
-    epoch 8: train 3.617 val 4.023 nats/token  (118s)
-    epoch 9: train 3.487 val 3.970 nats/token  (113s)
-    epoch 10: train 3.390 val 3.928 nats/token  (76s)
-    epoch 11: train 3.307 val 3.895 nats/token  (62s)
-    epoch 12: train 3.243 val 3.865 nats/token  (64s)
-    epoch 13: train 3.202 val 3.846 nats/token  (67s)
-    epoch 14: train 3.158 val 3.834 nats/token  (64s)
-  kn: mean 5.426 bits/piece over 78671 pieces
-  gpt: mean 5.444 bits/piece over 78650 pieces
-fold 2: train units 82, test units 22, train pieces 310415
-  KN fitted (3s), D=['0.75', '0.27', '0.68', '0.82', '0.91', '0.91']
-    epoch 1: train 6.310 val 5.360 nats/token  (70s)
-    epoch 2: train 4.892 val 4.608 nats/token  (63s)
-    epoch 3: train 4.373 val 4.377 nats/token  (68s)
-    epoch 4: train 4.195 val 4.271 nats/token  (67s)
-    epoch 5: train 4.074 val 4.193 nats/token  (66s)
-    epoch 6: train 3.952 val 4.108 nats/token  (64s)
-    epoch 7: train 3.803 val 3.990 nats/token  (61s)
-    epoch 8: train 3.678 val 3.899 nats/token  (61s)
-    epoch 9: train 3.568 val 3.834 nats/token  (62s)
-    epoch 10: train 3.467 val 3.777 nats/token  (64s)
-    epoch 11: train 3.393 val 3.749 nats/token  (61s)
-    epoch 12: train 3.308 val 3.713 nats/token  (60s)
-    epoch 13: train 3.278 val 3.690 nats/token  (61s)
-    epoch 14: train 3.242 val 3.683 nats/token  (62s)
-  kn: mean 5.320 bits/piece over 78921 pieces
-  gpt: mean 5.338 bits/piece over 78899 pieces
-fold 3: train units 83, test units 21, train pieces 310051
-  KN fitted (2s), D=['0.75', '0.33', '0.68', '0.82', '0.91', '0.92']
-    epoch 1: train 6.268 val 5.382 nats/token  (72s)
-    epoch 2: train 4.868 val 4.718 nats/token  (62s)
-    epoch 3: train 4.396 val 4.475 nats/token  (61s)
-    epoch 4: train 4.196 val 4.374 nats/token  (60s)
-    epoch 5: train 4.064 val 4.330 nats/token  (61s)
-    epoch 6: train 3.959 val 4.222 nats/token  (63s)
-    epoch 7: train 3.821 val 4.128 nats/token  (61s)
-    epoch 8: train 3.689 val 4.044 nats/token  (63s)
-    epoch 9: train 3.565 val 3.985 nats/token  (63s)
-    epoch 10: train 3.473 val 3.932 nats/token  (63s)
-    epoch 11: train 3.397 val 3.890 nats/token  (63s)
-    epoch 12: train 3.331 val 3.864 nats/token  (61s)
-    epoch 13: train 3.288 val 3.850 nats/token  (58s)
-    epoch 14: train 3.262 val 3.836 nats/token  (57s)
-  kn: mean 5.271 bits/piece over 78791 pieces
-  gpt: mean 5.348 bits/piece over 78770 pieces
-fold 4: train units 83, test units 21, train pieces 311098
+    epoch 1: train 6.303 val 5.337 nats/token  (70s)
+    epoch 2: train 4.878 val 4.615 nats/token  (68s)
+    epoch 3: train 4.387 val 4.406 nats/token  (69s)
+    epoch 4: train 4.189 val 4.310 nats/token  (68s)
+    epoch 5: train 4.082 val 4.240 nats/token  (68s)
+    epoch 6: train 3.939 val 4.120 nats/token  (69s)
+    epoch 7: train 3.790 val 4.023 nats/token  (68s)
+    epoch 8: train 3.675 val 3.953 nats/token  (67s)
+    epoch 9: train 3.556 val 3.889 nats/token  (69s)
+    epoch 10: train 3.465 val 3.837 nats/token  (67s)
+    epoch 11: train 3.383 val 3.798 nats/token  (68s)
+    epoch 12: train 3.310 val 3.769 nats/token  (67s)
+    epoch 13: train 3.267 val 3.754 nats/token  (68s)
+    epoch 14: train 3.227 val 3.742 nats/token  (68s)
+  kn: mean 5.324 bits/piece over 78820 pieces
+  gpt: mean 5.325 bits/piece over 78798 pieces
+fold 3: train units 83, test units 21, train pieces 309968
   KN fitted (2s), D=['0.75', '0.35', '0.68', '0.82', '0.91', '0.92']
-    epoch 1: train 6.277 val 5.378 nats/token  (64s)
-    epoch 2: train 4.852 val 4.710 nats/token  (60s)
-    epoch 3: train 4.361 val 4.511 nats/token  (62s)
-    epoch 4: train 4.186 val 4.410 nats/token  (60s)
-    epoch 5: train 4.055 val 4.338 nats/token  (60s)
-    epoch 6: train 3.933 val 4.239 nats/token  (65s)
-    epoch 7: train 3.781 val 4.147 nats/token  (66s)
-    epoch 8: train 3.659 val 4.063 nats/token  (62s)
-    epoch 9: train 3.545 val 3.993 nats/token  (62s)
-    epoch 10: train 3.438 val 3.963 nats/token  (64s)
-    epoch 11: train 3.377 val 3.928 nats/token  (65s)
-    epoch 12: train 3.302 val 3.902 nats/token  (61s)
-    epoch 13: train 3.264 val 3.885 nats/token  (61s)
-    epoch 14: train 3.227 val 3.872 nats/token  (62s)
-  kn: mean 5.168 bits/piece over 77958 pieces
-  gpt: mean 5.191 bits/piece over 77937 pieces
+    epoch 1: train 6.276 val 5.372 nats/token  (71s)
+    epoch 2: train 4.845 val 4.687 nats/token  (68s)
+    epoch 3: train 4.373 val 4.456 nats/token  (68s)
+    epoch 4: train 4.180 val 4.364 nats/token  (68s)
+    epoch 5: train 4.063 val 4.299 nats/token  (69s)
+    epoch 6: train 3.943 val 4.204 nats/token  (70s)
+    epoch 7: train 3.794 val 4.104 nats/token  (70s)
+    epoch 8: train 3.666 val 4.029 nats/token  (70s)
+    epoch 9: train 3.546 val 3.970 nats/token  (69s)
+    epoch 10: train 3.450 val 3.910 nats/token  (69s)
+    epoch 11: train 3.367 val 3.869 nats/token  (71s)
+    epoch 12: train 3.309 val 3.835 nats/token  (68s)
+    epoch 13: train 3.258 val 3.821 nats/token  (67s)
+    epoch 14: train 3.227 val 3.811 nats/token  (68s)
+  kn: mean 5.243 bits/piece over 78490 pieces
+  gpt: mean 5.294 bits/piece over 78469 pieces
+fold 4: train units 82, test units 22, train pieces 310836
+  KN fitted (2s), D=['0.75', '0.33', '0.68', '0.82', '0.91', '0.92']
+    epoch 1: train 6.286 val 5.394 nats/token  (71s)
+    epoch 2: train 4.850 val 4.717 nats/token  (68s)
+    epoch 3: train 4.372 val 4.506 nats/token  (69s)
+    epoch 4: train 4.179 val 4.426 nats/token  (68s)
+    epoch 5: train 4.057 val 4.320 nats/token  (67s)
+    epoch 6: train 3.919 val 4.246 nats/token  (69s)
+    epoch 7: train 3.784 val 4.142 nats/token  (69s)
+    epoch 8: train 3.662 val 4.071 nats/token  (70s)
+    epoch 9: train 3.541 val 4.001 nats/token  (69s)
+    epoch 10: train 3.441 val 3.964 nats/token  (69s)
+    epoch 11: train 3.368 val 3.918 nats/token  (70s)
+    epoch 12: train 3.305 val 3.896 nats/token  (69s)
+    epoch 13: train 3.261 val 3.877 nats/token  (69s)
+    epoch 14: train 3.230 val 3.870 nats/token  (69s)
+  kn: mean 5.169 bits/piece over 78022 pieces
+  gpt: mean 5.196 bits/piece over 78000 pieces
 done
+ver 78022 pieces
+  gpt: mean 5.196 bits/piece over 78000 pieces
+done
+LM_DONE 0

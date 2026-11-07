@@ -21,12 +21,17 @@ def norm(t):
 def split_sentences(par):
     """Split a paragraph into sentences at . ! ? … followed by space + capital/quote/digit."""
     out, start = [], 0
+    # dates printed with spaces ("3. 07. 2003") are one token, not three sentences
+    par = re.sub(r"\b(\d{1,2})\.\s+(\d{1,2})\.\s+(\d{4})\b", r"\1.\2.\3", par)
     for m in re.finditer(r"([.!?…]+)([”\")]*)\s+(?=[A-ZËÇ“\"(\d–-])", par):
         pre = par[start:m.start()]
         last = re.findall(r"([\w.]+)$", pre)
         lw = last[0].lower() if last else ""
         if m.group(1) == "." and (lw in ABBR or re.fullmatch(r"[A-ZËÇ]", last[0] if last else "") or
                                   re.fullmatch(r"(\w\.)+\w", lw)):
+            continue
+        # a list numeral ("1.", "06.") standing alone is the label of the item that follows, not a sentence
+        if m.group(1) == "." and re.fullmatch(r"\d{1,3}", pre.strip()):
             continue
         out.append(par[start:m.end()].strip()); start = m.end()
     tail = par[start:].strip()
@@ -103,10 +108,14 @@ def main():
   for c in corpus:
       for j, sp in enumerate(c["speeches"]):
           sents = []
+          label = ""   # a list numeral printed as a paragraph of its own ("1.") labels the next paragraph
           for pi, p in enumerate(sp["paragraphs"]):
               if p["heading"]:
                   continue
-              for si, s in enumerate(split_sentences(norm(p["text"]))):
+              if re.fullmatch(r"\s*\d{1,3}\.\s*", p["text"]):
+                  label = p["text"].strip() + " "; continue
+              text, label = label + norm(p["text"]), ""
+              for si, s in enumerate(split_sentences(text)):
                   toks = tokens(s)
                   if not toks:
                       continue

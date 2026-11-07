@@ -42,8 +42,13 @@ def fig2():
     a = ax[0]
     a.hist(L[L <= 120], bins=np.arange(0, 121, 3), density=True, color=GREY, alpha=0.6, edgecolor="white", lw=0.4)
     xx = np.linspace(1, 120, 300); P = Rr["sent_len_params"]
+    A = Rr["sent_len_fits_AIC"]; best = min(A, key=A.get)
+    kk = np.arange(1, 121)
+    a.plot(kk, stats.nbinom.pmf(kk - 1, P["negbin_r"], P["negbin_p"]), color=ACCENT, lw=1.5,
+           label=f"negative binomial\n(best by AIC)" if best == "negbin(L-1)" else "negative binomial")
     kw, _, lw_ = stats.weibull_min.fit(L.astype(float), floc=0)
-    a.plot(xx, stats.weibull_min.pdf(xx, kw, 0, lw_), color=ACCENT, lw=1.5, label=f"Weibull, k = {kw:.2f}\n(best by AIC)")
+    a.plot(xx, stats.weibull_min.pdf(xx, kw, 0, lw_), color=DARK, lw=0.9,
+           label=f"Weibull, k = {kw:.2f}\n(ΔAIC = {A['weibull'] - A[best]:.0f})")
     a.plot(xx, stats.lognorm.pdf(xx, P["lognormal_sigma"], 0, P["lognormal_median"]), color=DARK, lw=0.9, ls="--",
            label="lognormal\n(worst by AIC)")
     a.set_xlabel("sentence length (tokens)"); a.set_ylabel("density")
