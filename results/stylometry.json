@@ -1139,20 +1139,20 @@
  },
  "ols_log_msl": {
   "coef": {
-   "Intercept": 3.5743099877220197,
-   "C(term, Treatment('T1'))[T.T2]": 0.09429403276334787,
-   "C(term, Treatment('T1'))[T.T3]": 0.12421042735523635,
-   "C(genre2, Treatment('expository'))[T.adversarial]": -0.2205790819971226,
-   "C(genre2, Treatment('expository'))[T.debate]": -0.1566766914433426
+   "Intercept": 3.5796054814117926,
+   "C(term, Treatment('T1'))[T.T2]": 0.11397943189264369,
+   "C(term, Treatment('T1'))[T.T3]": 0.1274572003399542,
+   "C(genre2, Treatment('expository'))[T.adversarial]": -0.21360098970544153,
+   "C(genre2, Treatment('expository'))[T.debate]": -0.16187469399614948
   },
   "p": {
-   "Intercept": 1.137576722110127e-55,
-   "C(term, Treatment('T1'))[T.T2]": 0.3255057578465487,
-   "C(term, Treatment('T1'))[T.T3]": 0.1446896457394534,
-   "C(genre2, Treatment('expository'))[T.adversarial]": 0.001091203806670476,
-   "C(genre2, Treatment('expository'))[T.debate]": 0.03800222524138692
+   "Intercept": 1.4531290407498026e-56,
+   "C(term, Treatment('T1'))[T.T2]": 0.22247219578419225,
+   "C(term, Treatment('T1'))[T.T3]": 0.12407675257220253,
+   "C(genre2, Treatment('expository'))[T.adversarial]": 0.0011406362080893,
+   "C(genre2, Treatment('expository'))[T.debate]": 0.02778127558141901
   },
-  "r2": 0.15448453731626632
+  "r2": 0.16149220679137954
  },
  "genre2_counts": {
   "T1|adversarial": 1,

@@ -1,3 +1,19 @@
+# Changes of 7 November 2026: list numerals and spaced dates
+
+- `prep.py`: a list numeral ("1.", "06.") is no longer a sentence of its own. Printed inline it stays with the item it
+  labels; printed as a paragraph of its own it is joined to the next paragraph. Dates printed with spaces
+  ("3. 07. 2003") are joined before segmentation and no longer split into three sentences. The corpus now has
+  7,000 sentences (6,801 outside address lines; previously 7,125 and 6,926). Word counts are unchanged.
+- Every analysis was rerun. The 119 numeral pseudo-sentences had been one-clause sentences of one token, so the largest
+  changes are in sentence length and its order: median 30 tokens (was 29), Menzerath-Altmann exponent b = -0.50
+  (was -0.40), DFA exponent 0.70 (was 0.76). The negative binomial (of length minus one) now fits sentence length
+  slightly better than the Weibull (AIC 58,954 against 58,975); Figure 2a shows both.
+- `info.py`: the most frequent two-word sentence openings skip numerals, like the one-word openings.
+- `marx.py`: the exclusion of numeral sentences is no longer needed (the corpus has none); each corpus now draws its
+  own random stream, so the nulls and intervals of one corpus do not depend on the others.
+- Figures 2, 3, 5, 6 and 9 of the paper were redrawn, and Figure 10 changes imperceptibly; the others are unchanged.
+- This closes the open issue noted on 6 November.
+
 # Changes of 6 November 2026: Section 11, Nano and Marx
 
 - New Section 11 compares Nano's parliamentary speech with Marx's German originals (`get_marx.sh`, `marx_corpus.py`,

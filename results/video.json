@@ -26149,7 +26149,7 @@
   "speech_rate": 4.182638000255326,
   "articulation_rate": 6.752483700470397,
   "ipu_syllables_median": 6.685637277769139,
-  "ks_ipu_vs_clause_corrected": 0.4251185952327781,
+  "ks_ipu_vs_clause_corrected": 0.4251286038725715,
   "clause_syllables_median": 17.0,
   "kpd_vad_articulation_rate": 6.031917806215343
  }

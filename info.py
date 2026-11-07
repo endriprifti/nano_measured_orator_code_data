@@ -131,7 +131,7 @@ R["ncd_genres"] = {"genres": G, "matrix": [[ncd(gen[a][:60000].encode(), gen[b][
 R["two_word_openings"] = {}
 for t in TERMS:
     ss = [s for u in U if u["term"] == t for s in u["sentences"] if s["kind"] != "address"]
-    op = collections.Counter(" ".join(w.lower() for w in s["tokens"][:2]) for s in ss if len(s["tokens"]) >= 2)
+    op = collections.Counter(" ".join(words(s)[:2]) for s in ss if len(words(s)) >= 2)   # list numerals are not openings
     R["two_word_openings"][t] = [[w, c, c / len(ss)] for w, c in op.most_common(10)]
 
 save("info.json", R)
