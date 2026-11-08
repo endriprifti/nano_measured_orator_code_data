@@ -1293,5 +1293,51 @@
   "T1": 1.510985429510291,
   "T2": 1.6537218962200015,
   "T3": 1.7376137315331441
+ },
+ "topic_entropy_ols": {
+  "coef": {
+   "Intercept": 1.4114409100724132,
+   "C(term, Treatment('T1'))[T.T2]": 0.21682486167903464,
+   "C(term, Treatment('T1'))[T.T3]": 0.18727504833782882,
+   "C(genre2, Treatment('expository'))[T.adversarial]": 0.18527231806757505,
+   "C(genre2, Treatment('expository'))[T.debate]": 0.10990593775429316
+  },
+  "p": {
+   "Intercept": 9.202747847553656e-26,
+   "C(term, Treatment('T1'))[T.T2]": 0.10673743832266412,
+   "C(term, Treatment('T1'))[T.T3]": 0.08751046045750263,
+   "C(genre2, Treatment('expository'))[T.adversarial]": 0.0029340200964737446,
+   "C(genre2, Treatment('expository'))[T.debate]": 0.397077574890185
+  },
+  "ci": {
+   "Intercept": [
+    1.1478266524120835,
+    1.675055167732743
+   ],
+   "C(term, Treatment('T1'))[T.T2]": [
+    -0.04663474571257986,
+    0.48028446907064914
+   ],
+   "C(term, Treatment('T1'))[T.T3]": [
+    -0.027541420846928677,
+    0.4020915175225863
+   ],
+   "C(genre2, Treatment('expository'))[T.adversarial]": [
+    0.06319504627726236,
+    0.30734958985788774
+   ],
+   "C(genre2, Treatment('expository'))[T.debate]": [
+    -0.14446160127678928,
+    0.3642734767853756
+   ]
+  },
+  "n_paragraphs": 1844,
+  "n_units": 103,
+  "r2": 0.022696292944646812
+ },
+ "topic_entropy_by_genre": {
+  "adversarial": 1.7673043724715911,
+  "debate": 1.7018939559638413,
+  "expository": 1.5967511808054085
  }
 }

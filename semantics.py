@@ -122,13 +122,13 @@ for k in ("speed", "spread", "circuitousness"):
     R["trajectory_by_term"][f"kruskal_{k}"] = stats.kruskal(*[[x[k] for x in traj if x["term"] == t] for t in TERMS]).pvalue
 
 # ---------------------------------------------------------------- topic model on paragraphs
-pars, pterm = [], []
+pars, pterm, punit, pgenre = [], [], [], []
 for u in U:
     d = collections.defaultdict(list)
     for s in u["sentences"]:
         if s["kind"] != "address": d[s["par"]].extend(words(s))
     for p, ws in d.items():
-        if len(ws) >= 30: pars.append(" ".join(ws)); pterm.append(u["term"])
+        if len(ws) >= 30: pars.append(" ".join(ws)); pterm.append(u["term"]); punit.append(u["id"]); pgenre.append(u["genre"])
 stop = {w for w, _ in F.most_common(150)}
 tf = TfidfVectorizer(stop_words=list(stop), min_df=5, max_df=0.4, token_pattern=r"(?u)\b[\w'ëç-]{3,}\b", sublinear_tf=True)
 X = tf.fit_transform(pars); vocab = np.array(tf.get_feature_names_out())
@@ -143,6 +143,20 @@ R["topics"] = {"n_paragraphs": len(pars), "K": K, "top_words": topics,
 # thematic concentration: entropy of topic mixture per paragraph
 ent = -(np.where(share > 0, share * np.log2(np.where(share > 0, share, 1)), 0)).sum(1)
 R["topic_entropy_by_term"] = {t: float(ent[np.array(pterm) == t].mean()) for t in TERMS}
+# the same contrast at constant genre: OLS of paragraph entropy on premiership and the three-level genre factor,
+# with standard errors clustered by speech unit (paragraphs of one speech are not independent)
+import pandas as pd, statsmodels.formula.api as smf
+G2 = {"rejoinder": "adversarial", "interpellation": "adversarial", "motion": "adversarial", "questions": "adversarial",
+      "programme": "expository", "report": "expository", "budget": "expository", "debate": "debate"}
+_d = pd.DataFrame({"ent": ent, "term": pterm, "genre2": [G2[g] for g in pgenre], "unit": punit})
+from patsy import EvalEnvironment   # a clean namespace: this script uses the name C for an array
+_m = smf.ols("ent ~ C(term, Treatment('T1')) + C(genre2, Treatment('expository'))", data=_d,
+             eval_env=EvalEnvironment([{}])).fit(
+    cov_type="cluster", cov_kwds={"groups": pd.factorize(_d["unit"])[0]})
+R["topic_entropy_ols"] = {"coef": _m.params.to_dict(), "p": _m.pvalues.to_dict(),
+                          "ci": {k: list(v) for k, v in _m.conf_int().T.to_dict("list").items()},
+                          "n_paragraphs": int(len(_d)), "n_units": int(_d["unit"].nunique()), "r2": float(_m.rsquared)}
+R["topic_entropy_by_genre"] = {g: float(_d.loc[_d.genre2 == g, "ent"].mean()) for g in sorted(set(_d.genre2))}
 save("semantics.json", R)
 print(json.dumps({k: R[k] for k in ("w2v", "neighbours", "trajectory_summary", "trajectory_by_term", "topic_entropy_by_term")},
                  indent=1, ensure_ascii=False, default=lambda o: o.tolist() if hasattr(o, "tolist") else str(o)))

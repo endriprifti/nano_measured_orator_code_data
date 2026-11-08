@@ -1,3 +1,12 @@
+# Changes of 8 November 2026: topic dispersion at constant genre
+
+- `semantics.py`: the rise in the entropy of paragraph topic mixtures across the premierships (Section 9.3) is now also
+  estimated at constant genre, by an OLS regression of paragraph entropy on premiership and the three-level genre
+  factor, with standard errors clustered by speech unit (`topic_entropy_ols`, `topic_entropy_by_genre` in
+  `results/semantics.json`). Adversarial paragraphs are 0.19 bits more dispersed than expository ones (p = 0.003);
+  the premiership coefficients, 0.22 and 0.19 bits relative to 1991, are not significant (p = 0.11 and 0.09).
+  All other results of the script are unchanged.
+
 # Changes of 7 November 2026: list numerals and spaced dates
 
 - `prep.py`: a list numeral ("1.", "06.") is no longer a sentence of its own. Printed inline it stays with the item it
